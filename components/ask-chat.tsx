@@ -154,11 +154,7 @@ export default function AskChat({ page = false, autoFocus = false }: { page?: bo
             </li>
           ))}
         </ul>
-        <p className="askstart-note">
-          Not a chatbot. Every answer is a paragraph of these docs, copied word for word, with a link to where it came from —
-          and when the docs do not cover your question it says so instead of guessing. <b>Alpha</b>: the paragraph is always
-          real, but it may not be the one you wanted.
-        </p>
+        <p className="askstart-note">Leakdown is in alpha.</p>
       </div>
     );
   }
