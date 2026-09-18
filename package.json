@@ -1,0 +1,27 @@
+{
+  "name": "leakdown-docs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Leakdown documentation site (hosted separately from leakdown-website)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
