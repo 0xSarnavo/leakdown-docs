@@ -132,7 +132,8 @@ export function Files() {
         head={["File", "Contains"]}
         rows={[
           [<code key="1">session.jsonl</code>, "Every step, thought and typed string."],
-          [<code key="2">meta.json</code>, "URL, brain, model, effort, version, variant."],
+          [<code key="2">meta.json</code>, "URL, brain, model, effort, version, variant, how it ended, flow score, assertions, token usage, steps and duration."],
+          [<code key="8">verifications.jsonl</code>, "One line per completion claim: the page that was judged, the verdict, and any --expect results."],
           [<code key="3">shots/</code>, "Retina screenshot per step, and every email received."],
           [<code key="4">video.mp4</code>, "The recording (video.webm without ffmpeg)."],
           [<code key="5">filmstrip.html</code>, "Every step with its thought."],
@@ -171,8 +172,27 @@ export function Environment() {
           [<code key="2">LEAKDOWN_IMAP_USER</code>, "The inbox login"],
           [<code key="3">LEAKDOWN_IMAP_PASS</code>, "An app password"],
           [<code key="4">LEAKDOWN_MAIL_DOMAIN</code>, "A domain whose catch-all forwards to that inbox"],
+          [<code key="5">LEAKDOWN_IMAP_PORT</code>, "Optional. The port, for a host that is not on 993"],
+          [<code key="6">LEAKDOWN_IMAP_TLS</code>, 'Optional. TLS is on unless this is exactly "false"'],
         ]}
       />
+      <H2 id="judge">An external judge</H2>
+      <p>
+        Three questions have a yes or no answer rather than prose: was the goal reached, which flow checkpoints were
+        reached, and does the page show an <code>--expect</code> value in other words. Your AI CLI answers them by
+        default.
+      </p>
+      <Table
+        head={["Variable", "Value"]}
+        rows={[
+          [<code key="1">LEAKDOWN_JUDGE</code>, "Optional. A module path that exports createJudge(); it answers those three instead"],
+        ]}
+      />
+      <p>
+        Its usage is recorded apart from the brain&apos;s, as <code>usageJudge</code> in <code>meta.json</code>. A judge
+        that is missing, broken or slow never ends a session: each ruling it cannot make falls back to the same
+        inconclusive path a failed model call takes.
+      </p>
       <H2 id="orders">Website orders</H2>
       <p>These two variables let the CLI pick up requests from the website.</p>
       <Table
@@ -186,8 +206,11 @@ export function Environment() {
 LEAKDOWN_IMAP_USER=
 LEAKDOWN_IMAP_PASS=
 LEAKDOWN_MAIL_DOMAIN=
+LEAKDOWN_IMAP_PORT=
+LEAKDOWN_IMAP_TLS=
 LEAKDOWN_ORDERS_URL=
-LEAKDOWN_ORDERS_TOKEN=`}</Code>
+LEAKDOWN_ORDERS_TOKEN=
+LEAKDOWN_JUDGE=`}</Code>
       <H2 id="passthrough">Passed to your AI CLI</H2>
       <p>
         <code>ANTHROPIC_API_KEY</code>, <code>OPENAI_API_KEY</code> and their <code>*_BASE_URL</code> reach the AI CLIs if

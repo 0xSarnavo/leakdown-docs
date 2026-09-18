@@ -1,5 +1,7 @@
+import { createHash } from "node:crypto";
 import { makeAsk } from "../../../lib/ask";
-import { BLOCKS } from "../../../lib/corpus";
+import { BLOCKS, BUILT_AT } from "../../../lib/corpus";
+import { bump, get as kvGet, kvOn, set as kvSet, today } from "../../../lib/kv";
 
 /* POST /api/ask — ask the docs a question, get back the paragraph that answers
    it, verbatim, or an honest "not in these docs".
@@ -27,6 +29,27 @@ const MAX = 400;
 const WINDOW_MS = 60_000;
 const PER_WINDOW = 40;
 const hits = new Map<string, number[]>();
+
+/* What the day may cost, whatever the caller does.
+
+   Each ask sends the shortlisted docs to a paid model, so an unattended loop is
+   a bill, not just traffic. The per-address count above cannot see across
+   instances; this one can, and it is the ceiling that actually holds: once the
+   day's asks are used up the route answers 503 until UTC midnight. Raise it
+   with ASK_DAILY_MAX. Without a shared store there is nothing to count in, and
+   the in-memory guard is all there is — which is the state to fix before this
+   is pointed at the open internet. */
+const DAILY_MAX = Number(process.env.ASK_DAILY_MAX ?? 2_000);
+const DAY_SECONDS = 86_400;
+
+/* Identical questions cost nothing twice.
+
+   Docs change on deploy, not per request, so the same question has the same
+   answer until the corpus is rebuilt — BUILT_AT is in the key, so a rebuild
+   invalidates every entry by itself. This is also what makes a loop cheap: the
+   second identical ask never reaches the model. */
+const cacheKey = (q: string) =>
+  `ask:a:${createHash("sha256").update(`${BUILT_AT}\n${q.trim().toLowerCase().replace(/\s+/g, " ")}`).digest("hex").slice(0, 32)}`;
 
 function rateLimited(ip: string): boolean {
   const now = Date.now();
@@ -63,10 +86,31 @@ export async function POST(req: Request) {
   }
   if (query.length > MAX) return Response.json({ error: `keep it under ${MAX} characters` }, { status: 422 });
 
+  // a repeat of a question already answered against this corpus never reaches the model
+  const key = cacheKey(query);
+  if (kvOn() && !exempt) {
+    const hit = await kvGet(key);
+    if (hit) {
+      try {
+        return Response.json({ ...(JSON.parse(hit) as object), alpha: true, cached: true });
+      } catch {
+        /* a corrupt entry is just a miss */
+      }
+    }
+    const used = await bump(`ask:day:${today()}`, DAY_SECONDS);
+    if (used !== null && used > DAILY_MAX) {
+      return Response.json(
+        { error: "the docs have answered all they can today — try again tomorrow, or read the page directly" },
+        { status: 503, headers: { "retry-after": "3600" } },
+      );
+    }
+  }
+
   const ctl = new AbortController();
   const timer = setTimeout(() => ctl.abort(), 30_000);
   try {
     const out = await ask(query, ctl.signal);
+    if (kvOn() && !exempt) await kvSet(key, JSON.stringify(out), DAY_SECONDS);
     return Response.json({ ...out, alpha: true });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "failed";
@@ -83,5 +127,10 @@ export async function POST(req: Request) {
 }
 
 export async function GET() {
-  return Response.json({ ok: true, configured: !!process.env.TYPESAFE_API_KEY });
+  return Response.json({
+    ok: true,
+    configured: !!process.env.TYPESAFE_API_KEY,
+    // says whether the day's ceiling is real here, or only the per-instance guard
+    metered: kvOn(),
+  });
 }

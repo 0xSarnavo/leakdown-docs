@@ -1,6 +1,6 @@
 import { Callout, Ext, H2, Table } from "../components/ui";
 import { Code, CodeTabs } from "../components/code";
-import { REPO } from "../lib/nav";
+import { CONTACT, REPO } from "../lib/nav";
 
 export function ChoosingTheAi() {
   return (
@@ -172,6 +172,7 @@ export function YourData() {
           [<code key="2">shots/</code>, "A screenshot per step, plus a render of every email received."],
           [<code key="3">video.mp4</code>, "Whatever the page showed. Past a signup, that includes your own dashboard."],
           [<code key="4">meta.json</code>, "The URL, brain, model, effort, version and variant."],
+          [<code key="5">verifications.jsonl</code>, "The page text behind every completion claim, so a verdict can be checked afterwards."],
         ]}
       />
 
@@ -227,9 +228,11 @@ export function Troubleshooting() {
 
       <H2 id="bugs">Report a bug</H2>
       <p>
-        <Ext href={`${REPO}/issues`}>Open an issue on GitHub ↗</Ext> and include the version:
+        <Ext href={`${REPO}/issues`}>Open an issue on GitHub ↗</Ext> and include the version. If the
+        report does not belong in public — it names a customer, or quotes a run against a site that
+        is not yours to discuss — mail <Ext href={`mailto:${CONTACT}`}>{CONTACT}</Ext> instead.
       </p>
-      <Code id="tr-version" out={"leakdown 0.7.0"}>{"leakdown --version"}</Code>
+      <Code id="tr-version" out={"leakdown 0.8.0"}>{"leakdown --version"}</Code>
     </>
   );
 }

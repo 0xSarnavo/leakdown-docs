@@ -53,12 +53,6 @@ export default function Ask() {
           </button>
         </header>
 
-        <p className="ask-note">
-          This is <b>alpha</b>. It does not write answers — it finds the paragraph of the docs that answers you and shows it word
-          for word, or tells you the docs do not cover it. It can still pick the wrong paragraph, so check the page it links to
-          before you rely on it.
-        </p>
-
         <AskChat />
       </div>
     </dialog>

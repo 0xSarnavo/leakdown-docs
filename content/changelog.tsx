@@ -4,6 +4,16 @@ import { REPO } from "../lib/nav";
 /* From leakdown-cli CHANGELOG.md. Newest first. */
 const RELEASES: Array<{ v: string; id: string; date: string; head: string; items: Array<[string, React.ReactNode]> }> = [
   {
+    v: "0.8.0",
+    id: "v0-8-0",
+    date: "18 September 2026",
+    head: "A pluggable judge, and every completion claim keeps its page",
+    items: [
+      ["The yes/no rulings can come from somewhere else", <>Three questions have a yes or no answer rather than prose: was the goal reached, which flow checkpoints were reached, and does the page show an <code>--expect</code> value in other words. Point <code>LEAKDOWN_JUDGE</code> at a module that exports <code>createJudge()</code> and it answers those instead of the AI CLI; its usage is recorded apart, as <code>usageJudge</code> in <code>meta.json</code>. Unset, which is the default, nothing changes, and a judge that is missing or failing never ends a session.</>],
+      ["Every completion claim leaves its page behind", <>A session that claims it is done appends to <code>verifications.jsonl</code>: the page that was judged, the verdict, and any <code>--expect</code> results. A rejected completion used to say only that it was rejected; now you can read the page and judge for yourself, and past runs can be replayed without re-visiting the site.</>],
+    ],
+  },
+  {
     v: "0.7.0",
     id: "v0-7-0",
     date: "17 September 2026",

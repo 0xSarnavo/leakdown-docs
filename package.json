@@ -12,6 +12,7 @@
     "start": "next start",
     "corpus": "node scripts/build-corpus.mjs",
     "icon": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/build-icon.mjs",
+    "ascii": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/build-ascii.mjs",
     "eval:ask": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/eval-ask.mjs",
     "audit:ask": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/audit-ask.mjs",
     "tune:ask": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/tune-ask.mjs"
@@ -21,6 +22,7 @@
   },
   "dependencies": {
     "next": "16.3.5",
+    "posthog-js": "^1.434.0",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },

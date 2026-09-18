@@ -323,7 +323,9 @@ export function RequestedRuns() {
       <ul>
         <li>Your site URL, email, run choice and brief, and whether you allow public sharing.</li>
         <li>The run&apos;s videos, logs and screenshots, kept with the report.</li>
-        <li>No cookies, no trackers, nothing sold. Ask and everything is deleted, recordings included.</li>
+        <li>Nothing sold. Ask and everything is deleted, recordings included. This docs site and the
+          main site have their own analytics, described in the <a href="https://leakdown.dev/privacy">privacy
+          policy</a>; the site we test for you is never tracked.</li>
       </ul>
       <Callout kind="note" title="Public sharing is opt-in">
         <p>A finding goes public only if you ticked the box, and only once it is fixed. Ask and it comes down.</p>

@@ -24,6 +24,10 @@ export function proxy(request: NextRequest) {
     `style-src 'self' 'nonce-${nonce}'`,
     `script-src 'self' 'nonce-${nonce}'`,
     "connect-src 'self'",
+    // PostHog's session replay compresses events in a worker it creates from a
+    // blob. Everything else it does is same-origin via the /ingest rewrites, so
+    // this is the only allowance analytics needs; no third-party origin is added.
+    "worker-src 'self' blob:",
     "object-src 'none'",
     "frame-ancestors 'none'",
     "base-uri 'self'",

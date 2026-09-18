@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { trackCopy } from "./track";
 
 /* Copies the text of the element with id `target`. Shows a check for 1.4s. */
 export default function CopyButton({ target }: { target: string }) {
@@ -17,6 +18,7 @@ export default function CopyButton({ target }: { target: string }) {
     } catch {
       next = "fail";
     }
+    if (next === "ok") trackCopy(target);
     setState(next);
     window.clearTimeout(timer.current);
     timer.current = window.setTimeout(() => setState("idle"), 1400);

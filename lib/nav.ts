@@ -3,8 +3,10 @@
    `sections` lists each page's h2 ids so search can jump straight to one. */
 
 export const SITE = "https://leakdown.dev";
+// support, and anything a GitHub issue is the wrong shape for
+export const CONTACT = "talk@leakdown.dev";
 export const REPO = "https://github.com/0xSarnavo/leakdown-cli";
-export const CLI_VERSION = "0.7.0";
+export const CLI_VERSION = "0.8.0";
 
 export type Tab = "guides" | "reference" | "changelog" | "builder" | "ask";
 
@@ -300,6 +302,7 @@ export const PAGES: Page[] = [
     tab: "changelog",
     group: "Releases",
     sections: [
+      ["v0-8-0", "0.8.0"],
       ["v0-7-0", "0.7.0"],
       ["v0-6-0", "0.6.0"],
       ["v0-5-0", "0.5.0"],

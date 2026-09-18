@@ -217,9 +217,9 @@ export default function AskChat({ page = false, autoFocus = false }: { page?: bo
         <div className="askhero-stage" aria-hidden="true">
           <HeroDrop />
         </div>
-        <h2>
+        <h1>
           Ask the docs <span>anything</span>
-        </h2>
+        </h1>
         <p className="askhero-sub">Exact paragraphs, their source, and a straight no when the docs do not cover it.</p>
         {dock}
         <ul className="askstart-eg">
@@ -246,8 +246,20 @@ export default function AskChat({ page = false, autoFocus = false }: { page?: bo
     <>
       <div className={page ? "ask-feed is-page" : "ask-feed"} ref={feed}>
         {!turns.length && (
+          /* The panel opens on the same object and the same sentence as /ask,
+             at panel scale. It used to open on a grey slab of warning text,
+             which read as a disclaimer to dismiss rather than a thing to use;
+             the caveat is still here, at the bottom, where the page keeps it. */
           <div className="ask-empty">
-            <p>{page ? "Try one of these, or ask your own." : "Ask a question about the Leakdown CLI."}</p>
+            <div className="ask-empty-stage" aria-hidden="true">
+              <HeroDrop />
+            </div>
+            <h2>
+              Ask the docs <span>anything</span>
+            </h2>
+            <p className="ask-empty-sub">
+              Exact paragraphs, their source, and a straight no when the docs do not cover it.
+            </p>
             <ul>
               {EXAMPLES.map((e) => (
                 <li key={e}>
@@ -257,6 +269,13 @@ export default function AskChat({ page = false, autoFocus = false }: { page?: bo
                 </li>
               ))}
             </ul>
+            <p className="ask-empty-foot">
+              Powered by{" "}
+              <a href="https://docs.typesafe.ai/models" target="_blank" rel="noreferrer noopener">
+                Jev
+              </a>{" "}
+              <i aria-hidden="true">·</i> Alpha — it can pick the wrong paragraph, so check the page it links to
+            </p>
           </div>
         )}
 
