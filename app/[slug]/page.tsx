@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CONTENT } from "../../lib/pages";
-import { CLI_VERSION, PAGES, REPO, isWide, neighbours, pageBySlug } from "../../lib/nav";
+import { CLI_VERSION, DOC_PAGES, PAGES, REPO, isWide, neighbours, pageBySlug } from "../../lib/nav";
 import Toc from "../../components/toc";
 import PageActions from "../../components/page-actions";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export function generateStaticParams() {
-  return PAGES.map((p) => ({ slug: p.slug }));
+  return DOC_PAGES.map((p) => ({ slug: p.slug }));
 }
 
 export default async function DocPage({ params }: Props) {

@@ -6,7 +6,7 @@ export const SITE = "https://leakdown.ai";
 export const REPO = "https://github.com/0xSarnavo/leakdown-cli";
 export const CLI_VERSION = "0.7.0";
 
-export type Tab = "guides" | "reference" | "changelog" | "builder";
+export type Tab = "guides" | "reference" | "changelog" | "builder" | "ask";
 
 export type Page = {
   slug: string;
@@ -16,6 +16,10 @@ export type Page = {
   group: string;
   sections: Array<[id: string, label: string]>;
   keywords?: string;
+  /* An application, not a documentation page: it has no prose, so it is left
+     out of llms.txt, the sitemap, /<slug>.md and the previous/next chain. It is
+     still in PAGES so the sidebar, the tab strip and search all know it. */
+  app?: boolean;
 };
 
 /* `wide` tabs have no sidebar or contents list: one page, full width. */
@@ -24,6 +28,7 @@ export const TABS: Array<{ id: Tab; label: string; home: string; wide?: boolean 
   { id: "reference", label: "CLI reference", home: "commands" },
   { id: "changelog", label: "Changelog", home: "changelog" },
   { id: "builder", label: "Builder", home: "build-a-command", wide: true },
+  { id: "ask", label: "Ask", home: "ask", wide: true },
 ];
 export const isWide = (tab?: Tab) => !!TABS.find((t) => t.id === tab)?.wide;
 
@@ -303,13 +308,27 @@ export const PAGES: Page[] = [
     ],
     keywords: "release notes version history",
   },
+  {
+    slug: "ask",
+    title: "Ask",
+    description: "Ask the docs a question and get the paragraph that answers it, word for word.",
+    tab: "ask",
+    group: "Ask",
+    sections: [],
+    keywords: "ask search question answer ai chat",
+    app: true,
+  },
 ];
 
 export const pageBySlug = (slug: string) => PAGES.find((p) => p.slug === slug);
 
+/* Everything that is actually documentation. llms.txt, the sitemap, the .md
+   routes and the previous/next chain all mean this, not PAGES. */
+export const DOC_PAGES = PAGES.filter((p) => !p.app);
+
 export function neighbours(slug: string) {
   const tab = pageBySlug(slug)?.tab;
-  const list = PAGES.filter((p) => p.tab === tab);
+  const list = DOC_PAGES.filter((p) => p.tab === tab);
   const i = list.findIndex((p) => p.slug === slug);
   return { prev: i > 0 ? list[i - 1] : undefined, next: i >= 0 && i < list.length - 1 ? list[i + 1] : undefined };
 }

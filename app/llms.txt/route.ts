@@ -1,4 +1,4 @@
-import { PAGES, TABS } from "../../lib/nav";
+import { DOC_PAGES, TABS } from "../../lib/nav";
 
 /* llms.txt: what the docs are, and every page as a markdown link. */
 export const dynamic = "force-dynamic";
@@ -14,8 +14,10 @@ export function GET(req: Request) {
     "",
   ];
   for (const t of TABS) {
+    const pages = DOC_PAGES.filter((p) => p.tab === t.id);
+    if (!pages.length) continue; // an app tab, e.g. Ask: nothing to read as markdown
     lines.push(`## ${t.label}`, "");
-    for (const p of PAGES.filter((p) => p.tab === t.id)) lines.push(`- [${p.title}](${origin}/${p.slug}.md): ${p.description}`);
+    for (const p of pages) lines.push(`- [${p.title}](${origin}/${p.slug}.md): ${p.description}`);
     lines.push("");
   }
   return new Response(lines.join("\n"), { headers: { "content-type": "text/plain; charset=utf-8" } });

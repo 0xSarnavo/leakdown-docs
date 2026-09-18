@@ -10,7 +10,8 @@ export const dynamic = "force-dynamic";
 export async function GET(req: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const page = pageBySlug(slug);
-  if (!page) return new Response("not found", { status: 404 });
+  // an app page has no prose to convert
+  if (!page || page.app) return new Response("not found", { status: 404 });
   // the PUBLIC origin: behind a proxy (Railway, Vercel) req.url can carry the
   // internal host, and the links written into the markdown must be clickable
   const h = req.headers;
