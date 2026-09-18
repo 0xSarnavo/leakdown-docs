@@ -14,9 +14,9 @@ import { NextRequest, NextResponse } from "next/server";
 // No matcher config: the proxy (Next 16 name for middleware) runs on ALL routes, including /api/* (03-03
 // inherits this shell unchanged).
 export function proxy(request: NextRequest) {
-  const nonce = Buffer.from(
-    crypto.getRandomValues(new Uint8Array(16)),
-  ).toString("base64");
+  // btoa, not Buffer: this file is middleware, which Vercel runs on the Edge
+  // runtime where Node globals are not guaranteed. Works unchanged on Node.
+  const nonce = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(16))));
 
   const csp = [
     "default-src 'self'",

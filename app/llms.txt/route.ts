@@ -4,7 +4,9 @@ import { PAGES, TABS } from "../../lib/nav";
 export const dynamic = "force-dynamic";
 
 export function GET(req: Request) {
-  const origin = new URL(req.url).origin;
+  const h = req.headers;
+  const host = h.get("x-forwarded-host") || h.get("host");
+  const origin = host ? `${h.get("x-forwarded-proto") || "https"}://${host}` : new URL(req.url).origin;
   const lines = [
     "# Leakdown Docs",
     "",
