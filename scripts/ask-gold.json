@@ -494,8 +494,10 @@
       "blocks": [
         "flows-H000",
         "flows-H001",
-        "goal-tests-H001"
-      ]
+        "goal-tests-H001",
+        "cli-agents-H007"
+      ],
+      "why": "cli-agents-H007 is the CLI repo's flows section and shows --flow-file"
     },
     {
       "q": "what happens to sessions that run out of time?",
@@ -849,8 +851,10 @@
         "commands-H001",
         "cli-help-H003",
         "cli-agents-H016",
-        "how-it-works-H001"
-      ]
+        "how-it-works-H001",
+        "cli-agents-H004"
+      ],
+      "why": "cli-agents-H004 shows 'leakdown site-a.dev --stop personas' with what it does"
     },
     {
       "q": "how often can I request a run?",

@@ -13,6 +13,7 @@
     "corpus": "node scripts/build-corpus.mjs",
     "icon": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/build-icon.mjs",
     "eval:ask": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/eval-ask.mjs",
+    "audit:ask": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/audit-ask.mjs",
     "tune:ask": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/tune-ask.mjs"
   },
   "engines": {
