@@ -8,9 +8,12 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
+    "typecheck": "tsc --noEmit",
     "start": "next start",
     "corpus": "node scripts/build-corpus.mjs",
-    "eval:ask": "node --experimental-strip-types scripts/eval-ask.mjs"
+    "icon": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/build-icon.mjs",
+    "eval:ask": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/eval-ask.mjs",
+    "tune:ask": "node --experimental-strip-types --import ./scripts/ts-resolve.mjs scripts/tune-ask.mjs"
   },
   "engines": {
     "node": "24.x"
