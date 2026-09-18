@@ -3,6 +3,7 @@ import "./globals.css";
 import Topbar from "../components/topbar";
 import Sidebar from "../components/sidebar";
 import Search from "../components/search";
+import Ask from "../components/ask";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://docs.leakdown.ai"),
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main id="main">{children}</main>
         </div>
         <Search />
+        <Ask />
       </body>
     </html>
   );

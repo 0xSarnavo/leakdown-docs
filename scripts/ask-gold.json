@@ -1,0 +1,294 @@
+{
+  "note": "Gold set for scripts/eval-ask.mjs. `blocks` lists every block that would be a correct top answer; a query is right if the top-ranked block is one of them. `expect` is the verdict the reader should see.",
+  "queries": [
+    {
+      "q": "how do I install the leakdown CLI?",
+      "expect": "answered",
+      "blocks": [
+        "quickstart-H002",
+        "quickstart-H003",
+        "cli-readme-H007"
+      ]
+    },
+    {
+      "q": "what node version do I need?",
+      "expect": "answered",
+      "blocks": [
+        "quickstart-H001",
+        "cli-readme-H007",
+        "cli-agents-H003"
+      ]
+    },
+    {
+      "q": "what does exit code 2 mean?",
+      "expect": "answered",
+      "blocks": [
+        "goal-tests-H002",
+        "exit-codes-H002"
+      ]
+    },
+    {
+      "q": "what does the --ladder flag do?",
+      "expect": "answered",
+      "blocks": [
+        "how-it-works-H003",
+        "cli-agents-H006",
+        "commands-H001",
+        "cli-help-H003"
+      ]
+    },
+    {
+      "q": "how do I test a phone layout?",
+      "expect": "answered",
+      "blocks": [
+        "use-cases-H002",
+        "commands-H001",
+        "cli-help-H003"
+      ]
+    },
+    {
+      "q": "how do I run an A/B test between two versions?",
+      "expect": "answered",
+      "blocks": [
+        "ab-tests-H001",
+        "ab-tests-H000",
+        "cli-agents-H009"
+      ]
+    },
+    {
+      "q": "where is the report written on disk?",
+      "expect": "answered",
+      "blocks": [
+        "files-H001",
+        "quickstart-H008",
+        "cli-agents-H020",
+        "reading-the-report-H001",
+        "cli-help-H005"
+      ],
+      "why": "cli-help's PER SITE, ON DISK section lists runs/<site>/AGGREGATE.md outright, so it answers this as squarely as the docs pages do"
+    },
+    {
+      "q": "how do I delete the data leakdown stored?",
+      "expect": "answered",
+      "blocks": [
+        "your-data-H002",
+        "cli-readme-H006"
+      ]
+    },
+    {
+      "q": "which environment variable sets up the mailbox?",
+      "expect": "answered",
+      "blocks": [
+        "environment-H001",
+        "email-H001"
+      ]
+    },
+    {
+      "q": "what are the six stages of a run?",
+      "expect": "answered",
+      "blocks": [
+        "how-it-works-H001",
+        "cli-help-H001"
+      ]
+    },
+    {
+      "q": "how do I write my own flow file?",
+      "expect": "answered",
+      "blocks": [
+        "flows-H001",
+        "flows-H000",
+        "cli-agents-H008"
+      ]
+    },
+    {
+      "q": "how do I check my setup is working?",
+      "expect": "answered",
+      "blocks": [
+        "quickstart-H005",
+        "cli-agents-H003"
+      ]
+    },
+    {
+      "q": "what does leakdown never do?",
+      "expect": "answered",
+      "blocks": [
+        "safety-H002",
+        "cli-readme-H003",
+        "safety-H000"
+      ]
+    },
+    {
+      "q": "how do I choose which AI model runs the sessions?",
+      "expect": "answered",
+      "blocks": [
+        "choosing-the-ai-H001",
+        "choosing-the-ai-H000",
+        "cli-agents-H004",
+        "cli-agents-H011"
+      ]
+    },
+    {
+      "q": "what changed in version 0.7.0?",
+      "expect": "answered",
+      "blocks": [
+        "changelog-H001",
+        "cli-changelog-H002"
+      ]
+    },
+    {
+      "q": "how do I run a goal test in a CI job?",
+      "expect": "answered",
+      "blocks": [
+        "goal-tests-H004",
+        "goal-tests-H001",
+        "goal-tests-H000",
+        "cli-agents-H007"
+      ]
+    },
+    {
+      "q": "what are the three preset personas?",
+      "expect": "answered",
+      "blocks": [
+        "personas-H001",
+        "personas-H000"
+      ]
+    },
+    {
+      "q": "how do I report a bug?",
+      "expect": "answered",
+      "blocks": [
+        "troubleshooting-H002"
+      ]
+    },
+    {
+      "q": "what does --expect do?",
+      "expect": "answered",
+      "blocks": [
+        "goal-tests-H003",
+        "commands-H001"
+      ]
+    },
+    {
+      "q": "can you run the test for me instead?",
+      "expect": "answered",
+      "blocks": [
+        "requested-runs-H000",
+        "requested-runs-H001",
+        "requested-runs-H006",
+        "requested-runs-H002"
+      ]
+    },
+    {
+      "q": "what files does each session write?",
+      "expect": "answered",
+      "blocks": [
+        "files-H002",
+        "cli-agents-H020"
+      ]
+    },
+    {
+      "q": "how do I stop the run after a particular stage?",
+      "expect": "answered",
+      "blocks": [
+        "commands-H001",
+        "cli-help-H001",
+        "cli-help-H003",
+        "how-it-works-H001"
+      ]
+    },
+    {
+      "q": "how do I supply my own personas?",
+      "expect": "answered",
+      "blocks": [
+        "personas-H003",
+        "cli-agents-H015"
+      ]
+    },
+    {
+      "q": "what happens at an email confirmation wall?",
+      "expect": "answered",
+      "blocks": [
+        "email-H000",
+        "email-H001",
+        "email-H002",
+        "email-H003",
+        "cli-readme-H004"
+      ]
+    },
+    {
+      "q": "how sure is the report about a finding?",
+      "expect": "answered",
+      "blocks": [
+        "reading-the-report-H002",
+        "reading-the-report-H000"
+      ]
+    },
+    {
+      "q": "how many prospects can I queue at once?",
+      "expect": "answered",
+      "blocks": [
+        "cli-help-H002",
+        "commands-H001",
+        "personas-H002"
+      ]
+    },
+    {
+      "q": "do I need permission before testing a site?",
+      "expect": "answered",
+      "blocks": [
+        "safety-H001",
+        "safety-H000",
+        "cli-agents-H018",
+        "cli-help-H000"
+      ]
+    },
+    {
+      "q": "what does a rerun reuse instead of redoing?",
+      "expect": "answered",
+      "blocks": [
+        "how-it-works-H004",
+        "commands-H001"
+      ]
+    },
+    {
+      "q": "what is the company holiday policy?",
+      "expect": "absent",
+      "blocks": []
+    },
+    {
+      "q": "how do I deploy a Kubernetes cluster?",
+      "expect": "absent",
+      "blocks": []
+    },
+    {
+      "q": "what is the refund policy for enterprise contracts?",
+      "expect": "absent",
+      "blocks": []
+    },
+    {
+      "q": "who is the CEO of the company?",
+      "expect": "absent",
+      "blocks": []
+    },
+    {
+      "q": "how do I fine-tune a custom language model on my own data?",
+      "expect": "absent",
+      "blocks": []
+    },
+    {
+      "q": "how do I integrate this with Salesforce?",
+      "expect": "absent",
+      "blocks": []
+    },
+    {
+      "q": "what is the uptime guarantee?",
+      "expect": "absent",
+      "blocks": []
+    },
+    {
+      "q": "how do I invoice a client for a run?",
+      "expect": "absent",
+      "blocks": []
+    }
+  ]
+}

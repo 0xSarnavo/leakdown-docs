@@ -69,6 +69,13 @@ export default function Topbar() {
           <span>Search docs</span>
           <kbd>⌘K</kbd>
         </button>
+        <button className="ask-btn" type="button" onClick={() => window.dispatchEvent(new Event("docs:ask"))}>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-5.5A8 8 0 1 1 21 12z" />
+          </svg>
+          <span>Ask</span>
+          <em>alpha</em>
+        </button>
         <nav className="tabs" aria-label="Sections">
           {TABS.map((t) => (
             <Link key={t.id} href={`/${t.home}`} className={`${t.wide ? "is-sep " : ""}${tab === t.id ? "is-on" : ""}`.trim() || undefined} aria-current={tab === t.id ? "page" : undefined}>
