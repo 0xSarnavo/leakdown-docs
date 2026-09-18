@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import HeroDrop from "./hero-drop";
 import Md from "./md";
 
 /* The conversation itself, shared by the panel (components/ask.tsx) and the
@@ -142,8 +143,14 @@ export default function AskChat({ page = false, autoFocus = false }: { page?: bo
      composer drops to the bottom and the answers take the room. */
   if (page && !turns.length) {
     return (
-      <div className="askstart">
-        <h2>What do you want to know?</h2>
+      <section className="askhero">
+        <div className="askhero-stage" aria-hidden="true">
+          <HeroDrop />
+        </div>
+        <h2>
+          Ask the docs <span>anything</span>
+        </h2>
+        <p className="askhero-sub">Exact paragraphs, their source, and a straight no when the docs do not cover it.</p>
         {dock}
         <ul className="askstart-eg">
           {EXAMPLES.map((e) => (
@@ -154,8 +161,14 @@ export default function AskChat({ page = false, autoFocus = false }: { page?: bo
             </li>
           ))}
         </ul>
-        <p className="askstart-note">Leakdown is in alpha.</p>
-      </div>
+        <p className="askhero-foot">
+          Powered by{" "}
+          <a href="https://docs.typesafe.ai/models" target="_blank" rel="noreferrer noopener">
+            Jev
+          </a>{" "}
+          <i aria-hidden="true">·</i> Exact paragraphs, no hallucinations <i aria-hidden="true">·</i> Leakdown is in alpha
+        </p>
+      </section>
     );
   }
 
