@@ -6,7 +6,6 @@
       "expect": "answered",
       "blocks": [
         "quickstart-H002",
-        "quickstart-H003",
         "cli-readme-H007"
       ],
       "tag": "baseline"
@@ -17,7 +16,7 @@
       "blocks": [
         "quickstart-H001",
         "cli-readme-H007",
-        "cli-agents-H003"
+        "cli-agents-H002"
       ],
       "tag": "baseline"
     },
@@ -35,7 +34,7 @@
       "expect": "answered",
       "blocks": [
         "how-it-works-H003",
-        "cli-agents-H006",
+        "cli-agents-H005",
         "commands-H001",
         "cli-help-H003"
       ],
@@ -57,7 +56,7 @@
       "blocks": [
         "ab-tests-H001",
         "ab-tests-H000",
-        "cli-agents-H009"
+        "cli-agents-H008"
       ],
       "tag": "baseline"
     },
@@ -66,8 +65,8 @@
       "expect": "answered",
       "blocks": [
         "files-H001",
-        "quickstart-H008",
-        "cli-agents-H020",
+        "quickstart-H003",
+        "cli-agents-H019",
         "reading-the-report-H001",
         "cli-help-H005"
       ],
@@ -107,7 +106,7 @@
       "blocks": [
         "flows-H001",
         "flows-H000",
-        "cli-agents-H008"
+        "cli-agents-H007"
       ],
       "tag": "baseline"
     },
@@ -115,8 +114,8 @@
       "q": "how do I check my setup is working?",
       "expect": "answered",
       "blocks": [
-        "quickstart-H005",
-        "cli-agents-H003"
+        "quickstart-H002",
+        "cli-agents-H002"
       ],
       "tag": "baseline"
     },
@@ -136,8 +135,8 @@
       "blocks": [
         "choosing-the-ai-H001",
         "choosing-the-ai-H000",
-        "cli-agents-H004",
-        "cli-agents-H011"
+        "cli-agents-H003",
+        "cli-agents-H010"
       ],
       "tag": "baseline"
     },
@@ -157,7 +156,7 @@
         "goal-tests-H004",
         "goal-tests-H001",
         "goal-tests-H000",
-        "cli-agents-H007"
+        "cli-agents-H006"
       ],
       "tag": "baseline"
     },
@@ -193,8 +192,7 @@
       "blocks": [
         "requested-runs-H000",
         "requested-runs-H001",
-        "requested-runs-H006",
-        "requested-runs-H002"
+        "requested-runs-H003"
       ],
       "tag": "baseline"
     },
@@ -203,7 +201,7 @@
       "expect": "answered",
       "blocks": [
         "files-H002",
-        "cli-agents-H020"
+        "cli-agents-H019"
       ],
       "tag": "baseline"
     },
@@ -223,7 +221,7 @@
       "expect": "answered",
       "blocks": [
         "personas-H003",
-        "cli-agents-H015"
+        "cli-agents-H014"
       ],
       "tag": "baseline"
     },
@@ -264,7 +262,7 @@
       "blocks": [
         "safety-H001",
         "safety-H000",
-        "cli-agents-H018",
+        "cli-agents-H017",
         "cli-help-H000"
       ],
       "tag": "baseline"
@@ -365,7 +363,7 @@
         "environment-H003",
         "cli-readme-H000",
         "choosing-the-ai-H000",
-        "cli-agents-H003",
+        "cli-agents-H002",
         "introduction-H000"
       ],
       "why": "introduction-H000 says 'needs no API key' outright"
@@ -376,7 +374,7 @@
       "tag": "paraphrase",
       "blocks": [
         "files-H002",
-        "cli-agents-H020",
+        "cli-agents-H019",
         "reading-the-report-H004",
         "files-H001",
         "cli-readme-H006"
@@ -430,8 +428,8 @@
       "tag": "paraphrase",
       "blocks": [
         "use-cases-H004",
-        "cli-agents-H010",
-        "requested-runs-H004"
+        "cli-agents-H009",
+        "requested-runs-H001"
       ]
     },
     {
@@ -440,7 +438,7 @@
       "tag": "paraphrase",
       "blocks": [
         "choosing-the-ai-H001",
-        "cli-agents-H011",
+        "cli-agents-H010",
         "choosing-the-ai-H002"
       ]
     },
@@ -452,7 +450,7 @@
         "commands-H001",
         "cli-help-H003",
         "goal-tests-H004",
-        "quickstart-H007"
+        "quickstart-H003"
       ],
       "why": "quickstart-H007 shows the --headless invocation"
     },
@@ -463,7 +461,7 @@
       "blocks": [
         "safety-H002",
         "safety-H003",
-        "cli-agents-H018"
+        "cli-agents-H017"
       ]
     },
     {
@@ -473,7 +471,7 @@
       "blocks": [
         "goal-tests-H004",
         "choosing-the-ai-H002",
-        "cli-agents-H005",
+        "cli-agents-H004",
         "cli-help-H003",
         "commands-H001"
       ],
@@ -486,7 +484,7 @@
       "blocks": [
         "ab-tests-H000",
         "ab-tests-H001",
-        "cli-agents-H009"
+        "cli-agents-H008"
       ]
     },
     {
@@ -533,7 +531,7 @@
       "tag": "terse",
       "blocks": [
         "how-it-works-H003",
-        "cli-agents-H006",
+        "cli-agents-H005",
         "cli-help-H003"
       ]
     },
@@ -555,8 +553,8 @@
         "reading-the-report-H000",
         "reading-the-report-H001",
         "files-H001",
-        "quickstart-H008",
-        "cli-agents-H020"
+        "quickstart-H003",
+        "cli-agents-H019"
       ]
     },
     {
@@ -565,7 +563,7 @@
       "tag": "terse",
       "blocks": [
         "personas-H004",
-        "cli-agents-H016",
+        "cli-agents-H015",
         "files-H003"
       ]
     },
@@ -574,8 +572,8 @@
       "expect": "answered",
       "tag": "terse",
       "blocks": [
-        "quickstart-H005",
-        "cli-agents-H021",
+        "quickstart-H002",
+        "cli-agents-H020",
         "troubleshooting-H000",
         "commands-H001"
       ],
@@ -588,7 +586,7 @@
       "blocks": [
         "email-H001",
         "environment-H001",
-        "cli-agents-H003"
+        "cli-agents-H002"
       ]
     },
     {
@@ -605,7 +603,7 @@
       "tag": "terse",
       "blocks": [
         "ab-tests-H001",
-        "cli-agents-H009",
+        "cli-agents-H008",
         "commands-H001"
       ]
     },
@@ -614,7 +612,7 @@
       "expect": "answered",
       "tag": "terse",
       "blocks": [
-        "cli-agents-H006",
+        "cli-agents-H005",
         "how-it-works-H003",
         "commands-H001"
       ]
@@ -625,7 +623,6 @@
       "tag": "typo",
       "blocks": [
         "quickstart-H002",
-        "quickstart-H003",
         "cli-readme-H007"
       ]
     },
@@ -644,7 +641,7 @@
       "tag": "typo",
       "blocks": [
         "personas-H001",
-        "cli-agents-H013"
+        "cli-agents-H012"
       ]
     },
     {
@@ -692,8 +689,8 @@
       "expect": "answered",
       "tag": "typo",
       "blocks": [
-        "quickstart-H004",
-        "cli-agents-H003",
+        "quickstart-H002",
+        "cli-agents-H002",
         "cli-readme-H007",
         "quickstart-H001"
       ]
@@ -703,8 +700,8 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H025",
-        "cli-agents-H026"
+        "cli-agents-H024",
+        "cli-agents-H025"
       ]
     },
     {
@@ -712,9 +709,9 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H028",
-        "cli-agents-H015",
-        "cli-agents-H014"
+        "cli-agents-H027",
+        "cli-agents-H014",
+        "cli-agents-H013"
       ]
     },
     {
@@ -722,7 +719,7 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H026"
+        "cli-agents-H025"
       ]
     },
     {
@@ -730,7 +727,7 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H029"
+        "cli-agents-H028"
       ]
     },
     {
@@ -738,7 +735,7 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H012"
+        "cli-agents-H011"
       ]
     },
     {
@@ -746,7 +743,7 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H027"
+        "cli-agents-H026"
       ]
     },
     {
@@ -754,7 +751,7 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H034",
+        "cli-agents-H032",
         "cli-readme-H008"
       ]
     },
@@ -763,8 +760,8 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H031",
-        "cli-agents-H032"
+        "cli-agents-H029",
+        "cli-agents-H030"
       ]
     },
     {
@@ -772,7 +769,7 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H033",
+        "cli-agents-H031",
         "cli-changelog-H000"
       ]
     },
@@ -781,7 +778,7 @@
       "expect": "answered",
       "tag": "internals",
       "blocks": [
-        "cli-agents-H023"
+        "cli-agents-H022"
       ]
     },
     {
@@ -811,7 +808,7 @@
         "how-it-works-H001",
         "cli-help-H001",
         "files-H001",
-        "cli-agents-H020",
+        "cli-agents-H019",
         "changelog-H004",
         "cli-readme-H001"
       ],
@@ -831,7 +828,7 @@
       "tag": "factual",
       "blocks": [
         "how-it-works-H004",
-        "cli-agents-H020",
+        "cli-agents-H019",
         "files-H001"
       ]
     },
@@ -851,7 +848,7 @@
       "blocks": [
         "commands-H001",
         "cli-help-H003",
-        "cli-agents-H017",
+        "cli-agents-H016",
         "how-it-works-H001"
       ]
     },
@@ -860,7 +857,7 @@
       "expect": "answered",
       "tag": "factual",
       "blocks": [
-        "requested-runs-H004"
+        "requested-runs-H001"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
- "built_at": "2026-09-18T12:02:07.636Z",
+ "built_at": "2026-09-18T12:40:11.140Z",
  "sources": [
   "docs:llms.txt",
   "cli:repo"
@@ -17,7 +17,7 @@
    "title": "Quickstart",
    "slug": "quickstart",
    "source": "docs",
-   "block_count": 10
+   "block_count": 5
   },
   {
    "url": "https://docs.leakdown.ai/how-it-works.md",
@@ -31,7 +31,7 @@
    "title": "Requested runs",
    "slug": "requested-runs",
    "source": "docs",
-   "block_count": 8
+   "block_count": 4
   },
   {
    "url": "https://docs.leakdown.ai/use-cases.md",
@@ -164,7 +164,7 @@
    "title": "AGENTS.md — leakdown",
    "slug": "cli-agents",
    "source": "cli",
-   "block_count": 35
+   "block_count": 33
   },
   {
    "url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/CHANGELOG.md",
@@ -286,7 +286,7 @@
     "Install"
    ],
    "level": 2,
-   "text": "## Install\n\nInstalling takes three steps and a few minutes."
+   "text": "## Install\n\nInstalling takes three steps and a few minutes.\n\n### Get the code\n\n```\ngit clone https://github.com/0xSarnavo/leakdown-cli\ncd leakdown-cli && npm ci && npm run build\n```\n\n### Add a browser and video support\n\n```\nnpx playwright install chromium\nbrew install ffmpeg\n```\n\n### Check your setup\n\n```\nnode dist/cli.js --doctor  checking your setup...\n  ✓ Node.js >= 20: v22.12.0\n  ✓ Playwright chromium: launches OK\n  ✓ AI CLI (any one): claude: installed, codex: not installed, opencode: installed\n  ✓ brain claude (live call): responded\n  ✓ mailbox (live): not configured (optional — see README for OTP signups)\n  ✓ ffmpeg: /opt/homebrew/bin/ffmpeg — sessions get a playable video.mp4\n\n```\n\nA `✗` line names what to install. The result is cached for a week; `--doctor --force` checks again."
   },
   {
    "block_id": "quickstart-H003",
@@ -295,78 +295,13 @@
    "page_title": "Quickstart",
    "heading_path": [
     "Quickstart",
-    "Install",
-    "Get the code"
-   ],
-   "level": 3,
-   "text": "### Get the code\n\n```\ngit clone https://github.com/0xSarnavo/leakdown-cli\ncd leakdown-cli && npm ci && npm run build\n```"
-  },
-  {
-   "block_id": "quickstart-H004",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
-   "page_title": "Quickstart",
-   "heading_path": [
-    "Quickstart",
-    "Install",
-    "Add a browser and video support"
-   ],
-   "level": 3,
-   "text": "### Add a browser and video support\n\n```\nnpx playwright install chromium\nbrew install ffmpeg\n```"
-  },
-  {
-   "block_id": "quickstart-H005",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
-   "page_title": "Quickstart",
-   "heading_path": [
-    "Quickstart",
-    "Install",
-    "Check your setup"
-   ],
-   "level": 3,
-   "text": "### Check your setup\n\n```\nnode dist/cli.js --doctor  checking your setup...\n  ✓ Node.js >= 20: v22.12.0\n  ✓ Playwright chromium: launches OK\n  ✓ AI CLI (any one): claude: installed, codex: not installed, opencode: installed\n  ✓ brain claude (live call): responded\n  ✓ mailbox (live): not configured (optional — see README for OTP signups)\n  ✓ ffmpeg: /opt/homebrew/bin/ffmpeg — sessions get a playable video.mp4\n\n```\n\nA `✗` line names what to install. The result is cached for a week; `--doctor --force` checks again."
-  },
-  {
-   "block_id": "quickstart-H006",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
-   "page_title": "Quickstart",
-   "heading_path": [
-    "Quickstart",
     "Your first run"
    ],
    "level": 2,
-   "text": "## Your first run\n\nThe first run uses the full ladder, then you open the report it writes."
+   "text": "## Your first run\n\nThe first run uses the full ladder, then you open the report it writes.\n\n### Run the full test\n\n```\nnode dist/cli.js your-site.com --ladder --yes --headless  ladder on your-site.com: wide haiku ×10 → filter → sonnet verifies → opus digs\n\n▸ stage 1/6 · site\n  ...\n  ladder done: 10 wide + 1 deep session(s). VERIFIED.md and REPORT.md sit beside the report, mirrored at runs/your-site.com/.\n\n  3 of 10 completed their goal. 4 walked out with a reason. 3 ran out of patience still trying.\n  Fix first: your-site.com/signup/step-2 — 3 of 10 walked out here\n  \"The plan selector looks like a confirmation page. I think I am done.\"\n\n  Full report: runs/your-site.com/2026-09-17/10-14-02/AGGREGATE.md, then REPORT.md beside it\n\n```\n\n`--yes` takes the default for every question and `--headless` hides the browser. Drop both to watch it and answer the menus yourself. The last four lines are the result: the one number, the first wall, and where the report is.\n\n### Read the report\n\n```\nruns/your-site.com/AGGREGATE.md\n```\n\n[Reading the report](https://docs.leakdown.ai/reading-the-report) explains each section.\n\nMake it a command\n\nRun `npm link` once inside the clone and every command works as `leakdown` instead of `node dist/cli.js`, from any folder. The CLI reads `.env` from, and writes `runs/` to, the folder you run it in."
   },
   {
-   "block_id": "quickstart-H007",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
-   "page_title": "Quickstart",
-   "heading_path": [
-    "Quickstart",
-    "Your first run",
-    "Run the full test"
-   ],
-   "level": 3,
-   "text": "### Run the full test\n\n```\nnode dist/cli.js your-site.com --ladder --yes --headless  ladder on your-site.com: wide haiku ×10 → filter → sonnet verifies → opus digs\n\n▸ stage 1/6 · site\n  ...\n  ladder done: 10 wide + 1 deep session(s). VERIFIED.md and REPORT.md sit beside the report, mirrored at runs/your-site.com/.\n\n  3 of 10 completed their goal. 4 walked out with a reason. 3 ran out of patience still trying.\n  Fix first: your-site.com/signup/step-2 — 3 of 10 walked out here\n  \"The plan selector looks like a confirmation page. I think I am done.\"\n\n  Full report: runs/your-site.com/2026-09-17/10-14-02/AGGREGATE.md, then REPORT.md beside it\n\n```\n\n`--yes` takes the default for every question and `--headless` hides the browser. Drop both to watch it and answer the menus yourself. The last four lines are the result: the one number, the first wall, and where the report is."
-  },
-  {
-   "block_id": "quickstart-H008",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
-   "page_title": "Quickstart",
-   "heading_path": [
-    "Quickstart",
-    "Your first run",
-    "Read the report"
-   ],
-   "level": 3,
-   "text": "### Read the report\n\n```\nruns/your-site.com/AGGREGATE.md\n```\n\n[Reading the report](https://docs.leakdown.ai/reading-the-report) explains each section.\n\nMake it a command\n\nRun `npm link` once inside the clone and every command works as `leakdown` instead of `node dist/cli.js`, from any folder. The CLI reads `.env` from, and writes `runs/` to, the folder you run it in."
-  },
-  {
-   "block_id": "quickstart-H009",
+   "block_id": "quickstart-H004",
    "source": "docs",
    "page_url": "https://docs.leakdown.ai/quickstart",
    "page_title": "Quickstart",
@@ -457,49 +392,10 @@
     "How it works"
    ],
    "level": 2,
-   "text": "## How it works"
+   "text": "## How it works\n\n### Send the request\n\nYour site, your email, and a full run (default) or a special run with what you want tested. You confirm you may test the site.\n\n### We run it\n\nA person picks it up and runs it on our machine. Nothing runs automatically.\n\n### The report arrives\n\nA PDF with the funnel and every fix. One request per email per day."
   },
   {
    "block_id": "requested-runs-H002",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/requested-runs",
-   "page_title": "Requested runs",
-   "heading_path": [
-    "Requested runs",
-    "How it works",
-    "Send the request"
-   ],
-   "level": 3,
-   "text": "### Send the request\n\nYour site, your email, and a full run (default) or a special run with what you want tested. You confirm you may test the site."
-  },
-  {
-   "block_id": "requested-runs-H003",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/requested-runs",
-   "page_title": "Requested runs",
-   "heading_path": [
-    "Requested runs",
-    "How it works",
-    "We run it"
-   ],
-   "level": 3,
-   "text": "### We run it\n\nA person picks it up and runs it on our machine. Nothing runs automatically."
-  },
-  {
-   "block_id": "requested-runs-H004",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/requested-runs",
-   "page_title": "Requested runs",
-   "heading_path": [
-    "Requested runs",
-    "How it works",
-    "The report arrives"
-   ],
-   "level": 3,
-   "text": "### The report arrives\n\nA PDF with the funnel and every fix. One request per email per day."
-  },
-  {
-   "block_id": "requested-runs-H005",
    "source": "docs",
    "page_url": "https://docs.leakdown.ai/requested-runs",
    "page_title": "Requested runs",
@@ -511,7 +407,7 @@
    "text": "## What we keep\n\n- Your site URL, email, run choice and brief, and whether you allow public sharing.\n- The run's videos, logs and screenshots, kept with the report.\n- No cookies, no trackers, nothing sold. Ask and everything is deleted, recordings included.\n\nPublic sharing is opt-in\n\nA finding goes public only if you ticked the box, and only once it is fixed. Ask and it comes down."
   },
   {
-   "block_id": "requested-runs-H006",
+   "block_id": "requested-runs-H003",
    "source": "docs",
    "page_url": "https://docs.leakdown.ai/requested-runs",
    "page_title": "Requested runs",
@@ -520,20 +416,7 @@
     "Request one"
    ],
    "level": 2,
-   "text": "## Request one\n\n[Request a run on leakdown.ai ↗](https://leakdown.ai/#request) · [Privacy](https://leakdown.ai/privacy)"
-  },
-  {
-   "block_id": "requested-runs-H007",
-   "source": "docs",
-   "page_url": "https://docs.leakdown.ai/requested-runs",
-   "page_title": "Requested runs",
-   "heading_path": [
-    "Requested runs",
-    "Request one",
-    "For the operator"
-   ],
-   "level": 3,
-   "text": "### For the operator\n\n```\nleakdown --orders            # new requests on the website\nleakdown --order         # run one here and email the PDF\n```\n\nNeeds the website's URL and token in `.env` and mail configured. See [Environment variables](https://docs.leakdown.ai/environment#orders)."
+   "text": "## Request one\n\n[Request a run on leakdown.ai ↗](https://leakdown.ai/#request) · [Privacy](https://leakdown.ai/privacy)\n\n### For the operator\n\n```\nleakdown --orders            # new requests on the website\nleakdown --order         # run one here and email the PDF\n```\n\nNeeds the website's URL and token in `.env` and mail configured. See [Environment variables](https://docs.leakdown.ai/environment#orders)."
   },
   {
    "block_id": "use-cases-H000",
@@ -1472,17 +1355,6 @@
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
    "heading_path": [
-    "Part 1 — Operating the tool"
-   ],
-   "level": 1,
-   "text": "# Part 1 — Operating the tool"
-  },
-  {
-   "block_id": "cli-agents-H002",
-   "source": "cli",
-   "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
-   "page_title": "AGENTS.md — leakdown",
-   "heading_path": [
     "Part 1 — Operating the tool",
     "What leakdown does"
    ],
@@ -1490,7 +1362,7 @@
    "text": "## What leakdown does\n\nSimulated prospects visit a target URL in a real browser (Playwright). At each step an AI CLI — playing a persona — sees an accessibility snapshot and decides the next action: click, type, scroll, check email, pause, abandon. Everything is logged. Expert agents then review sessions and produce fix recommendations."
   },
   {
-   "block_id": "cli-agents-H003",
+   "block_id": "cli-agents-H002",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1502,7 +1374,7 @@
    "text": "## Environment setup\n\n```bash\nnpm install\nnpm run build\nnpx playwright install chromium   # one time\nbrew install ffmpeg               # one time — playable video.mp4 per session (else video.webm only)\n```\n\nRequirements: Node 20+, and at least one AI CLI logged in via subscription (no API keys):\n- `claude` (Claude Code)\n- `opencode` (opencode)\n\n**Verify environment (runs automatically on first visit):**\n\n```bash\nleakdown --doctor          # deep check incl. live brain call + mailbox test\nleakdown --doctor --force  # re-run even if recently verified\n```\n\nResults are cached in `.leakdown-state.json` (gitignored) for 7 days — checks don't re-run every time.\n\n**Optional — email verification support (OTP/magic links):** create `.env` in the project root:\n\n```\nLEAKDOWN_IMAP_HOST=\"imap.gmail.com\"\nLEAKDOWN_IMAP_USER=\"you@gmail.com\"\nLEAKDOWN_IMAP_PASS=\"xxxx xxxx xxxx xxxx\"   # Gmail app password\nLEAKDOWN_MAIL_DOMAIN=\"yourdomain.com\"      # domain with catch-all → your inbox\n```\n\nLegacy `CLIENTSIM_*` vars still work for one minor with a deprecation warning — use `LEAKDOWN_*`.\n\nRequires a domain whose catch-all forwards to the IMAP inbox. Without it, personas treat \"check your email\" walls as drop-off points (still valid data). Test with `leakdown --mailtest`.\n\nEvery run probes the mailbox first (one self-sent message, once a day, up to 5 minutes) and records the result on each session's `meta.json`. A failed probe does not stop the run; it puts an \"email verdicts unverified\" warning at the top of `AGGREGATE.md`. If two or more prospects in one run give up over email, the probe runs again afterwards and a failure writes `runs/<site>/MAIL-WARNING.md`. Gmail files self-sent mail under All Mail, never INBOX, so the poller scans the `\\All` folder where one exists."
   },
   {
-   "block_id": "cli-agents-H004",
+   "block_id": "cli-agents-H003",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1514,7 +1386,7 @@
    "text": "## Choosing the AI (brain, model, effort)\n\nEvery stage that calls an AI — the site read, persona generation, the visits, the\nexpert panel, `--doctor` — resolves three things: which CLI plays the client,\nwhich model, and how much reasoning effort. They are resolved once and reused for\nthe rest of the run. Pass them as flags or let it ask.\n\n```bash\nleakdown <url>                                    # menus for all three\nleakdown <url> --brain claude                     # menus for model + effort only\nleakdown <url> --brain claude --model opus --effort high   # no menus\n```\n\nThe menus are arrow-key driven and the lists are probed live from the CLI you\npick, not hardcoded here:\n\n| Brain | Models from | Effort from |\n|---|---|---|\n| `claude` | `claude --help` aliases | `claude --help` (`low`…`max`) |\n| `codex` | `codex --help`, else a fallback list | `low\\|medium\\|high` |\n| `opencode` | `opencode models` | none — opencode has no effort knob, so it isn't asked |\n\nBoth menus always offer **default** (leave the CLI's own setting alone) and, for\nmodels, **custom…** to type any id.\n\n**Automation:** with no TTY nothing is ever prompted — `--brain` falls back to\n`claude` and model/effort to the CLI's defaults. Always pass the flags explicitly\nin scripts and CI so runs are reproducible; a session records the brain, model,\nand effort it used in `meta.json`.\n\n**Zero-argument wizard:** running bare `leakdown` opens a guided flow\n(what to do → url → how far to go → brain → model → effort → who visits).\n`--help` still prints the flag reference. Ctrl-C out of any menu exits cleanly\nwith status 130."
   },
   {
-   "block_id": "cli-agents-H005",
+   "block_id": "cli-agents-H004",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1526,7 +1398,7 @@
    "text": "## One command\n\n```bash\nleakdown <url>                          # the lot\nleakdown site-a.dev --yes            # the lot, asking nothing\nleakdown site-a.dev --stop personas  # just read it and build prospects\n```\n\nPoint it at a site and five stages run in order:\n\n| Stage | Does | Writes |\n|---|---|---|\n| `site` | Scrapes the landing page: what it sells, to whom, its CTA, signup path, visible pricing, walls, what a first-timer trips on | `runs/<site>/SITE.md` |\n| `map` | Crawls two clicks from the landing page plus `sitemap.xml`, no brain: every internal page tagged by kind, and every booking or payment surface, on-site or off. The aggregate later lists pages no prospect found | `runs/<site>/MAP.md`, `map.json` |\n| `personas` | Builds a prospect set fitted to that product (`--count`, default 10), spread across core / adjacent / edge; `--flow \"<intent>\"` drafts the checkpoints the set is shaped around | `runs/<site>/personas/`, `FLOW.md` |\n| `visit` | One session per persona — one at a time by default (`--serial`; `--parallel` runs a multi-persona queue all at once; omit both flags and it asks), desktop unless `--mobile` — live thought stream (lines prefixed by persona id), ending COMPLETED / ABANDONED / GUARDRAIL / COULD NOT RUN | `session.jsonl`, `report.md`, `video.mp4` (+ `video.webm`), `filmstrip.html` |\n| `report` | The short report an owner reads — one number, the walls with quotes and \"check it yourself\" steps, a developer section — plus every table behind it | `runs/<site>/AGGREGATE.md`, `DETAIL.md` |\n| `fix` | Expert panel over each session | `FIXES.md` per session |\n\n`--stop <stage>` ends after that one. `site` is written once per site and\n`personas` is skipped when a set already exists — `--plan` redoes both. Re-running\na later stage with no new data is a no-op (\"up to date\"); `--force` regenerates\nanyway.\n\n**`site` and `personas` gate on nothing.** A site with no brief gets one whatever\nflags were passed, including `--persona`. That ordering is the whole reason this\nwas reorganised — see [DECISIONS.md](DECISIONS.md), 2026-08-31.\n\n**A persona only ever sees one viewport.** The snapshot is cut to what is on\nscreen, plus a headings outline of what lies below. On a 21-screen page that is\n40 elements instead of 776. Scrolling is free — it does not spend patience."
   },
   {
-   "block_id": "cli-agents-H006",
+   "block_id": "cli-agents-H005",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1539,7 +1411,7 @@
    "text": "### The ladder\n\n```bash\nleakdown <url> --ladder --yes --headless\nleakdown <url> --ladder --wide \"haiku:5,opencode/muse-spark-1.3-contributor-free:5\"\n```\n\nThe fleet the model eval chose, as one command: the site's personas are\nvisited half by haiku and half by muse-spark (free, when opencode is\ninstalled; `--wide` changes the split, `--wide haiku` is haiku only), the\nreplication filter picks the sessions that cite what other sessions also\ncite, sonnet runs the expert panel on those three, opus re-walks the persona\nbehind the top session and gets its own panel, and the report is regenerated\nover everything. Cheaper models produce votes; only sonnet verifies and only\nopus writes what a founder reads. Wide sessions from the same day are reused,\nso a rerun after a crash or a usage limit does not pay for the sweep twice.\nAbout $12 and an hour per site on the measured runs. Retest measured haiku at 3.8/4 agreement on a hot persona and\n2.5/4 on an edge one, so one wide run per persona is the default and a\nsingle-source finding earns a second run before it counts."
   },
   {
-   "block_id": "cli-agents-H007",
+   "block_id": "cli-agents-H006",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1552,7 +1424,7 @@
    "text": "### Goal tests\n\n```bash\nleakdown <url> --goal \"log in and get an API key\" --steps 15 --yes --headless\n```\n\n`--goal` swaps every queued persona's goal for the asserted one and turns the\nrun into a pass/fail test. Exit codes: 0 when every session ends `completed`\n(verification included); 1 when any session walked out or hit a guardrail —\nthe site failed somebody; 2 when nothing failed but a session *could not run*\n(unreachable URL, brain down, setup error) — our side, not the site's, so CI\ncan tell the two apart. `--steps` (1-50) caps each session's patience for the\ntest. Everything else is unchanged: same personas, same reports, same artifacts.\n\n`--expect \"label=value\"` (repeatable) adds value checks: a completion claim\ncounts only when the page shows every expected value (dumb substring over the\nfull snapshot, whitespace-insensitive). A failed check never spends a\nverification call; the session continues with a note, and `report.md` gets an\nAssertions section quoting expected vs. found (\"expected total=$96.00, found\n'Total: $120.00'\"). The expectations are appended to the persona's goal, so the\npersona and the verifier both read them."
   },
   {
-   "block_id": "cli-agents-H008",
+   "block_id": "cli-agents-H007",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1565,7 +1437,7 @@
    "text": "### Flows you write\n\n```bash\nleakdown --validate-flow flows/signup.yaml      # no browser; lists what is wrong, exits 1 on errors\nleakdown <url> --flow-file signup --yes         # runs against flows/signup.yaml (or runs/<site>/flows/)\n```\n\nA flow file is the journey you want checked, as ordered steps — a string, or\n`{name, expect}` where `expect` is page text that proves the step. Sessions are\nstill personas deciding for themselves; the file scripts nothing. After each\nsession `scoreFlow()` judges which steps were reached. A `stop_after` step\n(which must carry `expect`) ends the session COMPLETED the moment its text is on\nscreen, before the next step is spent — the local \"approved this far\" boundary.\nThat step is then marked reached mechanically, whatever the scorer says.\nFormat and an example: `src/site/flow-load.ts` (top comment) and\n`flows/example-signup.yaml`. Site-local flows win an id collision with global\nones, like personas."
   },
   {
-   "block_id": "cli-agents-H009",
+   "block_id": "cli-agents-H008",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1578,7 +1450,7 @@
    "text": "### A/B on one laptop\n\n```bash\nleakdown <url-a> --variant control --yes --headless\nleakdown <url-b> --variant new-pricing --yes --headless\nleakdown --compare <site>                        # runs/<site>/COMPARE.md\n```\n\n`--variant` labels every session (`meta.variant`) and the run folder\n(`<time>--<slug>`). Runs are folders, so two variant runs never share an\naggregate; `--compare` takes the newest run of each variant under a site and\nrenders `renderVariants()`: sessions, completed, leaked (walked out or out of\npatience), a Wilson interval per variant, where each lost people, and one\nverdict — which leaks more, or \"no meaningful difference\" when the intervals\noverlap, or \"too few\" under three sessions a side. Could-not-run sessions are\nexcluded from every rate. Exactly two variants are compared; more are listed.\nThe same section appears inside AGGREGATE.md when one aggregate happens to hold\ntwo variants."
   },
   {
-   "block_id": "cli-agents-H010",
+   "block_id": "cli-agents-H009",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1591,7 +1463,7 @@
    "text": "### On its own\n\n```bash\nleakdown --report [dirs...]     # aggregate past sessions\nleakdown --fix <dirs...>        # expert panel over past sessions\nleakdown --doctor               # verify the environment\nleakdown --list-personas        # every persona, built-in and custom\nleakdown --new-persona \"Name\"   # build one by answering questions\nleakdown --mailtest             # mailbox lifecycle test\nleakdown <url> --persona marcus,marcus,marcus   # the same persona three times (test-retest); --random <n> draws random ones\nleakdown --history [site]       # one line per run: date, the one number, who sat in which seat\nleakdown --fix site-b.ai   # a site name means its newest run; site/date/time names one run\nleakdown --orders [--all]       # run requests left on the website (new ones, or every status)\nleakdown --order <id>           # run one here, email the PDF; --reject \"why\" declines it\n```\n\nOrders are the website's request form. The site only stores them (a private\nbucket behind the leakdown-website repo, separate, deploys to Vercel); nothing runs until you pick one with\n`--order`, on this machine and this subscription, so a spammed form costs\nnothing. Needs `LEAKDOWN_ORDERS_URL` (the site) and `LEAKDOWN_ORDERS_TOKEN`\n(the site's `ORDERS_TOKEN`) in `.env`, and mail configured — the report goes\nout as a PDF attachment.\n\nSessions are grouped by the URL recorded in each `meta.json`, not by where they\nsit on disk, so a session moved between folders still lands in the right funnel.\nThe panel is gated on the aggregate for that session's own site.\n\nThe seven old subcommands (`visit`, `report`, `fix`, `all`, `doctor`, `personas`,\n`mailtest`) still dispatch, unchanged. They are not in `--help` and are not the\ndocumented surface."
   },
   {
-   "block_id": "cli-agents-H011",
+   "block_id": "cli-agents-H010",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1603,7 +1475,7 @@
    "text": "## Brains\n\n| `--brain` | CLI | Notes |\n|---|---|---|\n| `claude` (default) | Claude Code | Fastest per step |\n| `opencode` | opencode | Slower (~2–3×); needs `--print-logs` |\n| `codex` | Codex CLI | Varies by model |\n\nAny brain can run any stage. You can visit with one brain and run experts with another."
   },
   {
-   "block_id": "cli-agents-H012",
+   "block_id": "cli-agents-H011",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1616,7 +1488,7 @@
    "text": "### How brains are isolated\n\nEvery session gets its own brain instance, and every call is stateless — journey\nmemory comes only from the tiered history the prompt builder renders. This matters\nfor correctness, not just cost: brains used to be module-level singletons holding a\npersistent CLI session, so persona 2 inherited persona 1's entire conversation and\nwas no longer a first-time visitor.\n\nCalls run with the working directory outside the repo, so the CLI does not load\nthis project's own `AGENTS.md` into a persona that is supposed to know nothing\nabout it. The session directory is opted back in via `--add-dir` so screenshots\nstay readable.\n\nTools are restricted by role (`src/brain/adapters/claude.ts`):\n\n| Role | Tools | Why |\n|---|---|---|\n| `persona` | `Read` only | It must judge the page from the snapshot and its own screenshot — not shell out or fetch the URL directly |\n| `expert` | `Read`, `WebFetch`, search | Experts read screenshots and fetch the page for raw HTML. No shell: their input is a transcript quoting the site under review, so it is attacker-influenced too, and `WebFetch` is the narrow tool for the one thing the prompts actually need |\n\nUnused tool schemas cost roughly 5k tokens on every single call, so this is a\nsubstantial saving as well as a correctness boundary."
   },
   {
-   "block_id": "cli-agents-H013",
+   "block_id": "cli-agents-H012",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1628,7 +1500,7 @@
    "text": "## Personas\n\n| Preset | Client | Behavior | Arrives knowing |\n|---|---|---|---|\n| `cold` | Momus | First visit, low tech comfort, skims, distrusts forms/jargon, low patience | **nothing** |\n| `warm` | Egeria | Comparing options, wants pricing/features, tolerates minor friction | the arrival paragraph from `SITE.md` |\n| `hot` | Felicitas | Decided to buy, goes straight to signup, bails only when truly blocked | that, plus what it does, costs, and how signup works |\n\nThat last column is `arrivalFor()` in `src/site/brief.ts`, and it is load-bearing.\nThe three temperatures are three amounts of prior research, which is most of what\nmakes them behave differently. Giving a cold persona any of the brief turns it\ninto a warm one, and whatever it then fails to notice stops being evidence about\nthe page. Giving a hot persona none of it produces a \"decided buyer\" who\nrediscovers the pricing page, which no real hot prospect does.\n\nEach persona has `otp_patience_seconds` — waiting too long for a verification email is in-character abandonment."
   },
   {
-   "block_id": "cli-agents-H014",
+   "block_id": "cli-agents-H013",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1641,7 +1513,7 @@
    "text": "### Where personas come from\n\n| Source | Path | Scope |\n|---|---|---|\n| Built-in presets | `src/persona/presets.ts` | everywhere |\n| Yours | `personas/*.yaml` | everywhere |\n| Generated for one site | `runs/<site>/personas/*.yaml` | that site only |\n\nMost specific wins on an id collision. **`siteOwnPersonas()` reads only the third\nrow** — it decides whether generation runs and what an unattended run queues, so\ndefining it as \"anything that is not a built-in\" silently promotes your global\npersonas into every site's run. A set built for a scraping API is noise\nwhen you test a checkout, which is why generated sets live beside their site's\nruns rather than in the flat global directory."
   },
   {
-   "block_id": "cli-agents-H015",
+   "block_id": "cli-agents-H014",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1654,7 +1526,7 @@
    "text": "### Custom personas (YAML)\n\n```bash\nleakdown --list-personas               # list all (built-in, custom, per-site)\nleakdown --new-persona \"My Persona\"    # asks: scope, temperature, goal, traits\nleakdown <url> --stop personas         # AI-build a set for that site\n```"
   },
   {
-   "block_id": "cli-agents-H016",
+   "block_id": "cli-agents-H015",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1668,7 +1540,7 @@
    "text": "#### Calibrating to real visitors (optional)\n\nDrop `runs/<site>/analytics.json` beside the brief and the generator weights\nthe set toward what the owner's dashboard says. Five lines is enough:\n\n```json\n{\n  \"exitPages\": [{ \"path\": \"/pricing\", \"share\": 0.38 }, { \"path\": \"/\", \"share\": 0.31 }],\n  \"devices\": { \"mobile\": 0.55, \"desktop\": 0.45 },\n  \"entry\": [\"google organic\", \"product hunt\"],\n  \"note\": \"Most signups come through the docs, not the homepage.\"\n}\n```\n\nShares are fractions of 1. No file means fully synthetic, which is the\ndefault; `--plan` rebuilds the set after you add one. Whether calibrated sets\nfind more true problems than synthetic ones is an open question (Q6 in the\nlocal notes) — this file is how that test gets run."
   },
   {
-   "block_id": "cli-agents-H017",
+   "block_id": "cli-agents-H016",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1682,7 +1554,7 @@
    "text": "#### Persona generator (AI-built persona sets)\n\n```bash\nleakdown <url> --stop personas        # read the site, build a set, stop\nleakdown <url> --stop personas --plan # rebuild the set for a known site\n```\n\nHow it works:\n1. Optionally scrapes the target site's landing page (a11y text) to learn what the product is and who it serves\n2. Sends the page context plus your description (optional when `--site` is given) to the brain\n3. Returns a set spread across three tiers, roughly a third each:\n   - `core` — the ideal customers, most likely to convert\n   - `adjacent` — different roles, seniorities, company sizes, industries\n   - `edge` — people who land on the site but are not the target: no budget, wrong\n     use case, a competitor evaluating, an enterprise buyer in a self-serve flow.\n     These expose whether onboarding qualifies people fast or wastes their time.\n4. Writes each as `personas/<id>.yaml` (review/edit freely; delete to remove) and prints a coverage summary\n\nThe set is also spread across circumstances that decide whether onboarding works\nat all — tech comfort (at least one `low`), urgency, trust posture, price\nsensitivity, skim-reading, and (at `--count` 4+) at least one persona with a real\naccessibility constraint.\n\nAnti-similarity is enforced in the prompt: any two personas differ on at least\nthree axes, no trait repeats, each goal has its own COMPLETE condition, and\ntemperatures are mixed.\n\nAny `.yaml`/`.yml` in `personas/` is auto-loaded; the filename becomes the persona id (custom overrides built-in on collision). Only `name`, `temperature`, `goal` are required — everything else has defaults:\n\n```yaml\n# personas/my-persona.yaml\nname: \"Budget Bianca\"\ntemperature: warm            # cold | warm | hot\ngoal: >-\n  Find a tool under $20/mo that does X. Sign up for a free trial,\n  bail the moment pricing is not visible.\ntech_comfort: medium         # low | medium | high (default medium)\npatience_steps: 12           # max steps (default 12, max 50)\nmax_confusion_before_bail: 8 # confusion that pushes toward abandoning (default 8)\notp_patience_seconds: 300    # email verification wait (default 300 — real mail has taken 5 min)\ntraits:                      # free-text personality lines — these steer the LLM\n  - \"checks price before features\"\n  - \"leaves immediately if a credit card is required for a trial\"\n```\n\nTraits are the personality lever — write them like a character brief, first-person reactions the LLM should mimic. Invalid files are listed with reasons by `leakdown --list-personas` and skipped (never crash runs)."
   },
   {
-   "block_id": "cli-agents-H018",
+   "block_id": "cli-agents-H017",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1694,7 +1566,7 @@
    "text": "## Safety\n\nPersonas may go anywhere, including pricing, billing docs and checkout pages —\nreaching the wall is the finding. What is blocked is the *action*, not the page.\n\nEnforced in `src/safety.ts`, before every action in `src/session.ts`. **This is\na best-effort label match, not a guarantee.** A label it has not seen — an\nunusual phrasing, a language not listed below, a control with no accessible name\n— will pass. Do not point this at a live commerce site and assume it cannot buy.\n\nEvery label is read several ways before it is judged, because the page chooses\nits own spelling: accents folded, Latin lookalikes mapped in (\"Googlе\" with a\nCyrillic е), letter-spacing collapsed (\"G o o g l e\"). Every reading is checked\nand any dangerous one blocks — injected text can add a label, never mask one.\nThat last part matters: a page can print \"[ref=e12]\" in its own copy, and taking\nthe first matching snapshot line let one hidden div relabel every control on the\npage as \"Continue\".\n\n- **Payment.** Card-number fields (by label), anything passing a Luhn check, and\n  commit controls: \"Pay\", \"Pay now\", \"Buy it now\", \"Place your order\",\n  \"Complete your order\", \"Confirm & pay\", PayPal/Apple Pay/Google Pay, \"Donate\",\n  \"Start (paid) subscription\". A bare \"Subscribe\" is deliberately NOT blocked:\n  Stripe Checkout uses it as its commit button, but a newsletter \"Subscribe\" is\n  far commoner and a wanted action (`src/safety.ts:91`). \"Upgrade\" and \"See\n  pricing\" pass — they open a checkout the persona should be able to reach and\n  describe. Beyond English: es/pt/fr/de/\n  it/nl commit phrasings (\"Pagar\", \"Payer\", \"Kostenpflichtig bestellen\",\n  \"Finalizar compra\", \"Valider la commande\"), plus ru/ja/zh/ko (\"Оплатить\",\n  \"今すぐ購入\", \"立即购买\", \"결제하기\"). Bare verbs count only as the WHOLE label,\n  so \"Métodos de pago\" stays readable.\n- **Meeting bookings.** The commit controls of schedulers: \"Schedule Event\"\n  (Calendly), \"Confirm meeting\", \"Book this slot\", \"Book now\" — and a bare\n  \"Confirm\"/\"Schedule\"/\"Book\" when the URL or page chrome says scheduler\n  (cal.com, Calendly, timezone pickers). \"Book a demo\" and \"Request access\"\n  stay clickable: they open the scheduler, and seeing that signup is\n  demo-gated is the finding. Filling the form is looking; only the commit is\n  refused. This guard exists because two sessions put real 20-minute meetings\n  on a real founder's calendar.\n- **Third-party auth.** \"Sign in with X\", bare provider-icon buttons whose whole\n  label is \"Google\", \"Use SSO\", \"Enterprise login\", \"Log in with your work\n  account\", and the same in other languages, verb-first or verb-last\n  (\"Continuar con Google\", \"Mit Google anmelden\", \"Googleでログイン\").\n  \"Continue with email\" is not SSO; neither is \"Share via Slack\".\n- **Email is always the assigned mailbox** — invented addresses are overridden.\n\nPage text reaches a model as data, never as instruction: the snapshot goes into\nthe persona and verification prompts with backticks stripped, so a page cannot\nclose the ```yaml fence around it, and the session transcript reaches the expert\npanel inside an explicit untrusted-data block.\n\nTwo structural defences back the label matching: every session runs in a fresh\n`browser.newContext()` (no saved cards, no logged-in provider), and `type` uses\n`fill()` and never presses Enter (no implicit submit).\n\n**There used to be a third, and it was not true.** This section claimed the\nsnapshot was main-frame only, so iframed Stripe/Adyen/Braintree card fields \"cannot\nbe targeted at all\". Measured on 2026-08-31: `ariaSnapshot` descends into **every**\nframe, cross-origin included, and a `Card number` field inside one appears in the\nsnapshot with a targetable ref. The label guards do still refuse it — a framed\ncard field and a framed \"Pay now\" are both blocked, and a Luhn-passing string is\nblocked whatever the field is called — but that is the regex working, not a\nstructural ceiling. Do not point this at a live commerce site believing the card\nform is unreachable.\n\nA refusal does not end the session. The persona is told why, and either routes\naround it or walks out — which is the behaviour you want recorded.\n\nEnforced via persona prompt only (strict, but not mechanical):\n- Never deletes data, invites teammates, publishes anything, opens support chat, or contacts third parties"
   },
   {
-   "block_id": "cli-agents-H019",
+   "block_id": "cli-agents-H018",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1707,7 +1579,7 @@
    "text": "### Why this replaced the URL blocklist\n\nThe previous guard matched URL substrings and was wrong in both directions. It\nkilled two `deep-evaluator` sessions for opening `docs.site-d.ai/support/billing-and-credits`\nand `platform.site-e.ai/docs/billing` — help articles, not payment\npages — while a checkout at a path without those words walked straight past it.\nJudging the action instead of the address fixes both failure modes."
   },
   {
-   "block_id": "cli-agents-H020",
+   "block_id": "cli-agents-H019",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1719,7 +1591,7 @@
    "text": "## Output layout\n\n```\nruns/\n  <site>/                        # hostname, www. stripped (e.g. example.com)\n    SITE.md                      # what the page sells, its walls, its tripwires\n    MAP.md, map.json             # crawler's view: pages by kind, booking/payment surfaces\n    personas/                    # the prospects generated for this product\n    FLOW.md, analytics.json      # the flow under test; the owner's real-visitor numbers (optional)\n    flows/                       # this site's hand-written flows (--flow-file); global ones live in ./flows/\n    COMPARE.md                   # --compare: the newest run of each --variant, side by side\n    RUN.md, AGGREGATE.md, DETAIL.md, VERIFIED.md, REPORT.md   # copies of the newest run's files\n    <YYYY-MM-DD>/<HH-MM-SS>/     # one run = one CLI invocation (<HH-MM-SS>--<variant> for an A/B run)\n      RUN.md                     # which model sat in which seat, how sessions ended, tokens, minutes\n      AGGREGATE.md               # the short report over the run: one number, the walls, developer refs\n      DETAIL.md                  # every session, every table, every quote — the appendix\n      VERIFIED.md                # --ladder: the verifier seat's panels over the sessions the filter chose\n      REPORT.md                  # --ladder: the writer seat's panel over its own deep session\n      .aggregate-manifest.json   # stage-2 up-to-date check\n      wide/<model>/              # the sweep, one folder per model (haiku, opencode-muse-spark-…)\n        AGGREGATE.md, DETAIL.md  # the same two reports over this model's sessions only\n        <HH-MM-SS>-<persona>/\n          session.jsonl          # one event per step: url, thought, emotion, confusion, action\n          shots/                 # step screenshots\n          video.mp4              # playable recording (H.264, needs ffmpeg) + video.webm fallback\n          filmstrip.html           # every step's screenshot with its thought, no video needed\n          report.md              # verdict + drop-off analysis + timeline + confusion curve\n          meta.json              # metadata for stages 2-3, incl. brain/model/effort\n          FIXES.md               # expert panel findings (after stage 3)\n      verify/<model>/            # the verifier's FIXES.md per chosen session (no sessions of its own)\n        <HH-MM-SS>-<persona>/FIXES.md\n      deep/<model>/              # the writer's own session, same files as a wide one\n.leakdown-state.json  # doctor verification cache (gitignored)\n.env                   # mail config (gitignored)\n```\n\nThree seats, any model in each: `wide` is the sweep, `verify` reviews what the\nreplication filter chose, `deep` re-walks the hardest prospect and writes what a\nfounder reads. A plain run fills only `wide`; `--ladder` fills all three\n(haiku + muse-spark, sonnet, opus today — `VERIFIER` and `WRITER` in `cli.ts`).\nEvery run re-crawls the site once per process; when the page list changed since\n`map.json` was written it asks whether to rebuild the brief and personas,\notherwise reuses them. `--no-map` skips the check. A run ends by printing the\none number and the first wall from its AGGREGATE.md, so the file is for sharing,\nnot for finding out. `--ladder` marks its run folder with `.ladder` and resumes\nonly such a run from the same day when it has no REPORT.md yet.\n\nSession directories are found by walking `runs/` for any folder containing a\n`meta.json`, so the nesting depth is not load-bearing — stages 2-3 find sessions\nin any layout, and `--report` groups them by run folder (or by site when there is\nnone).\n\n`video.mp4` is H.264 with faststart: plays in QuickTime, Safari, browsers, VLC. It is\ntranscoded after each session when `ffmpeg` is installed (`brew install ffmpeg`) and the\n`video.webm` is then deleted (the mp4 is 60% of its size); without ffmpeg, or when the\ntranscode fails, `video.webm` (VP8) is kept. Failures never fail the run."
   },
   {
-   "block_id": "cli-agents-H021",
+   "block_id": "cli-agents-H020",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1731,7 +1603,7 @@
    "text": "## Useful commands\n\n```bash\nleakdown --doctor    # verify environment\nleakdown --mailtest  # mailbox create/receive/extract/destroy lifecycle test\nnpm run build                # compile — source is TypeScript in src/\n```\n\nChanging the code rather than running it? Build, typecheck and test commands are in\n[Verifying a change](#verifying-a-change)."
   },
   {
-   "block_id": "cli-agents-H022",
+   "block_id": "cli-agents-H021",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1743,7 +1615,7 @@
    "text": "## Tips for agents operating this tool\n\n1. Always run `leakdown --doctor` first on a new machine.\n2. Pass `--brain`, `--model`, and `--effort` explicitly — an agent has no TTY, so\n   omitting them silently accepts defaults rather than prompting.\n3. Prefer `--headless` in CI/automation; headed mode is better for watching behavior live.\n4. Read `runs/<site>/AGGREGATE.md` before individual reports — verdict summary first, details second.\n5. `FIXES.md` sections are independent per expert; cite evidence lines when discussing fixes.\n6. Sessions are immutable artifacts — re-run `fix` with `--force` to regenerate advice, never re-visit to \"fix\" a report.\n7. A GUARDRAIL verdict is still valid data: it means the site blocked the client (stuck loop, broken page, payment wall), not that the tool failed.\n\n---"
   },
   {
-   "block_id": "cli-agents-H023",
+   "block_id": "cli-agents-H022",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1754,7 +1626,7 @@
    "text": "# Part 2 — How the code works\n\nTypeScript in `src/`, compiled to `dist/` by `tsc`. No framework, five runtime\ndependencies (`playwright`, `execa`, `imapflow`, `yaml`, `zod`). The bin is\n`dist/cli.js`."
   },
   {
-   "block_id": "cli-agents-H024",
+   "block_id": "cli-agents-H023",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1766,7 +1638,7 @@
    "text": "## Data flow\n\n```\ncli.ts  ──►  BrowserDriver + Brain + optional MailProvider\n                    │\n                    ▼\n              runSession()  ──►  session.jsonl  +  shots/  +  video.mp4\n                    │\n                    ▼\n            generateReport()  ──►  report.md  +  meta.json\n                    │\n                    ▼\n          generateAggregate()  ──►  runs/<site>/AGGREGATE.md\n                    │\n                    ▼\n              expert panel   ──►  FIXES.md\n```\n\nEach arrow is a stage boundary and each artifact is the next stage's only input.\nStage 2 reads `meta.json` and `session.jsonl` off disk — it never sees a live\n`Session` object. That is why a lost JSONL line is a lost finding."
   },
   {
-   "block_id": "cli-agents-H025",
+   "block_id": "cli-agents-H024",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1778,7 +1650,7 @@
    "text": "## The session loop\n\n`runSession()` in `src/session.ts:35`. One `for` over `persona.patience_steps`:\n\n1. `driver.snapshot()` — accessibility YAML for the page **and all its frames**, the URL, `scrollY`, and where every ref sits relative to the viewport\n2. `driver.screenshotPath(step)`\n3. `brain.decide(ctx)` — the persona picks one action\n4. `blockedAction()` — safety runs on the *decision*, before anything touches the page\n5. act, then append the `StepEvent` to `session.jsonl` **at the end of the step**,\n   so the email override and any action failure make it into the file\n\nFour exits:\n\n| Exit | Trigger |\n|---|---|\n| `completed` | `complete` action, then `verifyGoal()` agrees (`MAX_VERIFICATIONS = 2`) |\n| `abandoned` | `abandon` action — the persona gives its reason |\n| `guardrail` | `stuckPattern()` fires, the page becomes unreadable, or the brain fails |\n| `guardrail` | patience runs out, or the wall-clock budget does (`--time`, default 20m — waiting on mail and `wait` actions is excluded, the same logic that made scrolling free) |\n\nA persona claiming `complete` without verification does not end the session — the\nloop `continue`s with a note, because personas are wrong about being done."
   },
   {
-   "block_id": "cli-agents-H026",
+   "block_id": "cli-agents-H025",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1787,10 +1659,10 @@
     "Module map"
    ],
    "level": 2,
-   "text": "## Module map\n\n| Path | Owns | Touch it when |\n|---|---|---|\n| `src/cli.ts` | Flag parsing, the wizard, `prepareSite`/`prepareSitePersonas`, and every stage wired end to end. The only file that knows about every other. | Adding a flag or changing the run order |\n| `src/session.ts` | The step loop, exit conditions (`completed`, `abandoned`, `guardrail`, `couldnotrun`), `checkAssertions()`, the flow stop point, `goalExitCode()`, `stuckPattern()`, inbox merging | Changing how a journey runs or ends |\n| `src/types.ts` | `Persona`; the `Decision` / `StepEvent` / `Verdict` zod schemas; the `Brain` and `BrainContext` interfaces; `SAFETY_RULES` prompt text | Changing the decision contract |\n| `src/safety.ts` | `blockedAction()` — label extraction, Luhn, payment and SSO matching | Adding or relaxing a guard |\n| `src/runs.ts` | The `runs/` layout: `siteSlug()`, `sessionPath()`, `findSessionDirs()`, the `--variant` run-folder suffix | Changing where sessions land |\n| `src/doctor.ts` | Environment verification and its 7-day state cache; the daily mail-probe record | Adding a preflight check |\n| `src/orders.ts` | Website orders: list, fetch, set status; `mimeWithAttachment()` for the emailed PDF | Changing how an order is fulfilled |\n| `src/browser/driver.ts` | Playwright wrapper: `snapshot()` and its per-ref visibility measurement, actions, screenshots, video, popup following, `needsKeystrokes()`, `chooseRecording()` | Anything the browser does |\n| `src/browser/cursor.ts` | Injected pointer and click ripple for recordings | Changing what recordings show |\n| `src/browser/audit.ts` | Mechanical page checks per snapshot: controls with no accessible name, tap targets under 24px, sideways overflow, viewport meta. Recorded once per URL on the step event; the report unions them per page | Adding a measurable check |\n| `src/browser/prune.ts` | `pruneSnapshot()` machine-noise removal, and `splitByViewport()` — what a person can see vs an outline of what is below | Changing what the persona perceives of a page |\n| `src/brain/index.ts` | `getBrain()` — name to adapter | Registering a brain |\n| `src/brain/prompt.ts` | `buildSystemPrompt()` (static, cached by the CLI) and `buildUserPrompt()` (per step); `fenceSafe()`, repair and verification prompts, history tiering | Changing what a persona sees — keep per-step facts out of the system half |\n| `src/brain/catalog.ts` | `BRAIN_SPECS`, live model and effort probing | Making a new brain appear in the picker |\n| `src/brain/picker.ts` | Resolving brain/model/effort from flags or menus, and validating them | Adding a brain-related flag |\n| `src/brain/roles.ts` | Per-role tool restrictions | Changing what a persona or expert may do |\n| `src/brain/adapters/cli-brain.ts` | The shared CLI-spawn brain: retries, `spawnEnv()`, `extractJson()`, `MAX_DECIDE_ATTEMPTS` | Changing how any CLI brain is called |\n| `src/brain/adapters/{claude,codex,opencode}.ts` | Per-CLI argv and sandbox flags | Adding or fixing one brain |\n| `src/persona/load.ts` | YAML discovery and validation, the `personas/` + preset registry | Changing persona loading |\n| `src/persona/presets.ts` | Built-in cold / warm / hot | Tuning a preset |\n| `src/persona/generate.ts` | AI-built persona sets, the core/adjacent/edge spread | Changing generation |\n| `src/mail/types.ts` | The `MailProvider` interface and `MailMessage` | Adding a mail provider |\n| `src/mail/imap.ts` | `ImapProvider` — mailbox lifecycle, UID-addressed reads | Changing mailbox behaviour |\n| `src/mail/mime.ts` | Part picking, base64 and quoted-printable decoding, code and link extraction | Changing OTP extraction |\n| `src/site/brief.ts` | `runs/<site>/SITE.md`: writing it, and `arrivalFor()` / `icpSeed()` reading it back | Changing what a site read produces, or who sees it |\n| `src/site/map.ts` | `runs/<site>/map.json`: the crawl, `classify()`, and `unreached()` / `guardedSurfaces()` the aggregate reads | Changing what counts as a page, or a booking/payment surface |\n| `src/site/analytics.ts` | `runs/<site>/analytics.json`: the owner's real-visitor numbers, validated and rendered for persona generation | Changing what calibration reads |\n| `src/site/flow.ts` | `runs/<site>/FLOW.md`: drafting checkpoints from an intent, and `scoreFlow()` judging a finished session against them | Changing what a flow is or how sessions are scored |\n| `src/site/flow-load.ts` | Hand-written flows: `flows/*.yaml` discovery and validation (`--validate-flow`), `toFlow()` into the scorer's shape, the `stop_after` stop point the session loop honours | Changing the flow file format |\n| `src/log/stats.ts` | Pure counts math: Wilson `confidenceInterval()`, `lift()`, `strength()`, `overlap()`; under 3 sessions nothing is quantified | Changing how sure a report claims to be |\n| `src/log/report.ts` | Per-session `report.md` and its timing | Changing a session report |\n| `src/log/aggregate.ts` | `loadSessions()` (zod-validated), `generateAggregate()` (the short report), `generateDetail()` (the appendix), `renderVariants()` (the A/B section, also behind `--compare`) | Changing what an owner or a developer reads |\n| `src/log/replication.ts` | Element refs cited across sessions: `collectSightings()`, `replicationTable()`; `--replication` | Changing what counts as replicated |\n| `src/log/pdf.ts` | `--pdf`: one send-ready PDF per site from AGGREGATE.md + one model's FIXES.md | Changing the packet |\n| `src/experts/index.ts` | The `EXPERTS` registry | Registering an expert |\n| `src/experts/{ux,copywriter,reviewers,discoverability,scores}.ts` | One expert each, plus its renderer | Changing panel output |\n| `src/ui/prompt.ts` | Zero-dependency `select` / `multiselect` / `text` over a raw-mode TTY | Adding a menu |"
+   "text": "## Module map\n\n| Path | Owns | Touch it when |\n|---|---|---|\n| `src/cli.ts` | Flag parsing, the wizard, `prepareSite`/`prepareSitePersonas`, and every stage wired end to end. The only file that knows about every other. | Adding a flag or changing the run order |\n| `src/session.ts` | The step loop, exit conditions (`completed`, `abandoned`, `guardrail`, `couldnotrun`), `checkAssertions()`, the flow stop point, `goalExitCode()`, `stuckPattern()`, inbox merging | Changing how a journey runs or ends |\n| `src/types.ts` | `Persona`; the `Decision` / `StepEvent` / `Verdict` zod schemas; the `Brain` and `BrainContext` interfaces; `SAFETY_RULES` prompt text | Changing the decision contract |\n| `src/safety.ts` | `blockedAction()` — label extraction, Luhn, payment and SSO matching | Adding or relaxing a guard |\n| `src/runs.ts` | The `runs/` layout: `siteSlug()`, `sessionPath()`, `findSessionDirs()`, the `--variant` run-folder suffix | Changing where sessions land |\n| `src/doctor.ts` | Environment verification and its 7-day state cache; the daily mail-probe record | Adding a preflight check |\n| `src/orders.ts` | Website orders: list, fetch, set status; `mimeWithAttachment()` for the emailed PDF | Changing how an order is fulfilled |\n| `src/browser/driver.ts` | Playwright wrapper: `snapshot()` and its per-ref visibility measurement, actions, screenshots, video, popup following, `needsKeystrokes()`, `chooseRecording()` | Anything the browser does |\n| `src/browser/cursor.ts` | Injected pointer and click ripple for recordings | Changing what recordings show |\n| `src/browser/audit.ts` | Mechanical page checks per snapshot: controls with no accessible name, tap targets under 24px, sideways overflow, viewport meta. Recorded once per URL on the step event; the report unions them per page | Adding a measurable check |\n| `src/browser/prune.ts` | `pruneSnapshot()` machine-noise removal, and `splitByViewport()` — what a person can see vs an outline of what is below | Changing what the persona perceives of a page |\n| `src/brain/index.ts` | `getBrain()` — name to adapter | Registering a brain |\n| `src/brain/jev.ts` | `--jev`: the TypeSafe judge. One `fetch`, N yes/no questions per call, `NOUL_YES`, `usageJev`. Null on any failure, so callers keep the path they had without it | Changing what the judge is asked, or the cutoff |\n| `src/brain/prompt.ts` | `buildSystemPrompt()` (static, cached by the CLI) and `buildUserPrompt()` (per step); `fenceSafe()`, repair and verification prompts, history tiering | Changing what a persona sees — keep per-step facts out of the system half |\n| `src/brain/catalog.ts` | `BRAIN_SPECS`, live model and effort probing | Making a new brain appear in the picker |\n| `src/brain/picker.ts` | Resolving brain/model/effort from flags or menus, and validating them | Adding a brain-related flag |\n| `src/brain/roles.ts` | Per-role tool restrictions | Changing what a persona or expert may do |\n| `src/brain/adapters/cli-brain.ts` | The shared CLI-spawn brain: retries, `spawnEnv()`, `extractJson()`, `MAX_DECIDE_ATTEMPTS` | Changing how any CLI brain is called |\n| `src/brain/adapters/{claude,codex,opencode}.ts` | Per-CLI argv and sandbox flags | Adding or fixing one brain |\n| `src/persona/load.ts` | YAML discovery and validation, the `personas/` + preset registry | Changing persona loading |\n| `src/persona/presets.ts` | Built-in cold / warm / hot | Tuning a preset |\n| `src/persona/generate.ts` | AI-built persona sets, the core/adjacent/edge spread | Changing generation |\n| `src/mail/types.ts` | The `MailProvider` interface and `MailMessage` | Adding a mail provider |\n| `src/mail/imap.ts` | `ImapProvider` — mailbox lifecycle, UID-addressed reads | Changing mailbox behaviour |\n| `src/mail/mime.ts` | Part picking, base64 and quoted-printable decoding, code and link extraction | Changing OTP extraction |\n| `src/site/brief.ts` | `runs/<site>/SITE.md`: writing it, and `arrivalFor()` / `icpSeed()` reading it back | Changing what a site read produces, or who sees it |\n| `src/site/map.ts` | `runs/<site>/map.json`: the crawl, `classify()`, and `unreached()` / `guardedSurfaces()` the aggregate reads | Changing what counts as a page, or a booking/payment surface |\n| `src/site/analytics.ts` | `runs/<site>/analytics.json`: the owner's real-visitor numbers, validated and rendered for persona generation | Changing what calibration reads |\n| `src/site/flow.ts` | `runs/<site>/FLOW.md`: drafting checkpoints from an intent, and `scoreFlow()` judging a finished session against them | Changing what a flow is or how sessions are scored |\n| `src/site/flow-load.ts` | Hand-written flows: `flows/*.yaml` discovery and validation (`--validate-flow`), `toFlow()` into the scorer's shape, the `stop_after` stop point the session loop honours | Changing the flow file format |\n| `src/log/stats.ts` | Pure counts math: Wilson `confidenceInterval()`, `lift()`, `strength()`, `overlap()`; under 3 sessions nothing is quantified | Changing how sure a report claims to be |\n| `src/log/report.ts` | Per-session `report.md` and its timing | Changing a session report |\n| `src/log/aggregate.ts` | `loadSessions()` (zod-validated), `generateAggregate()` (the short report), `generateDetail()` (the appendix), `renderVariants()` (the A/B section, also behind `--compare`) | Changing what an owner or a developer reads |\n| `src/log/replication.ts` | Element refs cited across sessions: `collectSightings()`, `replicationTable()`; `--replication` | Changing what counts as replicated |\n| `src/log/pdf.ts` | `--pdf`: one send-ready PDF per site from AGGREGATE.md + one model's FIXES.md | Changing the packet |\n| `src/experts/index.ts` | The `EXPERTS` registry | Registering an expert |\n| `src/experts/{ux,copywriter,reviewers,discoverability,scores}.ts` | One expert each, plus its renderer | Changing panel output |\n| `src/ui/prompt.ts` | Zero-dependency `select` / `multiselect` / `text` over a raw-mode TTY | Adding a menu |"
   },
   {
-   "block_id": "cli-agents-H027",
+   "block_id": "cli-agents-H026",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1802,7 +1674,7 @@
    "text": "## Invariants and tripwires\n\nSeventeen things that will bite you. Most were paid for once already — see\n[DECISIONS.md](DECISIONS.md).\n\n1. **`dist/` is build output.** Never edit it. `npm test` runs `tsc` first and then\n   `dist/**/*.test.js`, so an unbuilt change tests green against stale code.\n2. **Site text is untrusted input.** Any new path that quotes page text goes through\n   `fenceSafe()` (`src/brain/prompt.ts:40`) and `pruneSnapshot()`. A page that prints\n   ` ``` ` will otherwise close the fence and have the rest read as instruction.\n3. **Shape the page in `buildPrompt`, never in `driver.snapshot()`.** The driver\n   *measures* (visibility, `scrollY`); `pruneSnapshot` and `splitByViewport`\n   *decide what is shown*, at prompt time. `verifyGoal` reads the full\n   `ariaYaml`, or a confirmation scrolled out of view becomes a false drop-off.\n4. **Sessions are immutable artifacts.** Regenerate with `--force`. Never re-visit\n   a site to \"fix\" a bad report.\n5. **The three structural defences under [Safety](#safety) carry more weight than\n   the label regexes do.** They read as incidental in the driver. Breaking one\n   quietly removes the real ceiling on what a persona can do to a live site.\n6. **Short-maxlength fields need real keystrokes.** `needsKeystrokes()`\n   (`src/browser/driver.ts:21`) — `fill()` puts the whole string in a six-box OTP\n   input and only the first digit survives.\n7. **`extendEnv: false` is mandatory** when spawning a brain. execa v9 silently\n   re-merges the parent env without it, and `spawnEnv()`'s allowlist stops meaning\n   anything.\n8. **IMAP is addressed by UID everywhere.** Mixing in sequence numbers gives you\n   correct envelopes with empty bodies — and, in `destroy()`, trashes unrelated mail.\n9. **Validate a new flag in `src/brain/picker.ts`.** Unvalidated, it fails *after*\n   launching a browser and minting a mailbox.\n10. **Nothing gates the site brief.** `prepareSite()` runs before the queue is\n    resolved, on purpose. Putting it behind a flag check is the bug that made\n    `--persona cold` send an uninformed persona into an unread site.\n11. **`arrivalFor()` decides who sees the brief, and cold sees none of it.** If you\n    add a consumer, ration it there — not by reading `SITE.md` directly.\n12. **A persona only ever sees one viewport, and `act()` enforces it.** 776 refs\n    on site-a.dev against 37 a visitor could see. `requireOnScreen()` refuses a\n    target that was not visible — without it `aria-ref=` resolves against the whole\n    document and the limit is only a suggestion.\n13. **Scrolling is free and must stay free.** It does not spend `patience_steps`,\n    and its stuck-loop signature carries `scrollY`. Charging for it, or dropping\n    the position, makes every long page guardrail while scrolling. The step\n    counter prints `spent`, not the raw step, which now runs past the budget.\n14. **A ref may carry a frame prefix — `f5e27`, not `e27`.** Match\n    `REF_ID_PATTERN` from `prune.ts`, never a bare `e\\d+`. Signup forms are\n    routinely iframed, and on a page with both kinds the narrow pattern drops\n    every control inside the form.\n15. **Always resolve a persona with its site: `getPersonaRegistry(url)`.** Without\n    it, personas generated into `runs/<site>/personas/` are missing and the\n    `?? PERSONAS.cold` fallback silently reviews the run as somebody else.\n16. **Queued personas may run concurrently (`--parallel`), so nothing may be shared across them.**\n    Each gets its own brain, browser, `ImapProvider` and directory — an IMAP\n    connection is stateful, and concurrent polls through a shared one interleave\n    on a single socket. Session dirs are minted serially before launch because\n    `sessionPath()`'s same-second suffix check is exists-then-create.\n17. **Reports say risk, not measurement.** A simulated prospect stalling is a\n    signal that real visitors could; render it that way (\"people may stall\n    here\"), never as observed traffic. The framing lives in the renderers and\n    the expert prompts — the exit kinds on disk are unchanged, so old sessions\n    stay readable."
   },
   {
-   "block_id": "cli-agents-H028",
+   "block_id": "cli-agents-H027",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1814,7 +1686,7 @@
    "text": "## Where to add things\n\n- **A persona** — drop YAML in `personas/`, or add a preset in `src/persona/presets.ts`\n- **An expert** — implement `Expert` in `src/experts/`, register in `src/experts/index.ts`\n- **A brain** — adapter in `src/brain/adapters/` (build on `makeCliBrain`), wire into\n  `src/brain/index.ts`, and add a `BrainSpec` to `src/brain/catalog.ts` or it will not\n  show up in the picker\n- **A mail provider** — implement `MailProvider` from `src/mail/types.ts`\n- **A menu** — `select` / `multiselect` / `text` from `src/ui/prompt.ts`. They return\n  silent defaults when there is no TTY, so nothing hangs in CI\n- **A step-level action** — extend the `Decision` union in `src/types.ts`, handle it in\n  the loop, and decide what `blockedAction()` should say about it"
   },
   {
-   "block_id": "cli-agents-H029",
+   "block_id": "cli-agents-H028",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1823,21 +1695,10 @@
     "Verifying a change"
    ],
    "level": 2,
-   "text": "## Verifying a change\n\n```bash\nnpm run typecheck    # tsc --noEmit\nnpm test             # tsc, then node --test on every dist/**/*.test.js (listed by find, so Node 20 works)\n\nnode scripts/verify-frames.mjs   # iframe measurement, needs a build + Chromium\n```\n\n`verify-frames.mjs` is deliberately outside `npm test`: it launches Chromium and\nserves its own page. Run it after touching `measure()`, `splitByViewport()`, or any\nref pattern — a live site is not a reliable way to reproduce framed refs.\n\nTests sit beside their source as `src/**/*.test.ts` on Node's built-in runner — no\ntest framework. They cover the pure logic every stage depends on: run-directory\nlayout and discovery, the stuck-loop detector, JSON extraction from noisy CLI output,\nvideo-clip selection, MIME decoding, expert rendering, persona loading, prompt\nbuilding, aggregation.\n\n**What they deliberately do not cover: brains, browsers, network.** The suite runs in\nwell under a second and a green run is not end-to-end proof. For anything touching\nthe loop, the driver or a prompt, do a real run:\n\n```bash\nleakdown <url> --persona cold --brain claude --headless --stop visit\n```\n\n---"
+   "text": "## Verifying a change\n\n```bash\nnpm run typecheck    # tsc --noEmit\nnpm test             # tsc, then node --test on every dist/**/*.test.js (listed by find, so Node 20 works)\n\nnode scripts/verify-frames.mjs   # iframe measurement, needs a build + Chromium\nnode scripts/jev-replay.mjs runs/<site>          # --jev vs the brain on saved sessions\nnode scripts/jev-replay.mjs --pages pages.jsonl  # …and on labelled pages, with the cutoff sweep\n```\n\n`verify-frames.mjs` is deliberately outside `npm test`: it launches Chromium and\nserves its own page. Run it after touching `measure()`, `splitByViewport()`, or any\nref pattern — a live site is not a reliable way to reproduce framed refs.\n\nTests sit beside their source as `src/**/*.test.ts` on Node's built-in runner — no\ntest framework. They cover the pure logic every stage depends on: run-directory\nlayout and discovery, the stuck-loop detector, JSON extraction from noisy CLI output,\nvideo-clip selection, MIME decoding, expert rendering, persona loading, prompt\nbuilding, aggregation.\n\n**What they deliberately do not cover: brains, browsers, network.** The suite runs in\nwell under a second and a green run is not end-to-end proof. For anything touching\nthe loop, the driver or a prompt, do a real run:\n\n```bash\nleakdown <url> --persona cold --brain claude --headless --stop visit\n```\n\n---"
   },
   {
-   "block_id": "cli-agents-H030",
-   "source": "cli",
-   "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
-   "page_title": "AGENTS.md — leakdown",
-   "heading_path": [
-    "Part 3 — Working agreements"
-   ],
-   "level": 1,
-   "text": "# Part 3 — Working agreements"
-  },
-  {
-   "block_id": "cli-agents-H031",
+   "block_id": "cli-agents-H029",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1849,7 +1710,7 @@
    "text": "## Skills\n\n| Situation | Skill | Who turns it on |\n|---|---|---|\n| Any code change in this repo | `ponytail` | the model, by default |\n| README, AGENTS, DECISIONS, commit bodies, website copy | `no-ai-slop` | the model |\n| Output should cost fewer tokens | `caveman` | either |\n| Output should lead with the next action, number the steps, and restate state each turn | `i-have-adhd` | **you only** — the skill blocks model invocation, so type `/i-have-adhd` |\n\n`ponytail` as the default describes this repo rather than adding a rule to it.\n`810cf44` shipped a call budget with no new flag because the ceiling already existed\nstructurally. `e5d15ce` deleted two working optimisations for carrying real risk at\n~0% benefit. That is already the house style."
   },
   {
-   "block_id": "cli-agents-H032",
+   "block_id": "cli-agents-H030",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1861,7 +1722,7 @@
    "text": "## Precedence, when more than one is on\n\nThey conflict by construction — `caveman` compresses, `i-have-adhd` expands into\nnumbered structure. Resolve in this order:\n\n1. **Correctness beats brevity.** Never drop a command, path, flag, or error string\n   to save tokens.\n2. **`i-have-adhd` wins on structure, `caveman` wins on wording.** Keep the numbered\n   steps and the next-action-first opening; compress the words inside them.\n3. **`caveman` shapes chat only, never file contents.** Anything committed stays full\n   English under `no-ai-slop`.\n4. **`ponytail` governs the code; `no-ai-slop` governs the writing about it.** Neither\n   one gets a say in the other's territory."
   },
   {
-   "block_id": "cli-agents-H033",
+   "block_id": "cli-agents-H031",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1873,7 +1734,7 @@
    "text": "## Releases\n\n`CHANGELOG.md` is the release notes and it is written as you go: every commit\nwith a user-visible change adds a line under **Unreleased**, in plain words a\nperson running the tool would recognise. Cutting a release:\n\n```bash\n# move the Unreleased block under \"## <version> — <date>\" in CHANGELOG.md, bump package.json, then\ngit add CHANGELOG.md package.json && git commit -m \"<version>: <one line>\"\ngit tag -a v<version> -m \"<version>\"\ngit push && git push --tags\ngh release create v<version> --title \"<version>\" --notes-file <(awk '/^## <version>/{f=1;next} /^## /{f=0} f' CHANGELOG.md)\n```\n\nThe GitHub Release carries the same text as the file; nothing is written twice\nby hand. Layout changes under `runs/` and renamed flags are always a minor bump.\nStanding rule: every push that changes behavior ships a version bump (minor for\nfeatures, flag renames, layout changes) with its CHANGELOG entry — no exceptions."
   },
   {
-   "block_id": "cli-agents-H034",
+   "block_id": "cli-agents-H032",
    "source": "cli",
    "page_url": "https://github.com/0xSarnavo/leakdown-cli/blob/main/AGENTS.md",
    "page_title": "AGENTS.md — leakdown",
@@ -1905,7 +1766,7 @@
     "Unreleased"
    ],
    "level": 2,
-   "text": "## Unreleased"
+   "text": "## Unreleased\n\n**A judge for the yes/no calls: `--jev off|verify|full`.** With\n`TYPESAFE_API_KEY` set, TypeSafe's Jev model answers the questions that have a\nyes or no answer instead of the AI CLI: `verify` hands it the completion check\nat the end of a session, `full` also gives it flow checkpoints and any\n`--expect` value the page words differently (`Total: $96` for `$96.00`) — the\nplain substring match still runs first and still costs nothing. Default is\n`off`, and runs without the flag behave exactly as before. A judge that fails\nleaves a check unresolved, the same as a model that fails, and never ends a\nsession. Its tokens are counted apart from the brain's, as `usageJev` in\n`meta.json`. `node scripts/jev-replay.mjs` replays saved sessions through both\njudges and prints where they disagree."
   },
   {
    "block_id": "cli-changelog-H002",
@@ -2012,7 +1873,7 @@
     "HOW IT RUNS"
    ],
    "level": 2,
-   "text": "## HOW IT RUNS\n\n  --brain <claude|opencode|codex>   which AI CLI plays the client\n  --model <name>              pin the model (lists are read live from the CLI)\n  --effort <level>            reasoning effort (claude: low..max, codex: low|medium|high)\n  --time <minutes>            wall-clock ceiling per session (default 20; waiting\n                              on mail and pauses is excluded — slow mail is not\n                              the site's fault)\n  --headless                  no visible browser window\n  --serial | --parallel       queued personas one at a time (default) or all at\n                              once — parallel needs a machine that can hold one\n                              browser + AI CLI per persona; omit both and it asks\n  --mobile                    phone viewport (390x844, touch) instead of desktop\n  --yes                       never prompt; take the default for every question\n  --version                   print the version (put it in bug reports)"
+   "text": "## HOW IT RUNS\n\n  --brain <claude|opencode|codex>   which AI CLI plays the client\n  --model <name>              pin the model (lists are read live from the CLI)\n  --effort <level>            reasoning effort (claude: low..max, codex: low|medium|high)\n  --time <minutes>            wall-clock ceiling per session (default 20; waiting\n                              on mail and pauses is excluded — slow mail is not\n                              the site's fault)\n  --headless                  no visible browser window\n  --serial | --parallel       queued personas one at a time (default) or all at\n                              once — parallel needs a machine that can hold one\n                              browser + AI CLI per persona; omit both and it asks\n  --mobile                    phone viewport (390x844, touch) instead of desktop\n  --jev off|verify|full       hand the yes/no judgements to TypeSafe's Jev instead\n                              of the brain: \"verify\" the completion check, \"full\"\n                              also flow checkpoints and --expect values the page\n                              words differently. Needs TYPESAFE_API_KEY. Default\n                              off; a judge that fails leaves the check unresolved,\n                              exactly as a brain that fails does\n  --yes                       never prompt; take the default for every question\n  --version                   print the version (put it in bug reports)"
   },
   {
    "block_id": "cli-help-H004",

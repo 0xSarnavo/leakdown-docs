@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function AskPage() {
   return (
-    <div className="page is-wide">
+    <div className="page is-wide is-chat">
       <article className="doc askpage">
         <AskChat page autoFocus />
       </article>

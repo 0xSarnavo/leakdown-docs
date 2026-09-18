@@ -95,7 +95,46 @@ function splitBlocks(md, { slug, pageUrl, pageTitle, source }) {
       text,
     });
   }
-  return { blocks, realTitle };
+  const kept = absorbThinSections(blocks);
+  kept.forEach((b, i) => (b.block_id = `${slug}-H${String(i).padStart(3, "0")}`));
+  return { blocks: kept, realTitle };
+}
+
+/* A heading whose own text only introduces what follows cannot answer anything
+   on its own: "Install — installing takes three steps and a few minutes" is a
+   lead-in, and the commands live in the subsections under it. Left alone it
+   still wins the ranking and buries the real answer in the supporting
+   passages. So a thin section swallows its subsections and becomes the
+   self-contained answer, and a heading with no body at all is dropped — its
+   words survive in its children's heading_path either way.
+
+   Only level 2 and deeper: a page's opening block is a summary of the page and
+   is meant to be short. The size cap stops a thin heading over a long subtree
+   from turning a whole page into one block. */
+const THIN_BODY = 200;
+const MERGED_MAX = 2600;
+
+const bodyOf = (text) => text.replace(/^#+ .*$/m, "").trim();
+
+function absorbThinSections(blocks) {
+  const out = [];
+  for (let i = 0; i < blocks.length; i++) {
+    const b = blocks[i];
+    if (b.level >= 2 && bodyOf(b.text).length < THIN_BODY) {
+      let end = i + 1;
+      while (end < blocks.length && blocks[end].level > b.level) end++;
+      const kids = blocks.slice(i + 1, end);
+      const merged = [b.text, ...kids.map((k) => k.text)].join("\n\n");
+      if (kids.length && merged.length <= MERGED_MAX) {
+        out.push({ ...b, text: merged });
+        i = end - 1;
+        continue;
+      }
+    }
+    out.push(b);
+  }
+  // a heading with nothing under it says nothing
+  return out.filter((b) => bodyOf(b.text).length > 0);
 }
 
 async function docsPages() {

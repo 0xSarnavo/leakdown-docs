@@ -601,7 +601,13 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
 
 /* Fill the viewport so the composer sits at the bottom where a chat's does,
    with the conversation growing into the space above it. */
-.askpage { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; min-height: calc(100vh - var(--top-h) - 40px); }
+/* The column must not resize with its content. `.page.is-wide` centres its
+   single track with justify-content, which turns off track stretching, so the
+   track sizes to whatever is inside it — a one-line answer gave a narrow
+   column and expanding the supporting passages jumped it wider. An `1fr` track
+   fills the container instead, and the width below does the capping. */
+.page.is-wide.is-chat { grid-template-columns: minmax(0, 1fr); }
+.askpage { width: 100%; max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; min-height: calc(100vh - var(--top-h) - 40px); }
 .askpage .doc-head { border-bottom: 0; }
 .askpage .doc-title h1 { display: flex; align-items: center; gap: 12px; }
 .ask-h1-star { width: 28px; height: 28px; margin-top: -6px; }
