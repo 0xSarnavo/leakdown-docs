@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
   // dev would otherwise write AGENTS.md/CLAUDE.md into the repo on every start
   agentRules: false,
   async rewrites() {

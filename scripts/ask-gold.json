@@ -8,7 +8,8 @@
         "quickstart-H002",
         "quickstart-H003",
         "cli-readme-H007"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what node version do I need?",
@@ -17,7 +18,8 @@
         "quickstart-H001",
         "cli-readme-H007",
         "cli-agents-H003"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what does exit code 2 mean?",
@@ -25,7 +27,8 @@
       "blocks": [
         "goal-tests-H002",
         "exit-codes-H002"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what does the --ladder flag do?",
@@ -35,7 +38,8 @@
         "cli-agents-H006",
         "commands-H001",
         "cli-help-H003"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I test a phone layout?",
@@ -44,7 +48,8 @@
         "use-cases-H002",
         "commands-H001",
         "cli-help-H003"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I run an A/B test between two versions?",
@@ -53,7 +58,8 @@
         "ab-tests-H001",
         "ab-tests-H000",
         "cli-agents-H009"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "where is the report written on disk?",
@@ -65,7 +71,8 @@
         "reading-the-report-H001",
         "cli-help-H005"
       ],
-      "why": "cli-help's PER SITE, ON DISK section lists runs/<site>/AGGREGATE.md outright, so it answers this as squarely as the docs pages do"
+      "why": "cli-help's PER SITE, ON DISK section lists runs/<site>/AGGREGATE.md outright, so it answers this as squarely as the docs pages do",
+      "tag": "baseline"
     },
     {
       "q": "how do I delete the data leakdown stored?",
@@ -73,7 +80,8 @@
       "blocks": [
         "your-data-H002",
         "cli-readme-H006"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "which environment variable sets up the mailbox?",
@@ -81,7 +89,8 @@
       "blocks": [
         "environment-H001",
         "email-H001"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what are the six stages of a run?",
@@ -89,7 +98,8 @@
       "blocks": [
         "how-it-works-H001",
         "cli-help-H001"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I write my own flow file?",
@@ -98,7 +108,8 @@
         "flows-H001",
         "flows-H000",
         "cli-agents-H008"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I check my setup is working?",
@@ -106,7 +117,8 @@
       "blocks": [
         "quickstart-H005",
         "cli-agents-H003"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what does leakdown never do?",
@@ -115,7 +127,8 @@
         "safety-H002",
         "cli-readme-H003",
         "safety-H000"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I choose which AI model runs the sessions?",
@@ -125,7 +138,8 @@
         "choosing-the-ai-H000",
         "cli-agents-H004",
         "cli-agents-H011"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what changed in version 0.7.0?",
@@ -133,7 +147,8 @@
       "blocks": [
         "changelog-H001",
         "cli-changelog-H002"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I run a goal test in a CI job?",
@@ -143,7 +158,8 @@
         "goal-tests-H001",
         "goal-tests-H000",
         "cli-agents-H007"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what are the three preset personas?",
@@ -151,14 +167,16 @@
       "blocks": [
         "personas-H001",
         "personas-H000"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I report a bug?",
       "expect": "answered",
       "blocks": [
         "troubleshooting-H002"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what does --expect do?",
@@ -166,7 +184,8 @@
       "blocks": [
         "goal-tests-H003",
         "commands-H001"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "can you run the test for me instead?",
@@ -176,7 +195,8 @@
         "requested-runs-H001",
         "requested-runs-H006",
         "requested-runs-H002"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what files does each session write?",
@@ -184,7 +204,8 @@
       "blocks": [
         "files-H002",
         "cli-agents-H020"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I stop the run after a particular stage?",
@@ -194,7 +215,8 @@
         "cli-help-H001",
         "cli-help-H003",
         "how-it-works-H001"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how do I supply my own personas?",
@@ -202,7 +224,8 @@
       "blocks": [
         "personas-H003",
         "cli-agents-H015"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what happens at an email confirmation wall?",
@@ -213,7 +236,8 @@
         "email-H002",
         "email-H003",
         "cli-readme-H004"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how sure is the report about a finding?",
@@ -221,7 +245,8 @@
       "blocks": [
         "reading-the-report-H002",
         "reading-the-report-H000"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "how many prospects can I queue at once?",
@@ -230,7 +255,8 @@
         "cli-help-H002",
         "commands-H001",
         "personas-H002"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "do I need permission before testing a site?",
@@ -240,7 +266,8 @@
         "safety-H000",
         "cli-agents-H018",
         "cli-help-H000"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what does a rerun reuse instead of redoing?",
@@ -248,46 +275,714 @@
       "blocks": [
         "how-it-works-H004",
         "commands-H001"
-      ]
+      ],
+      "tag": "baseline"
     },
     {
       "q": "what is the company holiday policy?",
       "expect": "absent",
-      "blocks": []
+      "blocks": [],
+      "tag": "absent-obvious"
     },
     {
       "q": "how do I deploy a Kubernetes cluster?",
       "expect": "absent",
-      "blocks": []
+      "blocks": [],
+      "tag": "absent-obvious"
     },
     {
       "q": "what is the refund policy for enterprise contracts?",
       "expect": "absent",
-      "blocks": []
+      "blocks": [],
+      "tag": "absent-obvious"
     },
     {
       "q": "who is the CEO of the company?",
       "expect": "absent",
-      "blocks": []
+      "blocks": [],
+      "tag": "absent-obvious"
     },
     {
       "q": "how do I fine-tune a custom language model on my own data?",
       "expect": "absent",
-      "blocks": []
+      "blocks": [],
+      "tag": "absent-obvious"
     },
     {
       "q": "how do I integrate this with Salesforce?",
       "expect": "absent",
-      "blocks": []
+      "blocks": [],
+      "tag": "absent-obvious"
     },
     {
       "q": "what is the uptime guarantee?",
       "expect": "absent",
-      "blocks": []
+      "blocks": [],
+      "tag": "absent-obvious"
     },
     {
       "q": "how do I invoice a client for a run?",
       "expect": "absent",
+      "blocks": [],
+      "tag": "absent-obvious"
+    },
+    {
+      "q": "it stopped halfway through, what happened?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "troubleshooting-H001",
+        "choosing-the-ai-H003"
+      ]
+    },
+    {
+      "q": "can it actually buy something on my site?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "safety-H002",
+        "safety-H000",
+        "cli-readme-H003",
+        "safety-H003"
+      ]
+    },
+    {
+      "q": "how many fake users walk my site?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "personas-H002",
+        "cli-help-H002",
+        "commands-H001",
+        "personas-H000"
+      ]
+    },
+    {
+      "q": "does it need my openai key?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "environment-H003",
+        "cli-readme-H000",
+        "choosing-the-ai-H000",
+        "cli-agents-H003",
+        "introduction-H000"
+      ],
+      "why": "introduction-H000 says 'needs no API key' outright"
+    },
+    {
+      "q": "where do the screenshots end up?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "files-H002",
+        "cli-agents-H020",
+        "reading-the-report-H004",
+        "files-H001",
+        "cli-readme-H006"
+      ],
+      "why": "cli-readme-H006 names shots/ under runs/<site>/"
+    },
+    {
+      "q": "how do I know if a finding is real?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "reading-the-report-H003",
+        "reading-the-report-H004",
+        "use-cases-H003"
+      ]
+    },
+    {
+      "q": "can I see it on mobile?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "use-cases-H002",
+        "commands-H001",
+        "cli-help-H003"
+      ]
+    },
+    {
+      "q": "what if my signup needs an email code?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "email-H000",
+        "email-H001",
+        "email-H002",
+        "cli-readme-H004"
+      ]
+    },
+    {
+      "q": "does it upload my data anywhere?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "your-data-H000",
+        "your-data-H001",
+        "cli-readme-H006"
+      ]
+    },
+    {
+      "q": "I want a PDF to send my boss",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "use-cases-H004",
+        "cli-agents-H010",
+        "requested-runs-H004"
+      ]
+    },
+    {
+      "q": "which AI does it use by default?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "choosing-the-ai-H001",
+        "cli-agents-H011",
+        "choosing-the-ai-H002"
+      ]
+    },
+    {
+      "q": "can I run it without a screen?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "commands-H001",
+        "cli-help-H003",
+        "goal-tests-H004",
+        "quickstart-H007"
+      ],
+      "why": "quickstart-H007 shows the --headless invocation"
+    },
+    {
+      "q": "what does it do if there's a paywall?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "safety-H002",
+        "safety-H003",
+        "cli-agents-H018"
+      ]
+    },
+    {
+      "q": "how do I stop it asking me questions?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "goal-tests-H004",
+        "choosing-the-ai-H002",
+        "cli-agents-H005",
+        "cli-help-H003",
+        "commands-H001"
+      ],
+      "why": "cli-help-H003 lists '--yes never prompt; take the default for every question'"
+    },
+    {
+      "q": "can two versions of a page be compared?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "ab-tests-H000",
+        "ab-tests-H001",
+        "cli-agents-H009"
+      ]
+    },
+    {
+      "q": "is there a way to test just one part of the journey?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "flows-H000",
+        "flows-H001",
+        "goal-tests-H001"
+      ]
+    },
+    {
+      "q": "what happens to sessions that run out of time?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "exit-codes-H001",
+        "how-it-works-H002"
+      ]
+    },
+    {
+      "q": "does it work with google sign in?",
+      "expect": "answered",
+      "tag": "paraphrase",
+      "blocks": [
+        "safety-H002",
+        "cli-readme-H003",
+        "safety-H003"
+      ]
+    },
+    {
+      "q": "exit code 2",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "goal-tests-H002",
+        "exit-codes-H002"
+      ]
+    },
+    {
+      "q": "ladder",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "how-it-works-H003",
+        "cli-agents-H006",
+        "cli-help-H003"
+      ]
+    },
+    {
+      "q": "--expect",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "goal-tests-H003",
+        "cli-changelog-H002",
+        "commands-H001"
+      ]
+    },
+    {
+      "q": "AGGREGATE.md",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "reading-the-report-H000",
+        "reading-the-report-H001",
+        "files-H001",
+        "quickstart-H008",
+        "cli-agents-H020"
+      ]
+    },
+    {
+      "q": "analytics.json",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "personas-H004",
+        "cli-agents-H016",
+        "files-H003"
+      ]
+    },
+    {
+      "q": "--doctor",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "quickstart-H005",
+        "cli-agents-H021",
+        "troubleshooting-H000",
+        "commands-H001"
+      ],
+      "why": "commands-H001 is the flag reference and documents --doctor"
+    },
+    {
+      "q": "IMAP",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "email-H001",
+        "environment-H001",
+        "cli-agents-H003"
+      ]
+    },
+    {
+      "q": "VERDICTS.md",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "reading-the-report-H003"
+      ]
+    },
+    {
+      "q": "--variant",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "ab-tests-H001",
+        "cli-agents-H009",
+        "commands-H001"
+      ]
+    },
+    {
+      "q": "--wide",
+      "expect": "answered",
+      "tag": "terse",
+      "blocks": [
+        "cli-agents-H006",
+        "how-it-works-H003",
+        "commands-H001"
+      ]
+    },
+    {
+      "q": "how do i instal the cli",
+      "expect": "answered",
+      "tag": "typo",
+      "blocks": [
+        "quickstart-H002",
+        "quickstart-H003",
+        "cli-readme-H007"
+      ]
+    },
+    {
+      "q": "exit codes meanning",
+      "expect": "answered",
+      "tag": "typo",
+      "blocks": [
+        "exit-codes-H002",
+        "goal-tests-H002"
+      ]
+    },
+    {
+      "q": "personna presets",
+      "expect": "answered",
+      "tag": "typo",
+      "blocks": [
+        "personas-H001",
+        "cli-agents-H013"
+      ]
+    },
+    {
+      "q": "enviroment variables for mail",
+      "expect": "answered",
+      "tag": "typo",
+      "blocks": [
+        "environment-H001",
+        "email-H001",
+        "environment-H000"
+      ]
+    },
+    {
+      "q": "goal test in ci pipline",
+      "expect": "answered",
+      "tag": "typo",
+      "blocks": [
+        "goal-tests-H004",
+        "goal-tests-H001",
+        "goal-tests-H000"
+      ]
+    },
+    {
+      "q": "recieve email codes",
+      "expect": "answered",
+      "tag": "typo",
+      "blocks": [
+        "email-H000",
+        "email-H001",
+        "email-H002",
+        "cli-readme-H004"
+      ]
+    },
+    {
+      "q": "delete my runs foler",
+      "expect": "answered",
+      "tag": "typo",
+      "blocks": [
+        "your-data-H002",
+        "cli-readme-H006"
+      ]
+    },
+    {
+      "q": "playwrite chromium install",
+      "expect": "answered",
+      "tag": "typo",
+      "blocks": [
+        "quickstart-H004",
+        "cli-agents-H003",
+        "cli-readme-H007",
+        "quickstart-H001"
+      ]
+    },
+    {
+      "q": "where is the session loop implemented?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H025",
+        "cli-agents-H026"
+      ]
+    },
+    {
+      "q": "how do I add a new persona to the code?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H028",
+        "cli-agents-H015",
+        "cli-agents-H014"
+      ]
+    },
+    {
+      "q": "what does src/cli.ts own?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H026"
+      ]
+    },
+    {
+      "q": "how do I verify a code change?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H029"
+      ]
+    },
+    {
+      "q": "how are brains isolated between sessions?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H012"
+      ]
+    },
+    {
+      "q": "what invariants should I not break?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H027"
+      ]
+    },
+    {
+      "q": "where does the reasoning behind a decision live?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H034",
+        "cli-readme-H008"
+      ]
+    },
+    {
+      "q": "which skill applies to a code change in this repo?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H031",
+        "cli-agents-H032"
+      ]
+    },
+    {
+      "q": "how is a release cut?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H033",
+        "cli-changelog-H000"
+      ]
+    },
+    {
+      "q": "how many runtime dependencies does it have?",
+      "expect": "answered",
+      "tag": "internals",
+      "blocks": [
+        "cli-agents-H023"
+      ]
+    },
+    {
+      "q": "what viewport is used for phone tests?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "use-cases-H002",
+        "cli-help-H003",
+        "commands-H001"
+      ],
+      "why": "cli-help-H003 and commands-H001 both state 390x844"
+    },
+    {
+      "q": "what are the four session endings?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "exit-codes-H001"
+      ]
+    },
+    {
+      "q": "which file lists broken links?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "how-it-works-H001",
+        "cli-help-H001",
+        "files-H001",
+        "cli-agents-H020",
+        "changelog-H004",
+        "cli-readme-H001"
+      ],
+      "why": "cli-readme-H001's stage table maps broken links to MAP.md"
+    },
+    {
+      "q": "what tap target size does it flag?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "use-cases-H002"
+      ]
+    },
+    {
+      "q": "what is written once per site?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "how-it-works-H004",
+        "cli-agents-H020",
+        "files-H001"
+      ]
+    },
+    {
+      "q": "what changed in 0.6.0?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "changelog-H002",
+        "cli-changelog-H003"
+      ]
+    },
+    {
+      "q": "what does --stop do?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "commands-H001",
+        "cli-help-H003",
+        "cli-agents-H017",
+        "how-it-works-H001"
+      ]
+    },
+    {
+      "q": "how often can I request a run?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "requested-runs-H004"
+      ]
+    },
+    {
+      "q": "what is in a session folder?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "files-H002",
+        "your-data-H001",
+        "reading-the-report-H004"
+      ]
+    },
+    {
+      "q": "what does the map stage crawl?",
+      "expect": "answered",
+      "tag": "factual",
+      "blocks": [
+        "how-it-works-H001",
+        "cli-help-H001",
+        "changelog-H004"
+      ]
+    },
+    {
+      "q": "how much does leakdown cost per run?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "docs cover running it, never pricing"
+    },
+    {
+      "q": "what is the SLA for a requested run?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "requested runs are covered; no SLA is stated"
+    },
+    {
+      "q": "can I run it on Windows?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "requirements name Node/Chromium/brew, never Windows support"
+    },
+    {
+      "q": "does it test native mobile apps?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "phone VIEWPORT is covered; native apps are not"
+    },
+    {
+      "q": "is there a hosted web dashboard?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "everything is local CLI; no dashboard exists"
+    },
+    {
+      "q": "how do I add a teammate to my account?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "there are no accounts"
+    },
+    {
+      "q": "does it integrate with Jira?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "GitHub issues are mentioned; no integrations"
+    },
+    {
+      "q": "can I schedule runs to happen nightly?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "CI is covered; scheduling is not"
+    },
+    {
+      "q": "does it produce a WCAG compliance report?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "tap-target ruler exists; no accessibility report"
+    },
+    {
+      "q": "how do I self-host the language model?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "brains are subscription CLIs; self-hosting is not covered"
+    },
+    {
+      "q": "what is the rate limit on the API?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "there is no API"
+    },
+    {
+      "q": "how do I get a refund?",
+      "expect": "absent",
+      "tag": "absent-near",
+      "blocks": [],
+      "why": "no billing anywhere in the docs"
+    },
+    {
+      "q": "what is the capital of France?",
+      "expect": "absent",
+      "tag": "absent-obvious",
+      "blocks": []
+    },
+    {
+      "q": "how do I make sourdough bread?",
+      "expect": "absent",
+      "tag": "absent-obvious",
+      "blocks": []
+    },
+    {
+      "q": "what is the company travel expense policy?",
+      "expect": "absent",
+      "tag": "absent-obvious",
       "blocks": []
     }
   ]

@@ -79,48 +79,49 @@ export function tokens(text: string): string[] {
 }
 
 /* ---------- BM25 ---------- */
-const K1 = 1.5;
-const B = 0.75;
-// heading_path counts double: a heading carries the page's intent ("Exit codes",
-// "Reading the report"), so a definitional block outranks a long sibling that
-// only mentions the words in passing.
-const HEADING_WEIGHT = 2;
+/* BM25 knobs. `heading` weights heading_path tokens: a heading carries the
+   page's intent ("Exit codes", "Reading the report"), so a definitional block
+   outranks a long sibling that only mentions the words in passing. Exposed as
+   parameters so scripts/tune-ask.mjs can sweep them against the gold set
+   instead of them being three numbers someone once guessed. */
+export type Bm25Params = { k1: number; b: number; heading: number };
+export const BM25: Bm25Params = { k1: 1.5, b: 0.75, heading: 2 };
 // Blocks sent to Jev. Choice caps at 255 labels; the state budget binds first.
 export const SHORTLIST = 40;
 
 type Doc = { block: Block; tf: Map<string, number>; len: number };
 
-export type Index = { docs: Doc[]; df: Map<string, number>; avgdl: number; n: number };
+export type Index = { docs: Doc[]; df: Map<string, number>; avgdl: number; n: number; p: Bm25Params };
 
 /* Tokenizing the whole corpus per query costs ~200ms and never changes between
    queries, so callers build the index once and keep it. */
-export function buildIndex(BLOCKS: Block[]): Index {
+export function buildIndex(BLOCKS: Block[], p: Bm25Params = BM25): Index {
   const docs: Doc[] = [];
   const df = new Map<string, number>();
   for (const block of BLOCKS) {
     const toks = tokens(block.text);
     const head = tokens(block.heading_path.join(" "));
-    for (let i = 0; i < HEADING_WEIGHT; i++) toks.push(...head);
+    for (let i = 0; i < p.heading; i++) toks.push(...head);
     const tf = new Map<string, number>();
     for (const t of toks) tf.set(t, (tf.get(t) ?? 0) + 1);
     docs.push({ block, tf, len: toks.length || 1 });
     for (const t of tf.keys()) df.set(t, (df.get(t) ?? 0) + 1);
   }
   const avgdl = docs.length ? docs.reduce((a, d) => a + d.len, 0) / docs.length : 1;
-  return { docs, df, avgdl: avgdl || 1, n: docs.length };
+  return { docs, df, avgdl: avgdl || 1, n: docs.length, p };
 }
 
 export function shortlist(index: Index, query: string, k = SHORTLIST): Block[] {
   const qterms = [...new Set(tokens(query))];
   if (!qterms.length) return index.docs.slice(0, k).map((d) => d.block);
-  const { docs, df, avgdl, n } = index;
+  const { docs, df, avgdl, n, p } = index;
   const idf = new Map(qterms.map((t) => [t, Math.log(1 + (n - (df.get(t) ?? 0) + 0.5) / ((df.get(t) ?? 0) + 0.5))]));
   const scored = docs.map((d) => {
     let score = 0;
-    const norm = K1 * (1 - B + (B * d.len) / avgdl);
+    const norm = p.k1 * (1 - p.b + (p.b * d.len) / avgdl);
     for (const t of qterms) {
       const freq = d.tf.get(t);
-      if (freq) score += (idf.get(t) as number) * ((freq * (K1 + 1)) / (freq + norm));
+      if (freq) score += (idf.get(t) as number) * ((freq * (p.k1 + 1)) / (freq + norm));
     }
     return { block: d.block, score };
   });

@@ -1,4 +1,5 @@
-import { ask } from "../../../lib/ask";
+import { makeAsk } from "../../../lib/ask";
+import { BLOCKS } from "../../../lib/corpus";
 
 /* POST /api/ask — ask the docs a question, get back the paragraph that answers
    it, verbatim, or an honest "not in these docs".
@@ -8,11 +9,21 @@ import { ask } from "../../../lib/ask";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// bound to the corpus once per instance, not per request
+const ask = makeAsk(BLOCKS);
+
 const MIN = 3;
 const MAX = 400;
 
-/* 40 asks a minute per address. The key is ours and every ask costs tokens;
-   this is a spend guard, not a security boundary. */
+/* 40 asks a minute per address, counted in this process's memory.
+
+   Be clear about what that is worth. On a single long-lived server it is a real
+   per-address limit. On serverless — where this now deploys — each instance
+   keeps its own counter and instances recycle, so a determined caller spread
+   across instances gets 40 per instance, not 40 in total. It blunts an
+   accidental loop, which is what it is here for; it is not a spend cap and not
+   a security boundary. Move the counter to a shared store (Vercel KV, Upstash,
+   Redis) if this ever needs to hold a real budget. */
 const WINDOW_MS = 60_000;
 const PER_WINDOW = 40;
 const hits = new Map<string, number[]>();
@@ -29,10 +40,14 @@ function rateLimited(ip: string): boolean {
 export async function POST(req: Request) {
   // first entry of x-forwarded-for, matching the website's proxy handling
   const fwd = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim();
-  // No forwarded-for means the request never crossed the edge proxy, i.e. it is
-  // local: dev and scripts/eval-ask.mjs --live would otherwise trip the limit.
-  // Guarded by NODE_ENV as well, so production limits every request either way.
-  const exempt = !fwd && process.env.NODE_ENV !== "production";
+  /* Local requests are exempt, so `npm run eval:ask -- --live` (107 questions
+     back to back) is not throttled by a guard meant for the public internet.
+     Local means no forwarded-for at all, or a loopback one — the dev server
+     sets `::1` itself, which is why the header alone is not enough to tell.
+     The NODE_ENV guard is the belt: in production every request is counted,
+     whatever the headers claim. */
+  const loopback = fwd === "::1" || fwd === "127.0.0.1" || fwd === "::ffff:127.0.0.1";
+  const exempt = (!fwd || loopback) && process.env.NODE_ENV !== "production";
   if (!exempt && rateLimited(fwd || "local")) {
     return Response.json({ error: "too many questions, give it a minute" }, { status: 429 });
   }
