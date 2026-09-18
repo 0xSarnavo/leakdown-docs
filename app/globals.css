@@ -27,8 +27,8 @@
   --nav-h: 52px;
   --pad: 28px;
   --ease: cubic-bezier(.22, .61, .36, 1);
-  /* fixed dark instrument palette (terminal, hero command bar): identical in both themes */
-  --term-bg: #141419; --term-rule: #33333c; --term-chrome: #8b8b96; --term-ink: #e8e4d8; --term-ok: #8fd08f;
+  /* The terminal's palette is per-theme, below. Only the window dots stay fixed:
+     they are macOS chrome, not text, and they are that colour everywhere. */
   --bar-bg: #17171a; --bar-rule: #39393e; --bar-ink: #e4e1d8; --bar-dim: #8f8c84; --bar-hover: #1d1d21;
   --hero-ink: #F3EEE2; --hero-sub: #a7a49d; --hero-ground: #101012;
   /* 404 scene: fixed dark regardless of theme */
@@ -41,6 +41,12 @@ html[data-theme="light"] {
   --glow: rgba(91, 33, 182, .24); --lk-fill: rgba(91, 33, 182, .14);
   --ok: #1E7A3C; --warn: #8A5A00; --err: #B3261E; --info: #5b21b6;
   --field-err-bd: #B3261E; --field-err-bg: #FBEDEB;
+  /* terminal, light: the same roles on paper. These are the light theme's own
+     values, not the dark ones dimmed — every token here is a text colour on
+     --term-bg, and #5fd38a on cream cannot be read. */
+  --term-bg: #F4EDDE; --term-rule: #E3D9C2; --term-chrome: #5C5546; --term-ink: #1C1913; --term-ok: #1E7A3C;
+  --term-hover: #EDE3D0; --term-tab: #5b21b6; --term-prompt: #5b21b6;
+  --term-dim: #6B6455; --term-ok-txt: #1E7A3C; --term-warn: #8A5A00; --term-err: #B3261E;
   color-scheme: light;
 }
 html[data-theme="dark"] {
@@ -49,6 +55,10 @@ html[data-theme="dark"] {
   --glow: rgba(157, 123, 245, .3); --lk-fill: rgba(157, 123, 245, .16);
   --ok: #7BD99A; --warn: #E3B341; --err: #FF8A80; --info: #9d7bf5;
   --field-err-bd: #FF8A80; --field-err-bg: rgba(255, 138, 128, .10);
+  /* terminal, dark: the instrument look */
+  --term-bg: #141419; --term-rule: #33333c; --term-chrome: #8b8b96; --term-ink: #e8e4d8; --term-ok: #8fd08f;
+  --term-hover: #1b1b21; --term-tab: #9d7bf5; --term-prompt: #a78bfa;
+  --term-dim: #9a9aa6; --term-ok-txt: #5fd38a; --term-warn: #e5c07b; --term-err: #ff6b6b;
   color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {
@@ -58,6 +68,10 @@ html[data-theme="dark"] {
     --glow: rgba(157, 123, 245, .3); --lk-fill: rgba(157, 123, 245, .16);
     --ok: #7BD99A; --warn: #E3B341; --err: #FF8A80; --info: #9d7bf5;
     --field-err-bd: #FF8A80; --field-err-bg: rgba(255, 138, 128, .10);
+    /* terminal, dark: the instrument look */
+    --term-bg: #141419; --term-rule: #33333c; --term-chrome: #8b8b96; --term-ink: #e8e4d8; --term-ok: #8fd08f;
+    --term-hover: #1b1b21; --term-tab: #9d7bf5; --term-prompt: #a78bfa;
+    --term-dim: #9a9aa6; --term-ok-txt: #5fd38a; --term-warn: #e5c07b; --term-err: #ff6b6b;
     color-scheme: dark;
   }
 }
@@ -68,6 +82,12 @@ html[data-theme="dark"] {
     --glow: rgba(91, 33, 182, .24); --lk-fill: rgba(91, 33, 182, .14);
     --ok: #1E7A3C; --warn: #8A5A00; --err: #B3261E; --info: #5b21b6;
     --field-err-bd: #B3261E; --field-err-bg: #FBEDEB;
+    /* terminal, light: the same roles on paper. These are the light theme's own
+       values, not the dark ones dimmed — every token here is a text colour on
+       --term-bg, and #5fd38a on cream cannot be read. */
+    --term-bg: #F4EDDE; --term-rule: #E3D9C2; --term-chrome: #5C5546; --term-ink: #1C1913; --term-ok: #1E7A3C;
+    --term-hover: #EDE3D0; --term-tab: #5b21b6; --term-prompt: #5b21b6;
+    --term-dim: #6B6455; --term-ok-txt: #1E7A3C; --term-warn: #8A5A00; --term-err: #B3261E;
     color-scheme: light;
   }
 }
@@ -177,7 +197,7 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
 .code figcaption { display: flex; align-items: stretch; justify-content: space-between; height: 38px; border-bottom: 1px solid var(--term-rule); font-family: var(--mono); font-size: 12px; color: var(--term-chrome); }
 .code-t { display: flex; align-items: center; padding-left: 14px; }
 .code .copy { display: grid; place-items: center; width: 42px; background: none; border: 0; border-left: 1px solid var(--term-rule); color: var(--term-chrome); cursor: pointer; transition: color .2s var(--ease), background-color .2s var(--ease); }
-.code .copy:hover { color: var(--term-ink); background: #1b1b21; }
+.code .copy:hover { color: var(--term-ink); background: var(--term-hover); }
 .code .copy.is-ok { color: var(--term-ok); }
 .code .copy svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .code .copy.is-ok svg { animation: fade .3s var(--ease); }
@@ -187,7 +207,7 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
 .code pre:not([hidden]) { animation: fade .25s var(--ease); }
 .code-tabs { display: flex; align-items: stretch; overflow-x: auto; scrollbar-width: none; }
 .code-tabs button { position: relative; padding: 0 14px; background: none; border: 0; color: var(--term-chrome); font: 12.5px var(--mono); cursor: pointer; white-space: nowrap; transition: color .2s var(--ease); }
-.code-tabs button::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: -1px; height: 2px; background: #9d7bf5; transform: scaleX(0); transition: transform .3s var(--ease); }
+.code-tabs button::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: -1px; height: 2px; background: var(--term-tab); transform: scaleX(0); transition: transform .3s var(--ease); }
 .code-tabs button:hover { color: var(--term-ink); }
 .code-tabs button.is-on { color: var(--term-ink); }
 .code-tabs button.is-on::after { transform: scaleX(1); }
@@ -427,13 +447,13 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
 .code-dots i:nth-child(3) { background: #28c840; }
 .code.is-term .code-t { flex: 1; justify-content: center; padding: 0 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .code.is-term .code-t::before { content: "leakdown \2014\00a0"; }
-.code.is-term .ln::before { content: "$ "; color: #a78bfa; user-select: none; }
+.code.is-term .ln::before { content: "$ "; color: var(--term-prompt); user-select: none; }
 .code.is-term .ln:empty::before { content: ""; }
-.code.is-term .t-dim { color: #9a9aa6; }
-.code.is-term .t-ok { color: #5fd38a; }
-.code.is-term .t-warn { color: #e5c07b; }
-.code.is-term .t-err { color: #ff6b6b; font-weight: 600; }
-.code.is-term .t-stage { color: #a78bfa; font-weight: 600; }
+.code.is-term .t-dim { color: var(--term-dim); }
+.code.is-term .t-ok { color: var(--term-ok-txt); }
+.code.is-term .t-warn { color: var(--term-warn); }
+.code.is-term .t-err { color: var(--term-err); font-weight: 600; }
+.code.is-term .t-stage { color: var(--term-prompt); font-weight: 600; }
 .code.is-term .t-strong { color: var(--term-ink); font-weight: 600; }
 .code.has-tabs.is-term .code-tabs { flex: 1; justify-content: center; }
 
@@ -441,15 +461,30 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
 /* Every rule lives here, never inline: proxy.ts serves a nonce CSP and an
    inline style attribute has no nonce to carry. */
 
+/* Ask is the last item in the tab strip and is styled as one: same size, same
+   colour, same hover. It is a button, not a link — the rule to its left is the
+   only thing that says so, because it opens the panel over the page you are on
+   instead of navigating away. */
 .ask-btn {
-  display: inline-flex; align-items: center; gap: 7px; height: 30px; padding: 0 10px;
-  background: transparent; border: 1px solid var(--rule); border-radius: var(--r-pill);
-  color: var(--ink2); font: inherit; font-size: 13px; cursor: pointer;
+  position: relative; display: flex; align-items: center; gap: 8px;
+  padding: 0; background: none; border: 0;
+  color: var(--ink2); font: inherit; font-size: 16px; white-space: nowrap; cursor: pointer;
+  transition: color .2s var(--ease);
 }
-.ask-btn:hover { border-color: var(--accent); color: var(--ink); }
-.ask-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; }
-.ask-btn em { font-style: normal; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--warn); }
-@media (max-width: 900px) { .ask-btn span { display: none; } }
+.ask-btn::before { content: ""; position: absolute; left: -14px; top: 50%; transform: translateY(-50%); width: 1px; height: 17px; background: var(--rule); }
+.ask-btn:hover { color: var(--ink); }
+
+/* The star: the one mark on this site that says a model is involved. Raised to
+   the text's shoulder and lit, so it reads as a signal rather than an icon. */
+.ask-star { width: 15px; height: 15px; flex: none; margin-top: -4px; fill: var(--accent); stroke: none; overflow: visible; }
+.ask-star path { filter: drop-shadow(0 0 5px var(--glow)) drop-shadow(0 0 10px var(--glow)); }
+.ask-star .ask-star-sm { opacity: .75; }
+.ask-btn:hover .ask-star { animation: ask-twinkle 1.4s var(--ease) infinite; }
+@keyframes ask-twinkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50% { transform: scale(1.12) rotate(8deg); opacity: .85; }
+}
+@media (prefers-reduced-motion: reduce) { .ask-btn:hover .ask-star { animation: none; } }
 
 .ask-fab {
   position: fixed; right: 20px; bottom: 20px; z-index: 25;
@@ -459,7 +494,8 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .55); transition: transform .18s var(--ease);
 }
 .ask-fab:hover { transform: translateY(-2px); }
-.ask-fab svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linejoin: round; }
+.ask-fab .ask-star { width: 17px; height: 17px; margin-top: 0; fill: currentColor; }
+.ask-fab .ask-star path { filter: drop-shadow(0 0 6px rgba(255, 255, 255, .55)); }
 @media (max-width: 620px) { .ask-fab span { display: none; } .ask-fab { padding: 0; width: 46px; height: 46px; justify-content: center; } }
 
 .ask { padding: 0; border: 0; background: transparent; color: var(--ink); width: min(680px, calc(100vw - 24px)); margin: 6vh auto auto; max-height: 88vh; overflow: visible; }
@@ -467,7 +503,8 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
 .ask-card { display: flex; flex-direction: column; max-height: 88vh; background: var(--ground); border: 1px solid var(--rule); border-radius: var(--r-l); overflow: hidden; box-shadow: 0 40px 100px -30px rgba(0, 0, 0, .8); }
 
 .ask-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
-.ask-title { display: flex; align-items: center; gap: 9px; font-size: 15px; }
+.ask-title { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+.ask-title .ask-star { width: 16px; height: 16px; margin-top: 0; }
 .ask-alpha { font-size: 10px; letter-spacing: .07em; text-transform: uppercase; color: var(--warn); border: 1px solid var(--warn); border-radius: var(--r-pill); padding: 1px 7px; }
 
 .ask-note { margin: 0; padding: 11px 16px; font-size: 12.5px; line-height: 1.5; color: var(--ink2); background: color-mix(in srgb, var(--warn) 9%, transparent); border-bottom: 1px solid var(--rule); }
@@ -522,6 +559,21 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
 .ask-more > summary { cursor: pointer; font-size: 12.5px; color: var(--ink2); }
 .ask-more > summary:hover { color: var(--accent); }
 .ask-sup { display: grid; gap: 7px; margin-top: 12px; }
+
+.ask-note code, .ask-sys code { font-family: var(--mono); font-size: .85em; padding: 1px 5px; background: var(--ground); border: 1px solid var(--rule); border-radius: var(--r-s); }
+
+/* A line the panel itself wrote — a command's reply, never a docs answer. It is
+   deliberately plain: nothing here should be mistaken for a quoted block. */
+.ask-sys { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--ink2); border-left: 2px solid var(--rule); padding-left: 11px; }
+.ask-sys b { color: var(--ink); font-weight: 600; }
+.ask-sys ul { margin: 6px 0 0; padding-left: 0; list-style: none; display: grid; gap: 4px; }
+.ask-sys li { display: flex; gap: 9px; align-items: baseline; }
+.ask-sys li code { flex: none; }
+
+.ask-eg { background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-size: 13.5px; text-align: left; cursor: pointer; }
+.ask-eg:hover { text-decoration: underline; }
+
+.ask-hint { margin: 0; padding: 0 16px 10px; font-size: 11.5px; color: var(--ink2); opacity: .8; }
 
 .ask-form { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--rule); background: var(--ground); }
 .ask-form input { flex: 1; min-width: 0; height: 38px; padding: 0 12px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--r-m); color: var(--ink); font: inherit; font-size: 14.5px; }

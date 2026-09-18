@@ -23,7 +23,7 @@ export const TABS: Array<{ id: Tab; label: string; home: string; wide?: boolean 
   { id: "guides", label: "Guides", home: "introduction" },
   { id: "reference", label: "CLI reference", home: "commands" },
   { id: "changelog", label: "Changelog", home: "changelog" },
-  { id: "builder", label: "Command builder", home: "build-a-command", wide: true },
+  { id: "builder", label: "Builder", home: "build-a-command", wide: true },
 ];
 export const isWide = (tab?: Tab) => !!TABS.find((t) => t.id === tab)?.wide;
 
@@ -102,12 +102,12 @@ export const PAGES: Page[] = [
   },
   {
     slug: "build-a-command",
-    title: "Command builder",
+    title: "Builder",
     description: "Pick the job, type your site, copy the command.",
     tab: "builder",
     group: "Tools",
     sections: [["after", "After it runs"]],
-    keywords: "command builder generator wizard which flags copy",
+    keywords: "command builder generator wizard which flags copy build a command",
   },
   {
     slug: "goal-tests",

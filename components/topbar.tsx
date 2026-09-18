@@ -9,6 +9,17 @@ import { REPO, TABS, pageBySlug } from "../lib/nav";
 type Theme = "auto" | "light" | "dark";
 const KEY = "leakdown-theme";
 
+/* The four-point star that marks the one AI-backed thing here. Its glow is CSS
+   (.ask-btn svg), so it follows the theme and stops under reduced motion. */
+function Sparkle() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="ask-star">
+      <path d="M12 1.6l2.1 6.6a4 4 0 0 0 2.6 2.6l6.6 2.1-6.6 2.1a4 4 0 0 0-2.6 2.6L12 24.2l-2.1-6.6a4 4 0 0 0-2.6-2.6L.7 12.9l6.6-2.1a4 4 0 0 0 2.6-2.6z" />
+      <path className="ask-star-sm" d="M19.2 1.2l.7 2.1a1.4 1.4 0 0 0 .9.9l2.1.7-2.1.7a1.4 1.4 0 0 0-.9.9l-.7 2.1-.7-2.1a1.4 1.4 0 0 0-.9-.9l-2.1-.7 2.1-.7a1.4 1.4 0 0 0 .9-.9z" />
+    </svg>
+  );
+}
+
 /* One-row top bar: mark, tabs, search, GitHub, theme. Under 900px the tabs drop to a second row and the menu button
    opens the sidebar as a drawer (sidebar.tsx listens for it). */
 export default function Topbar() {
@@ -69,19 +80,20 @@ export default function Topbar() {
           <span>Search docs</span>
           <kbd>⌘K</kbd>
         </button>
-        <button className="ask-btn" type="button" onClick={() => window.dispatchEvent(new Event("docs:ask"))}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-5.5A8 8 0 1 1 21 12z" />
-          </svg>
-          <span>Ask</span>
-          <em>alpha</em>
-        </button>
         <nav className="tabs" aria-label="Sections">
           {TABS.map((t) => (
             <Link key={t.id} href={`/${t.home}`} className={`${t.wide ? "is-sep " : ""}${tab === t.id ? "is-on" : ""}`.trim() || undefined} aria-current={tab === t.id ? "page" : undefined}>
               {t.label}
             </Link>
           ))}
+          {/* Last in the strip, reading as one more section, but it opens the
+              panel instead of navigating — so the page you asked from stays
+              behind it. The sparkle is the only mark on this site that says a
+              model is involved; the rest of the docs are written by hand. */}
+          <button className="ask-btn" type="button" aria-label="Ask the docs" onClick={() => window.dispatchEvent(new Event("docs:ask"))}>
+            <Sparkle />
+            <span>Ask</span>
+          </button>
         </nav>
         <span className="sp" />
         <a className="icon" href={REPO} target="_blank" rel="noopener noreferrer" aria-label="Leakdown CLI on GitHub">

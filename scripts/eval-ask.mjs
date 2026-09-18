@@ -11,11 +11,16 @@ import { fileURLToPath } from "node:url";
 import { pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const GOLD = JSON.parse(readFileSync(path.join(ROOT, "scripts", "ask-gold.json"), "utf8")).queries;
+const ALL_GOLD = JSON.parse(readFileSync(path.join(ROOT, "scripts", "ask-gold.json"), "utf8")).queries;
 const argv = process.argv.slice(2);
 const LIVE = argv.includes("--live");
 const SHOW = argv.includes("--show");
 const BASE = (process.env.ASK_BASE || "http://127.0.0.1:3001").replace(/\/$/, "");
+/* --sample N takes roughly N questions, spread evenly across the tags, for a
+   cheap check after a small change. The gates still apply, so a sample can fail
+   a build; it just cannot prove one good the way the full set does. */
+const sampleAt = argv.indexOf("--sample");
+const SAMPLE = sampleAt >= 0 ? Number(argv[sampleAt + 1]) : 0;
 
 // Goals. A miss here fails the run.
 const RECALL_MIN = 1.0; // every gold block must survive the BM25 shortlist
@@ -28,7 +33,27 @@ const EXACT_MIN = 0.94;
 const TOP1_MIN = 0.94;
 const ABSTAIN_MIN = 0.9;
 
+const GOLD = SAMPLE > 0 ? stratify(ALL_GOLD, SAMPLE) : ALL_GOLD;
+
 const pct = (n, d) => (d ? ((100 * n) / d).toFixed(1) + "%" : "n/a");
+
+function stratify(all, n) {
+  const byTag = {};
+  for (const g of all) (byTag[g.tag ?? "untagged"] ??= []).push(g);
+  const tags = Object.keys(byTag).sort();
+  const out = [];
+  for (let i = 0; out.length < n; i++) {
+    let added = false;
+    for (const t of tags) {
+      if (byTag[t][i] && out.length < n) {
+        out.push(byTag[t][i]);
+        added = true;
+      }
+    }
+    if (!added) break;
+  }
+  return out;
+}
 const fails = [];
 
 /* ---------- audit: the "no LLM" claim ---------- */
@@ -157,6 +182,14 @@ async function live() {
     for (const m of misses) console.log(m);
   }
 
+  /* The gates are calibrated on the whole set. On a sample of a couple of dozen
+     there are only two or three questions per tag, so a single known-hard one
+     swings a rate by 30 points — failing a build on that would be noise, not a
+     regression. A sample reports; the full run gates. */
+  if (SAMPLE > 0) {
+    console.log(`\nsample of ${GOLD.length} — reported, not gated. Run without --sample before shipping.`);
+    return;
+  }
   if (exact / GOLD.length < EXACT_MIN) fails.push(`exact ${pct(exact, GOLD.length)} < ${(EXACT_MIN * 100).toFixed(0)}%`);
   if (top1 / answerable.length < TOP1_MIN) fails.push(`top-1 ${pct(top1, answerable.length)} < ${(TOP1_MIN * 100).toFixed(0)}%`);
   if (abstained / absent.length < ABSTAIN_MIN) fails.push(`abstention ${pct(abstained, absent.length)} < ${(ABSTAIN_MIN * 100).toFixed(0)}%`);

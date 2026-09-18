@@ -84,7 +84,7 @@ export function UseCases() {
       <H2 id="more">More jobs</H2>
       <p>Other jobs have their own pages.</p>
       <Cards>
-        <Card href="/build-a-command" title="Command builder">Pick the job, type your site, copy the command.</Card>
+        <Card href="/build-a-command" title="Builder">Pick the job, type your site, copy the command.</Card>
         <Card href="/goal-tests" title="Fail the build when signup breaks">Goal tests with exit codes CI can read.</Card>
         <Card href="/goal-tests#expect" title="Check a price or a total">--expect makes a completion count only when the value shows.</Card>
         <Card href="/ab-tests" title="Compare two versions">Same prospects, one verdict.</Card>

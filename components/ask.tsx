@@ -32,9 +32,28 @@ type Reply = {
   router: { choice: string; confidence: number } | null;
 };
 
-type Turn = { q: string; state: "asking" | "done" | "error"; reply?: Reply; error?: string };
+type Turn = { q: string; state: "asking" | "done" | "error" | "said"; reply?: Reply; error?: string; said?: "help" | "examples" | "unknown" };
 
 const EXAMPLES = ["How do I install it?", "What does exit code 2 mean?", "How do I run a goal test in CI?"];
+
+/* Typed commands, not a menu: the panel is a text box, so the things you can do
+   to it should be typeable too. Handled here and never sent to the model. */
+const COMMANDS: Array<[name: string, does: string]> = [
+  ["/clear", "start over — forget everything above"],
+  ["/examples", "show the example questions again"],
+  ["/help", "this list"],
+];
+
+/* The same four-point star as the top bar, so the panel is visibly the thing
+   that button opens. */
+function Sparkle({ className }: { className?: string }) {
+  return (
+    <svg className={`ask-star${className ? " " + className : ""}`} viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 1.6l2.1 6.6a4 4 0 0 0 2.6 2.6l6.6 2.1-6.6 2.1a4 4 0 0 0-2.6 2.6L12 24.2l-2.1-6.6a4 4 0 0 0-2.6-2.6L.7 12.9l6.6-2.1a4 4 0 0 0 2.6-2.6z" />
+      <path className="ask-star-sm" d="M19.2 1.2l.7 2.1a1.4 1.4 0 0 0 .9.9l2.1.7-2.1.7a1.4 1.4 0 0 0-.9.9l-.7 2.1-.7-2.1a1.4 1.4 0 0 0-.9-.9l-2.1-.7 2.1-.7a1.4 1.4 0 0 0 .9-.9z" />
+    </svg>
+  );
+}
 
 function Crumb({ hit }: { hit: Hit }) {
   return (
@@ -83,6 +102,19 @@ export default function Ask() {
     const query = question.trim();
     if (!query || busy) return;
     setQ("");
+
+    // a command acts on the panel; it is never a question for the docs
+    if (query.startsWith("/")) {
+      const name = query.split(/\s+/)[0].toLowerCase();
+      if (name === "/clear") {
+        setTurns([]);
+        return;
+      }
+      const said = name === "/help" ? "help" : name === "/examples" ? "examples" : "unknown";
+      setTurns((t) => [...t, { q: query, state: "said", said }]);
+      return;
+    }
+
     const at = turns.length;
     setTurns((t) => [...t, { q: query, state: "asking" }]);
     try {
@@ -105,9 +137,7 @@ export default function Ask() {
   return (
     <>
       <button className="ask-fab" type="button" onClick={show} aria-label="Ask the docs a question">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-5.5A8 8 0 1 1 21 12z" />
-        </svg>
+        <Sparkle />
         <span>Ask the docs</span>
       </button>
 
@@ -122,6 +152,7 @@ export default function Ask() {
         <div className="ask-card">
           <header className="ask-head">
             <div className="ask-title">
+              <Sparkle />
               <b>Ask the docs</b>
               <span className="ask-alpha">alpha</span>
             </div>
@@ -165,6 +196,41 @@ export default function Ask() {
                 )}
 
                 {t.state === "error" && <p className="ask-err">{t.error}</p>}
+
+                {t.state === "said" && t.said === "help" && (
+                  <div className="ask-sys">
+                    <b>Commands</b>
+                    <ul>
+                      {COMMANDS.map(([name, does]) => (
+                        <li key={name}>
+                          <code>{name}</code>
+                          <span>{does}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {t.state === "said" && t.said === "examples" && (
+                  <div className="ask-sys">
+                    <b>Try one of these</b>
+                    <ul>
+                      {EXAMPLES.map((e) => (
+                        <li key={e}>
+                          <button type="button" className="ask-eg" onClick={() => send(e)}>
+                            {e}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {t.state === "said" && t.said === "unknown" && (
+                  <p className="ask-sys">
+                    No such command. <code>/help</code> lists them.
+                  </p>
+                )}
 
                 {t.state === "done" && t.reply && (
                   <div className="ask-a">
@@ -228,6 +294,9 @@ export default function Ask() {
               {busy ? "…" : "Ask"}
             </button>
           </form>
+          <p className="ask-hint">
+            Answers are copied from the docs, never written. Type <code>/help</code> for commands.
+          </p>
         </div>
       </dialog>
     </>

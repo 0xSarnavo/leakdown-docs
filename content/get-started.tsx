@@ -39,7 +39,7 @@ export function Introduction() {
       />
       <p>
         When it finishes, open <code>runs/your-site.com/AGGREGATE.md</code>. Not sure which flags you want? The{" "}
-        <a href="/build-a-command">Command builder</a> writes the command from what you want to know.
+        <a href="/build-a-command">Builder</a> writes the command from what you want to know.
       </p>
 
       <H2 id="see-it">What a run looks like</H2>
@@ -84,7 +84,7 @@ export function Introduction() {
       <Cards>
         <Card href="/quickstart" title="Quickstart">From nothing to your first report in five commands.</Card>
         <Card href="/how-it-works" title="How a run works">The six stages, what each writes, how a session ends.</Card>
-        <Card href="/build-a-command" title="Command builder">Pick the job, type your site, copy the command.</Card>
+        <Card href="/build-a-command" title="Builder">Pick the job, type your site, copy the command.</Card>
         <Card href="/goal-tests" title="Goal tests in CI">A pass or fail on every deploy.</Card>
         <Card href="/commands" title="Commands">Every flag, filterable.</Card>
         <Card href="/requested-runs" title="Requested runs">Have us run it and email you the report.</Card>

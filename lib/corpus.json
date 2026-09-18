@@ -1,5 +1,5 @@
 {
- "built_at": "2026-09-18T11:33:46.936Z",
+ "built_at": "2026-09-18T11:50:41.217Z",
  "sources": [
   "docs:llms.txt",
   "cli:repo"
@@ -147,7 +147,7 @@
   },
   {
    "url": "https://docs.leakdown.ai/build-a-command.md",
-   "title": "Command builder",
+   "title": "Builder",
    "slug": "build-a-command",
    "source": "docs",
    "block_count": 2
@@ -215,7 +215,7 @@
     "Try it"
    ],
    "level": 2,
-   "text": "## Try it\n\n```\ngit clone https://github.com/0xSarnavo/leakdown-cli\ncd leakdown-cli && npm ci && npm run build\nnpx playwright install chromium\nnode dist/cli.js your-site.com --ladder --yes --headless\n```\n\nWhen it finishes, open `runs/your-site.com/AGGREGATE.md`. Not sure which flags you want? The [Command builder](https://docs.leakdown.ai/build-a-command) writes the command from what you want to know."
+   "text": "## Try it\n\n```\ngit clone https://github.com/0xSarnavo/leakdown-cli\ncd leakdown-cli && npm ci && npm run build\nnpx playwright install chromium\nnode dist/cli.js your-site.com --ladder --yes --headless\n```\n\nWhen it finishes, open `runs/your-site.com/AGGREGATE.md`. Not sure which flags you want? The [Builder](https://docs.leakdown.ai/build-a-command) writes the command from what you want to know."
   },
   {
    "block_id": "introduction-H003",
@@ -239,7 +239,7 @@
     "Explore the docs"
    ],
    "level": 2,
-   "text": "## Explore the docs\n\n[**Quickstart**From nothing to your first report in five commands.→](https://docs.leakdown.ai/quickstart)[**How a run works**The six stages, what each writes, how a session ends.→](https://docs.leakdown.ai/how-it-works)[**Command builder**Pick the job, type your site, copy the command.→](https://docs.leakdown.ai/build-a-command)[**Goal tests in CI**A pass or fail on every deploy.→](https://docs.leakdown.ai/goal-tests)[**Commands**Every flag, filterable.→](https://docs.leakdown.ai/commands)[**Requested runs**Have us run it and email you the report.→](https://docs.leakdown.ai/requested-runs)"
+   "text": "## Explore the docs\n\n[**Quickstart**From nothing to your first report in five commands.→](https://docs.leakdown.ai/quickstart)[**How a run works**The six stages, what each writes, how a session ends.→](https://docs.leakdown.ai/how-it-works)[**Builder**Pick the job, type your site, copy the command.→](https://docs.leakdown.ai/build-a-command)[**Goal tests in CI**A pass or fail on every deploy.→](https://docs.leakdown.ai/goal-tests)[**Commands**Every flag, filterable.→](https://docs.leakdown.ai/commands)[**Requested runs**Have us run it and email you the report.→](https://docs.leakdown.ai/requested-runs)"
   },
   {
    "block_id": "introduction-H005",
@@ -604,7 +604,7 @@
     "More jobs"
    ],
    "level": 2,
-   "text": "## More jobs\n\nOther jobs have their own pages.\n[**Command builder**Pick the job, type your site, copy the command.→](https://docs.leakdown.ai/build-a-command)[**Fail the build when signup breaks**Goal tests with exit codes CI can read.→](https://docs.leakdown.ai/goal-tests)[**Check a price or a total**--expect makes a completion count only when the value shows.→](https://docs.leakdown.ai/goal-tests#expect)[**Compare two versions**Same prospects, one verdict.→](https://docs.leakdown.ai/ab-tests)[**Test email verification**Codes and magic links, read by each prospect.→](https://docs.leakdown.ai/email)"
+   "text": "## More jobs\n\nOther jobs have their own pages.\n[**Builder**Pick the job, type your site, copy the command.→](https://docs.leakdown.ai/build-a-command)[**Fail the build when signup breaks**Goal tests with exit codes CI can read.→](https://docs.leakdown.ai/goal-tests)[**Check a price or a total**--expect makes a completion count only when the value shows.→](https://docs.leakdown.ai/goal-tests#expect)[**Compare two versions**Same prospects, one verdict.→](https://docs.leakdown.ai/ab-tests)[**Test email verification**Codes and magic links, read by each prospect.→](https://docs.leakdown.ai/email)"
   },
   {
    "block_id": "goal-tests-H000",
@@ -1329,20 +1329,20 @@
    "block_id": "build-a-command-H000",
    "source": "docs",
    "page_url": "https://docs.leakdown.ai/build-a-command",
-   "page_title": "Command builder",
+   "page_title": "Builder",
    "heading_path": [
-    "Command builder"
+    "Builder"
    ],
    "level": 1,
-   "text": "# Command builder\n\n> Pick the job, type your site, copy the command.\n\nYour site\nWhat do you want to know?\n**Where does signup leak?**The full run. About an hour.**Does signup still work?**A pass or fail for CI.**Does it work on a phone?**The full run on a phone screen.**Does one journey work?**Every session is scored against its steps.**Which version leaks less?**The same prospects on both, one verdict.**Was that finding real?**The same prospect three times.**Share the last report**One PDF for someone who will not open markdown.\n\nRun this\n\n```\nleakdown your-site.com --ladder --yes --headless\n```\n\nThen open runs/your-site.com/AGGREGATE.md.\n show the browser while it runs\nRunning from the clone instead of `npm link`? Use `node dist/cli.js` in place of `leakdown`.\nNot installed yet? [Quickstart](https://docs.leakdown.ai/quickstart) is five commands. Every other flag, such as `--model` and `--time`, is on [Commands](https://docs.leakdown.ai/commands)."
+   "text": "# Builder\n\n> Pick the job, type your site, copy the command.\n\nYour site\nWhat do you want to know?\n**Where does signup leak?**The full run. About an hour.**Does signup still work?**A pass or fail for CI.**Does it work on a phone?**The full run on a phone screen.**Does one journey work?**Every session is scored against its steps.**Which version leaks less?**The same prospects on both, one verdict.**Was that finding real?**The same prospect three times.**Share the last report**One PDF for someone who will not open markdown.\n\nRun this\n\n```\nleakdown your-site.com --ladder --yes --headless\n```\n\nThen open runs/your-site.com/AGGREGATE.md.\n show the browser while it runs\nRunning from the clone instead of `npm link`? Use `node dist/cli.js` in place of `leakdown`.\nNot installed yet? [Quickstart](https://docs.leakdown.ai/quickstart) is five commands. Every other flag, such as `--model` and `--time`, is on [Commands](https://docs.leakdown.ai/commands)."
   },
   {
    "block_id": "build-a-command-H001",
    "source": "docs",
    "page_url": "https://docs.leakdown.ai/build-a-command",
-   "page_title": "Command builder",
+   "page_title": "Builder",
    "heading_path": [
-    "Command builder",
+    "Builder",
     "After it runs"
    ],
    "level": 2,
