@@ -19,6 +19,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { SITE_URL } from "../lib/site.ts";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const BASE = (process.env.ASK_BASE || "http://127.0.0.1:3001").replace(/\/$/, "");
@@ -67,8 +68,8 @@ for (const [i, g] of queries.entries()) {
     else if (block.text !== h.text) fail.verbatim.push(`${g.q} -> text for ${h.block_id} differs from the corpus`);
 
     const url = h.page_url ?? "";
-    const ok = url.startsWith("https://docs.leakdown.ai/")
-      ? SLUGS.has(url.replace("https://docs.leakdown.ai/", "").split("#")[0])
+    const ok = url.startsWith(`${SITE_URL}/`)
+      ? SLUGS.has(url.replace(`${SITE_URL}/`, "").split("#")[0])
       : url.startsWith("https://github.com/0xSarnavo/leakdown-cli/");
     if (!ok) fail.sourced.push(`${g.q} -> ${h.block_id} links to ${url || "(nothing)"}`);
   }

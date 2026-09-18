@@ -1,152 +1,152 @@
 {
- "built_at": "2026-09-18T12:40:11.140Z",
+ "built_at": "2026-09-18T14:17:30.235Z",
  "sources": [
   "docs:llms.txt",
   "cli:repo"
  ],
  "pages": [
   {
-   "url": "https://docs.leakdown.ai/introduction.md",
+   "url": "https://docs.leakdown.dev/introduction.md",
    "title": "Introduction",
    "slug": "introduction",
    "source": "docs",
    "block_count": 6
   },
   {
-   "url": "https://docs.leakdown.ai/quickstart.md",
+   "url": "https://docs.leakdown.dev/quickstart.md",
    "title": "Quickstart",
    "slug": "quickstart",
    "source": "docs",
    "block_count": 5
   },
   {
-   "url": "https://docs.leakdown.ai/how-it-works.md",
+   "url": "https://docs.leakdown.dev/how-it-works.md",
    "title": "How a run works",
    "slug": "how-it-works",
    "source": "docs",
    "block_count": 5
   },
   {
-   "url": "https://docs.leakdown.ai/requested-runs.md",
+   "url": "https://docs.leakdown.dev/requested-runs.md",
    "title": "Requested runs",
    "slug": "requested-runs",
    "source": "docs",
    "block_count": 4
   },
   {
-   "url": "https://docs.leakdown.ai/use-cases.md",
+   "url": "https://docs.leakdown.dev/use-cases.md",
    "title": "Use cases",
    "slug": "use-cases",
    "source": "docs",
    "block_count": 6
   },
   {
-   "url": "https://docs.leakdown.ai/goal-tests.md",
+   "url": "https://docs.leakdown.dev/goal-tests.md",
    "title": "Goal tests in CI",
    "slug": "goal-tests",
    "source": "docs",
    "block_count": 6
   },
   {
-   "url": "https://docs.leakdown.ai/flows.md",
+   "url": "https://docs.leakdown.dev/flows.md",
    "title": "Flows you write",
    "slug": "flows",
    "source": "docs",
    "block_count": 4
   },
   {
-   "url": "https://docs.leakdown.ai/ab-tests.md",
+   "url": "https://docs.leakdown.dev/ab-tests.md",
    "title": "A/B tests",
    "slug": "ab-tests",
    "source": "docs",
    "block_count": 3
   },
   {
-   "url": "https://docs.leakdown.ai/reading-the-report.md",
+   "url": "https://docs.leakdown.dev/reading-the-report.md",
    "title": "Reading the report",
    "slug": "reading-the-report",
    "source": "docs",
    "block_count": 5
   },
   {
-   "url": "https://docs.leakdown.ai/personas.md",
+   "url": "https://docs.leakdown.dev/personas.md",
    "title": "Personas",
    "slug": "personas",
    "source": "docs",
    "block_count": 6
   },
   {
-   "url": "https://docs.leakdown.ai/choosing-the-ai.md",
+   "url": "https://docs.leakdown.dev/choosing-the-ai.md",
    "title": "Choosing the AI",
    "slug": "choosing-the-ai",
    "source": "docs",
    "block_count": 4
   },
   {
-   "url": "https://docs.leakdown.ai/email.md",
+   "url": "https://docs.leakdown.dev/email.md",
    "title": "Email walls",
    "slug": "email",
    "source": "docs",
    "block_count": 4
   },
   {
-   "url": "https://docs.leakdown.ai/safety.md",
+   "url": "https://docs.leakdown.dev/safety.md",
    "title": "Safety",
    "slug": "safety",
    "source": "docs",
    "block_count": 4
   },
   {
-   "url": "https://docs.leakdown.ai/your-data.md",
+   "url": "https://docs.leakdown.dev/your-data.md",
    "title": "Your data",
    "slug": "your-data",
    "source": "docs",
    "block_count": 3
   },
   {
-   "url": "https://docs.leakdown.ai/troubleshooting.md",
+   "url": "https://docs.leakdown.dev/troubleshooting.md",
    "title": "Troubleshooting",
    "slug": "troubleshooting",
    "source": "docs",
    "block_count": 3
   },
   {
-   "url": "https://docs.leakdown.ai/commands.md",
+   "url": "https://docs.leakdown.dev/commands.md",
    "title": "Commands",
    "slug": "commands",
    "source": "docs",
    "block_count": 2
   },
   {
-   "url": "https://docs.leakdown.ai/exit-codes.md",
+   "url": "https://docs.leakdown.dev/exit-codes.md",
    "title": "Exit codes and verdicts",
    "slug": "exit-codes",
    "source": "docs",
    "block_count": 3
   },
   {
-   "url": "https://docs.leakdown.ai/files.md",
+   "url": "https://docs.leakdown.dev/files.md",
    "title": "Files and folders",
    "slug": "files",
    "source": "docs",
    "block_count": 4
   },
   {
-   "url": "https://docs.leakdown.ai/environment.md",
+   "url": "https://docs.leakdown.dev/environment.md",
    "title": "Environment variables",
    "slug": "environment",
    "source": "docs",
    "block_count": 4
   },
   {
-   "url": "https://docs.leakdown.ai/changelog.md",
+   "url": "https://docs.leakdown.dev/changelog.md",
    "title": "Changelog",
    "slug": "changelog",
    "source": "docs",
    "block_count": 6
   },
   {
-   "url": "https://docs.leakdown.ai/build-a-command.md",
+   "url": "https://docs.leakdown.dev/build-a-command.md",
    "title": "Builder",
    "slug": "build-a-command",
    "source": "docs",
@@ -185,7 +185,7 @@
   {
    "block_id": "introduction-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/introduction",
+   "page_url": "https://docs.leakdown.dev/introduction",
    "page_title": "Introduction",
    "heading_path": [
     "Introduction"
@@ -196,31 +196,31 @@
   {
    "block_id": "introduction-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/introduction",
+   "page_url": "https://docs.leakdown.dev/introduction",
    "page_title": "Introduction",
    "heading_path": [
     "Introduction",
     "What you get"
    ],
    "level": 2,
-   "text": "## What you get\n\n[**The one number**How many finished, how many walked out and why, and how sure the report is.→](https://docs.leakdown.ai/reading-the-report)[**Fix these first**The three pages people left from, a quote, and the steps to see it yourself.→](https://docs.leakdown.ai/reading-the-report#one-page)[**Every session on film**Video, screenshots and a filmstrip of every step with the thought behind it.→](https://docs.leakdown.ai/reading-the-report#evidence)"
+   "text": "## What you get\n\n[**The one number**How many finished, how many walked out and why, and how sure the report is.→](https://docs.leakdown.dev/reading-the-report)[**Fix these first**The three pages people left from, a quote, and the steps to see it yourself.→](https://docs.leakdown.dev/reading-the-report#one-page)[**Every session on film**Video, screenshots and a filmstrip of every step with the thought behind it.→](https://docs.leakdown.dev/reading-the-report#evidence)"
   },
   {
    "block_id": "introduction-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/introduction",
+   "page_url": "https://docs.leakdown.dev/introduction",
    "page_title": "Introduction",
    "heading_path": [
     "Introduction",
     "Try it"
    ],
    "level": 2,
-   "text": "## Try it\n\n```\ngit clone https://github.com/0xSarnavo/leakdown-cli\ncd leakdown-cli && npm ci && npm run build\nnpx playwright install chromium\nnode dist/cli.js your-site.com --ladder --yes --headless\n```\n\nWhen it finishes, open `runs/your-site.com/AGGREGATE.md`. Not sure which flags you want? The [Builder](https://docs.leakdown.ai/build-a-command) writes the command from what you want to know."
+   "text": "## Try it\n\n```\ngit clone https://github.com/0xSarnavo/leakdown-cli\ncd leakdown-cli && npm ci && npm run build\nnpx playwright install chromium\nnode dist/cli.js your-site.com --ladder --yes --headless\n```\n\nWhen it finishes, open `runs/your-site.com/AGGREGATE.md`. Not sure which flags you want? The [Builder](https://docs.leakdown.dev/build-a-command) writes the command from what you want to know."
   },
   {
    "block_id": "introduction-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/introduction",
+   "page_url": "https://docs.leakdown.dev/introduction",
    "page_title": "Introduction",
    "heading_path": [
     "Introduction",
@@ -232,31 +232,31 @@
   {
    "block_id": "introduction-H004",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/introduction",
+   "page_url": "https://docs.leakdown.dev/introduction",
    "page_title": "Introduction",
    "heading_path": [
     "Introduction",
     "Explore the docs"
    ],
    "level": 2,
-   "text": "## Explore the docs\n\n[**Quickstart**From nothing to your first report in five commands.→](https://docs.leakdown.ai/quickstart)[**How a run works**The six stages, what each writes, how a session ends.→](https://docs.leakdown.ai/how-it-works)[**Builder**Pick the job, type your site, copy the command.→](https://docs.leakdown.ai/build-a-command)[**Goal tests in CI**A pass or fail on every deploy.→](https://docs.leakdown.ai/goal-tests)[**Commands**Every flag, filterable.→](https://docs.leakdown.ai/commands)[**Requested runs**Have us run it and email you the report.→](https://docs.leakdown.ai/requested-runs)"
+   "text": "## Explore the docs\n\n[**Quickstart**From nothing to your first report in five commands.→](https://docs.leakdown.dev/quickstart)[**How a run works**The six stages, what each writes, how a session ends.→](https://docs.leakdown.dev/how-it-works)[**Builder**Pick the job, type your site, copy the command.→](https://docs.leakdown.dev/build-a-command)[**Goal tests in CI**A pass or fail on every deploy.→](https://docs.leakdown.dev/goal-tests)[**Commands**Every flag, filterable.→](https://docs.leakdown.dev/commands)[**Requested runs**Have us run it and email you the report.→](https://docs.leakdown.dev/requested-runs)"
   },
   {
    "block_id": "introduction-H005",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/introduction",
+   "page_url": "https://docs.leakdown.dev/introduction",
    "page_title": "Introduction",
    "heading_path": [
     "Introduction",
     "Before you rely on it"
    ],
    "level": 2,
-   "text": "## Before you rely on it\n\nOnly test sites you own or have written permission to test\n\nA run creates real accounts and triggers real emails and webhooks. Use a staging copy when you can.\nLeakdown is in alpha. A finding is a risk to check on your own page, not a measurement of your traffic. Under three sessions the report says too few to call. [Safety](https://docs.leakdown.ai/safety) lists what a prospect never does."
+   "text": "## Before you rely on it\n\nOnly test sites you own or have written permission to test\n\nA run creates real accounts and triggers real emails and webhooks. Use a staging copy when you can.\nLeakdown is in alpha. A finding is a risk to check on your own page, not a measurement of your traffic. Under three sessions the report says too few to call. [Safety](https://docs.leakdown.dev/safety) lists what a prospect never does."
   },
   {
    "block_id": "quickstart-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
+   "page_url": "https://docs.leakdown.dev/quickstart",
    "page_title": "Quickstart",
    "heading_path": [
     "Quickstart"
@@ -267,7 +267,7 @@
   {
    "block_id": "quickstart-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
+   "page_url": "https://docs.leakdown.dev/quickstart",
    "page_title": "Quickstart",
    "heading_path": [
     "Quickstart",
@@ -279,7 +279,7 @@
   {
    "block_id": "quickstart-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
+   "page_url": "https://docs.leakdown.dev/quickstart",
    "page_title": "Quickstart",
    "heading_path": [
     "Quickstart",
@@ -291,31 +291,31 @@
   {
    "block_id": "quickstart-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
+   "page_url": "https://docs.leakdown.dev/quickstart",
    "page_title": "Quickstart",
    "heading_path": [
     "Quickstart",
     "Your first run"
    ],
    "level": 2,
-   "text": "## Your first run\n\nThe first run uses the full ladder, then you open the report it writes.\n\n### Run the full test\n\n```\nnode dist/cli.js your-site.com --ladder --yes --headless  ladder on your-site.com: wide haiku ×10 → filter → sonnet verifies → opus digs\n\n▸ stage 1/6 · site\n  ...\n  ladder done: 10 wide + 1 deep session(s). VERIFIED.md and REPORT.md sit beside the report, mirrored at runs/your-site.com/.\n\n  3 of 10 completed their goal. 4 walked out with a reason. 3 ran out of patience still trying.\n  Fix first: your-site.com/signup/step-2 — 3 of 10 walked out here\n  \"The plan selector looks like a confirmation page. I think I am done.\"\n\n  Full report: runs/your-site.com/2026-09-17/10-14-02/AGGREGATE.md, then REPORT.md beside it\n\n```\n\n`--yes` takes the default for every question and `--headless` hides the browser. Drop both to watch it and answer the menus yourself. The last four lines are the result: the one number, the first wall, and where the report is.\n\n### Read the report\n\n```\nruns/your-site.com/AGGREGATE.md\n```\n\n[Reading the report](https://docs.leakdown.ai/reading-the-report) explains each section.\n\nMake it a command\n\nRun `npm link` once inside the clone and every command works as `leakdown` instead of `node dist/cli.js`, from any folder. The CLI reads `.env` from, and writes `runs/` to, the folder you run it in."
+   "text": "## Your first run\n\nThe first run uses the full ladder, then you open the report it writes.\n\n### Run the full test\n\n```\nnode dist/cli.js your-site.com --ladder --yes --headless  ladder on your-site.com: wide haiku ×10 → filter → sonnet verifies → opus digs\n\n▸ stage 1/6 · site\n  ...\n  ladder done: 10 wide + 1 deep session(s). VERIFIED.md and REPORT.md sit beside the report, mirrored at runs/your-site.com/.\n\n  3 of 10 completed their goal. 4 walked out with a reason. 3 ran out of patience still trying.\n  Fix first: your-site.com/signup/step-2 — 3 of 10 walked out here\n  \"The plan selector looks like a confirmation page. I think I am done.\"\n\n  Full report: runs/your-site.com/2026-09-17/10-14-02/AGGREGATE.md, then REPORT.md beside it\n\n```\n\n`--yes` takes the default for every question and `--headless` hides the browser. Drop both to watch it and answer the menus yourself. The last four lines are the result: the one number, the first wall, and where the report is.\n\n### Read the report\n\n```\nruns/your-site.com/AGGREGATE.md\n```\n\n[Reading the report](https://docs.leakdown.dev/reading-the-report) explains each section.\n\nMake it a command\n\nRun `npm link` once inside the clone and every command works as `leakdown` instead of `node dist/cli.js`, from any folder. The CLI reads `.env` from, and writes `runs/` to, the folder you run it in."
   },
   {
    "block_id": "quickstart-H004",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/quickstart",
+   "page_url": "https://docs.leakdown.dev/quickstart",
    "page_title": "Quickstart",
    "heading_path": [
     "Quickstart",
     "Next steps"
    ],
    "level": 2,
-   "text": "## Next steps\n\nOnce the first report is in, these pages cover the usual follow-ups.\n[**Set up email**Let prospects read verification codes and magic links.→](https://docs.leakdown.ai/email)[**Add it to CI**Fail the build when signup breaks.→](https://docs.leakdown.ai/goal-tests)[**Shape the prospects**Presets, your own personas, and real-visitor weighting.→](https://docs.leakdown.ai/personas)[**Pick the model**Brain, model and effort, and usage limits.→](https://docs.leakdown.ai/choosing-the-ai)"
+   "text": "## Next steps\n\nOnce the first report is in, these pages cover the usual follow-ups.\n[**Set up email**Let prospects read verification codes and magic links.→](https://docs.leakdown.dev/email)[**Add it to CI**Fail the build when signup breaks.→](https://docs.leakdown.dev/goal-tests)[**Shape the prospects**Presets, your own personas, and real-visitor weighting.→](https://docs.leakdown.dev/personas)[**Pick the model**Brain, model and effort, and usage limits.→](https://docs.leakdown.dev/choosing-the-ai)"
   },
   {
    "block_id": "how-it-works-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/how-it-works",
+   "page_url": "https://docs.leakdown.dev/how-it-works",
    "page_title": "How a run works",
    "heading_path": [
     "How a run works"
@@ -326,7 +326,7 @@
   {
    "block_id": "how-it-works-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/how-it-works",
+   "page_url": "https://docs.leakdown.dev/how-it-works",
    "page_title": "How a run works",
    "heading_path": [
     "How a run works",
@@ -338,7 +338,7 @@
   {
    "block_id": "how-it-works-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/how-it-works",
+   "page_url": "https://docs.leakdown.dev/how-it-works",
    "page_title": "How a run works",
    "heading_path": [
     "How a run works",
@@ -350,7 +350,7 @@
   {
    "block_id": "how-it-works-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/how-it-works",
+   "page_url": "https://docs.leakdown.dev/how-it-works",
    "page_title": "How a run works",
    "heading_path": [
     "How a run works",
@@ -362,7 +362,7 @@
   {
    "block_id": "how-it-works-H004",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/how-it-works",
+   "page_url": "https://docs.leakdown.dev/how-it-works",
    "page_title": "How a run works",
    "heading_path": [
     "How a run works",
@@ -374,18 +374,18 @@
   {
    "block_id": "requested-runs-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/requested-runs",
+   "page_url": "https://docs.leakdown.dev/requested-runs",
    "page_title": "Requested runs",
    "heading_path": [
     "Requested runs"
    ],
    "level": 1,
-   "text": "# Requested runs\n\n> Have us run it for you: what happens and what we keep.\n\nDon't want to run it yourself? Request a run on leakdown.ai. It is a free early-access demo: we run the same CLI and email you the report."
+   "text": "# Requested runs\n\n> Have us run it for you: what happens and what we keep.\n\nDon't want to run it yourself? Request a run on leakdown.dev. It is a free early-access demo: we run the same CLI and email you the report."
   },
   {
    "block_id": "requested-runs-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/requested-runs",
+   "page_url": "https://docs.leakdown.dev/requested-runs",
    "page_title": "Requested runs",
    "heading_path": [
     "Requested runs",
@@ -397,7 +397,7 @@
   {
    "block_id": "requested-runs-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/requested-runs",
+   "page_url": "https://docs.leakdown.dev/requested-runs",
    "page_title": "Requested runs",
    "heading_path": [
     "Requested runs",
@@ -409,19 +409,19 @@
   {
    "block_id": "requested-runs-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/requested-runs",
+   "page_url": "https://docs.leakdown.dev/requested-runs",
    "page_title": "Requested runs",
    "heading_path": [
     "Requested runs",
     "Request one"
    ],
    "level": 2,
-   "text": "## Request one\n\n[Request a run on leakdown.ai ↗](https://leakdown.ai/#request) · [Privacy](https://leakdown.ai/privacy)\n\n### For the operator\n\n```\nleakdown --orders            # new requests on the website\nleakdown --order         # run one here and email the PDF\n```\n\nNeeds the website's URL and token in `.env` and mail configured. See [Environment variables](https://docs.leakdown.ai/environment#orders)."
+   "text": "## Request one\n\n[Request a run on leakdown.dev ↗](https://leakdown.dev/#request) · [Privacy](https://leakdown.dev/privacy)\n\n### For the operator\n\n```\nleakdown --orders            # new requests on the website\nleakdown --order         # run one here and email the PDF\n```\n\nNeeds the website's URL and token in `.env` and mail configured. See [Environment variables](https://docs.leakdown.dev/environment#orders)."
   },
   {
    "block_id": "use-cases-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/use-cases",
+   "page_url": "https://docs.leakdown.dev/use-cases",
    "page_title": "Use cases",
    "heading_path": [
     "Use cases"
@@ -432,19 +432,19 @@
   {
    "block_id": "use-cases-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/use-cases",
+   "page_url": "https://docs.leakdown.dev/use-cases",
    "page_title": "Use cases",
    "heading_path": [
     "Use cases",
     "Before a launch"
    ],
    "level": 2,
-   "text": "## Before a launch\n\nFind where a new signup flow loses people. Ten prospects walk it, and the report names the three pages they left from, with a quote and the element they were on.\n\n```\nleakdown your-site.com --ladder --yes --headless\n```\n\nWant the run shaped around one journey? Add `--flow \"signup through to the dashboard\"`. See [Flows](https://docs.leakdown.ai/flows)."
+   "text": "## Before a launch\n\nFind where a new signup flow loses people. Ten prospects walk it, and the report names the three pages they left from, with a quote and the element they were on.\n\n```\nleakdown your-site.com --ladder --yes --headless\n```\n\nWant the run shaped around one journey? Add `--flow \"signup through to the dashboard\"`. See [Flows](https://docs.leakdown.dev/flows)."
   },
   {
    "block_id": "use-cases-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/use-cases",
+   "page_url": "https://docs.leakdown.dev/use-cases",
    "page_title": "Use cases",
    "heading_path": [
     "Use cases",
@@ -456,7 +456,7 @@
   {
    "block_id": "use-cases-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/use-cases",
+   "page_url": "https://docs.leakdown.dev/use-cases",
    "page_title": "Use cases",
    "heading_path": [
     "Use cases",
@@ -468,7 +468,7 @@
   {
    "block_id": "use-cases-H004",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/use-cases",
+   "page_url": "https://docs.leakdown.dev/use-cases",
    "page_title": "Use cases",
    "heading_path": [
     "Use cases",
@@ -480,19 +480,19 @@
   {
    "block_id": "use-cases-H005",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/use-cases",
+   "page_url": "https://docs.leakdown.dev/use-cases",
    "page_title": "Use cases",
    "heading_path": [
     "Use cases",
     "More jobs"
    ],
    "level": 2,
-   "text": "## More jobs\n\nOther jobs have their own pages.\n[**Builder**Pick the job, type your site, copy the command.→](https://docs.leakdown.ai/build-a-command)[**Fail the build when signup breaks**Goal tests with exit codes CI can read.→](https://docs.leakdown.ai/goal-tests)[**Check a price or a total**--expect makes a completion count only when the value shows.→](https://docs.leakdown.ai/goal-tests#expect)[**Compare two versions**Same prospects, one verdict.→](https://docs.leakdown.ai/ab-tests)[**Test email verification**Codes and magic links, read by each prospect.→](https://docs.leakdown.ai/email)"
+   "text": "## More jobs\n\nOther jobs have their own pages.\n[**Builder**Pick the job, type your site, copy the command.→](https://docs.leakdown.dev/build-a-command)[**Fail the build when signup breaks**Goal tests with exit codes CI can read.→](https://docs.leakdown.dev/goal-tests)[**Check a price or a total**--expect makes a completion count only when the value shows.→](https://docs.leakdown.dev/goal-tests#expect)[**Compare two versions**Same prospects, one verdict.→](https://docs.leakdown.dev/ab-tests)[**Test email verification**Codes and magic links, read by each prospect.→](https://docs.leakdown.dev/email)"
   },
   {
    "block_id": "goal-tests-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/goal-tests",
+   "page_url": "https://docs.leakdown.dev/goal-tests",
    "page_title": "Goal tests in CI",
    "heading_path": [
     "Goal tests in CI"
@@ -503,7 +503,7 @@
   {
    "block_id": "goal-tests-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/goal-tests",
+   "page_url": "https://docs.leakdown.dev/goal-tests",
    "page_title": "Goal tests in CI",
    "heading_path": [
     "Goal tests in CI",
@@ -515,7 +515,7 @@
   {
    "block_id": "goal-tests-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/goal-tests",
+   "page_url": "https://docs.leakdown.dev/goal-tests",
    "page_title": "Goal tests in CI",
    "heading_path": [
     "Goal tests in CI",
@@ -527,7 +527,7 @@
   {
    "block_id": "goal-tests-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/goal-tests",
+   "page_url": "https://docs.leakdown.dev/goal-tests",
    "page_title": "Goal tests in CI",
    "heading_path": [
     "Goal tests in CI",
@@ -539,7 +539,7 @@
   {
    "block_id": "goal-tests-H004",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/goal-tests",
+   "page_url": "https://docs.leakdown.dev/goal-tests",
    "page_title": "Goal tests in CI",
    "heading_path": [
     "Goal tests in CI",
@@ -551,7 +551,7 @@
   {
    "block_id": "goal-tests-H005",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/goal-tests",
+   "page_url": "https://docs.leakdown.dev/goal-tests",
    "page_title": "Goal tests in CI",
    "heading_path": [
     "Goal tests in CI",
@@ -564,7 +564,7 @@
   {
    "block_id": "flows-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/flows",
+   "page_url": "https://docs.leakdown.dev/flows",
    "page_title": "Flows you write",
    "heading_path": [
     "Flows you write"
@@ -575,7 +575,7 @@
   {
    "block_id": "flows-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/flows",
+   "page_url": "https://docs.leakdown.dev/flows",
    "page_title": "Flows you write",
    "heading_path": [
     "Flows you write",
@@ -587,7 +587,7 @@
   {
    "block_id": "flows-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/flows",
+   "page_url": "https://docs.leakdown.dev/flows",
    "page_title": "Flows you write",
    "heading_path": [
     "Flows you write",
@@ -599,7 +599,7 @@
   {
    "block_id": "flows-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/flows",
+   "page_url": "https://docs.leakdown.dev/flows",
    "page_title": "Flows you write",
    "heading_path": [
     "Flows you write",
@@ -611,7 +611,7 @@
   {
    "block_id": "ab-tests-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/ab-tests",
+   "page_url": "https://docs.leakdown.dev/ab-tests",
    "page_title": "A/B tests",
    "heading_path": [
     "A/B tests"
@@ -622,7 +622,7 @@
   {
    "block_id": "ab-tests-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/ab-tests",
+   "page_url": "https://docs.leakdown.dev/ab-tests",
    "page_title": "A/B tests",
    "heading_path": [
     "A/B tests",
@@ -634,7 +634,7 @@
   {
    "block_id": "ab-tests-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/ab-tests",
+   "page_url": "https://docs.leakdown.dev/ab-tests",
    "page_title": "A/B tests",
    "heading_path": [
     "A/B tests",
@@ -646,7 +646,7 @@
   {
    "block_id": "reading-the-report-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/reading-the-report",
+   "page_url": "https://docs.leakdown.dev/reading-the-report",
    "page_title": "Reading the report",
    "heading_path": [
     "Reading the report"
@@ -657,7 +657,7 @@
   {
    "block_id": "reading-the-report-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/reading-the-report",
+   "page_url": "https://docs.leakdown.dev/reading-the-report",
    "page_title": "Reading the report",
    "heading_path": [
     "Reading the report",
@@ -669,7 +669,7 @@
   {
    "block_id": "reading-the-report-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/reading-the-report",
+   "page_url": "https://docs.leakdown.dev/reading-the-report",
    "page_title": "Reading the report",
    "heading_path": [
     "Reading the report",
@@ -681,7 +681,7 @@
   {
    "block_id": "reading-the-report-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/reading-the-report",
+   "page_url": "https://docs.leakdown.dev/reading-the-report",
    "page_title": "Reading the report",
    "heading_path": [
     "Reading the report",
@@ -693,7 +693,7 @@
   {
    "block_id": "reading-the-report-H004",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/reading-the-report",
+   "page_url": "https://docs.leakdown.dev/reading-the-report",
    "page_title": "Reading the report",
    "heading_path": [
     "Reading the report",
@@ -705,7 +705,7 @@
   {
    "block_id": "personas-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/personas",
+   "page_url": "https://docs.leakdown.dev/personas",
    "page_title": "Personas",
    "heading_path": [
     "Personas"
@@ -716,7 +716,7 @@
   {
    "block_id": "personas-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/personas",
+   "page_url": "https://docs.leakdown.dev/personas",
    "page_title": "Personas",
    "heading_path": [
     "Personas",
@@ -728,7 +728,7 @@
   {
    "block_id": "personas-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/personas",
+   "page_url": "https://docs.leakdown.dev/personas",
    "page_title": "Personas",
    "heading_path": [
     "Personas",
@@ -740,7 +740,7 @@
   {
    "block_id": "personas-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/personas",
+   "page_url": "https://docs.leakdown.dev/personas",
    "page_title": "Personas",
    "heading_path": [
     "Personas",
@@ -752,7 +752,7 @@
   {
    "block_id": "personas-H004",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/personas",
+   "page_url": "https://docs.leakdown.dev/personas",
    "page_title": "Personas",
    "heading_path": [
     "Personas",
@@ -764,7 +764,7 @@
   {
    "block_id": "personas-H005",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/personas",
+   "page_url": "https://docs.leakdown.dev/personas",
    "page_title": "Personas",
    "heading_path": [
     "Personas",
@@ -777,7 +777,7 @@
   {
    "block_id": "choosing-the-ai-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/choosing-the-ai",
+   "page_url": "https://docs.leakdown.dev/choosing-the-ai",
    "page_title": "Choosing the AI",
    "heading_path": [
     "Choosing the AI"
@@ -788,7 +788,7 @@
   {
    "block_id": "choosing-the-ai-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/choosing-the-ai",
+   "page_url": "https://docs.leakdown.dev/choosing-the-ai",
    "page_title": "Choosing the AI",
    "heading_path": [
     "Choosing the AI",
@@ -800,7 +800,7 @@
   {
    "block_id": "choosing-the-ai-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/choosing-the-ai",
+   "page_url": "https://docs.leakdown.dev/choosing-the-ai",
    "page_title": "Choosing the AI",
    "heading_path": [
     "Choosing the AI",
@@ -812,7 +812,7 @@
   {
    "block_id": "choosing-the-ai-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/choosing-the-ai",
+   "page_url": "https://docs.leakdown.dev/choosing-the-ai",
    "page_title": "Choosing the AI",
    "heading_path": [
     "Choosing the AI",
@@ -824,7 +824,7 @@
   {
    "block_id": "email-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/email",
+   "page_url": "https://docs.leakdown.dev/email",
    "page_title": "Email walls",
    "heading_path": [
     "Email walls"
@@ -835,7 +835,7 @@
   {
    "block_id": "email-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/email",
+   "page_url": "https://docs.leakdown.dev/email",
    "page_title": "Email walls",
    "heading_path": [
     "Email walls",
@@ -847,7 +847,7 @@
   {
    "block_id": "email-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/email",
+   "page_url": "https://docs.leakdown.dev/email",
    "page_title": "Email walls",
    "heading_path": [
     "Email walls",
@@ -859,7 +859,7 @@
   {
    "block_id": "email-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/email",
+   "page_url": "https://docs.leakdown.dev/email",
    "page_title": "Email walls",
    "heading_path": [
     "Email walls",
@@ -871,7 +871,7 @@
   {
    "block_id": "safety-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/safety",
+   "page_url": "https://docs.leakdown.dev/safety",
    "page_title": "Safety",
    "heading_path": [
     "Safety"
@@ -882,7 +882,7 @@
   {
    "block_id": "safety-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/safety",
+   "page_url": "https://docs.leakdown.dev/safety",
    "page_title": "Safety",
    "heading_path": [
     "Safety",
@@ -894,7 +894,7 @@
   {
    "block_id": "safety-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/safety",
+   "page_url": "https://docs.leakdown.dev/safety",
    "page_title": "Safety",
    "heading_path": [
     "Safety",
@@ -906,7 +906,7 @@
   {
    "block_id": "safety-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/safety",
+   "page_url": "https://docs.leakdown.dev/safety",
    "page_title": "Safety",
    "heading_path": [
     "Safety",
@@ -918,7 +918,7 @@
   {
    "block_id": "your-data-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/your-data",
+   "page_url": "https://docs.leakdown.dev/your-data",
    "page_title": "Your data",
    "heading_path": [
     "Your data"
@@ -929,7 +929,7 @@
   {
    "block_id": "your-data-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/your-data",
+   "page_url": "https://docs.leakdown.dev/your-data",
    "page_title": "Your data",
    "heading_path": [
     "Your data",
@@ -941,19 +941,19 @@
   {
    "block_id": "your-data-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/your-data",
+   "page_url": "https://docs.leakdown.dev/your-data",
    "page_title": "Your data",
    "heading_path": [
     "Your data",
     "Delete it"
    ],
    "level": 2,
-   "text": "## Delete it\n\nDeleting the folder deletes the run. There is no other copy.\n\n```\nrm -rf runs/your-site.com\n```\n\nRequested runs are different: they live on our side. [What we keep](https://docs.leakdown.ai/requested-runs#what-we-keep) explains how to have them deleted."
+   "text": "## Delete it\n\nDeleting the folder deletes the run. There is no other copy.\n\n```\nrm -rf runs/your-site.com\n```\n\nRequested runs are different: they live on our side. [What we keep](https://docs.leakdown.dev/requested-runs#what-we-keep) explains how to have them deleted."
   },
   {
    "block_id": "troubleshooting-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/troubleshooting",
+   "page_url": "https://docs.leakdown.dev/troubleshooting",
    "page_title": "Troubleshooting",
    "heading_path": [
     "Troubleshooting"
@@ -964,19 +964,19 @@
   {
    "block_id": "troubleshooting-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/troubleshooting",
+   "page_url": "https://docs.leakdown.dev/troubleshooting",
    "page_title": "Troubleshooting",
    "heading_path": [
     "Troubleshooting",
     "Common problems"
    ],
    "level": 2,
-   "text": "## Common problems\n\nOpen a problem to see the fix.\nThe run stopped halfway\n\nYour AI subscription likely hit its usage limit. Rerun the same command later; a ladder run from the same day picks up where it stopped.--goal exited with 2\n\nNothing failed on your site. The run could not start: the URL was unreachable, the model stopped answering, or setup failed. Run `leakdown --doctor`.There is only video.webm\n\nffmpeg is not installed. Install it and new sessions also save `video.mp4`. `--doctor` says whether it was found.A flag seems to do nothing\n\nSince 0.7.0 an unknown flag is an error, so check the exact spelling in [Commands](https://docs.leakdown.ai/commands).Prospects stop at \"check your email\"\n\nMail is not set up, so they cannot read the code. See [Email walls](https://docs.leakdown.ai/email).A finding appears only once\n\nIt is marked unverified. Send the same persona again with `--persona name,name,name`.Ctrl-C in a menu\n\nIt exits cleanly with status 130. Nothing is written.--doctor says everything is fine but the run fails\n\nThe result is cached for a week. `leakdown --doctor --force` checks again, including a live call to your AI CLI.\"the brain is not answering\"\n\nYour AI CLI stopped replying, which is what a usage limit looks like. Wait for it to reset and rerun the same command; nothing is lost."
+   "text": "## Common problems\n\nOpen a problem to see the fix.\nThe run stopped halfway\n\nYour AI subscription likely hit its usage limit. Rerun the same command later; a ladder run from the same day picks up where it stopped.--goal exited with 2\n\nNothing failed on your site. The run could not start: the URL was unreachable, the model stopped answering, or setup failed. Run `leakdown --doctor`.There is only video.webm\n\nffmpeg is not installed. Install it and new sessions also save `video.mp4`. `--doctor` says whether it was found.A flag seems to do nothing\n\nSince 0.7.0 an unknown flag is an error, so check the exact spelling in [Commands](https://docs.leakdown.dev/commands).Prospects stop at \"check your email\"\n\nMail is not set up, so they cannot read the code. See [Email walls](https://docs.leakdown.dev/email).A finding appears only once\n\nIt is marked unverified. Send the same persona again with `--persona name,name,name`.Ctrl-C in a menu\n\nIt exits cleanly with status 130. Nothing is written.--doctor says everything is fine but the run fails\n\nThe result is cached for a week. `leakdown --doctor --force` checks again, including a live call to your AI CLI.\"the brain is not answering\"\n\nYour AI CLI stopped replying, which is what a usage limit looks like. Wait for it to reset and rerun the same command; nothing is lost."
   },
   {
    "block_id": "troubleshooting-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/troubleshooting",
+   "page_url": "https://docs.leakdown.dev/troubleshooting",
    "page_title": "Troubleshooting",
    "heading_path": [
     "Troubleshooting",
@@ -988,7 +988,7 @@
   {
    "block_id": "commands-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/commands",
+   "page_url": "https://docs.leakdown.dev/commands",
    "page_title": "Commands",
    "heading_path": [
     "Commands"
@@ -999,7 +999,7 @@
   {
    "block_id": "commands-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/commands",
+   "page_url": "https://docs.leakdown.dev/commands",
    "page_title": "Commands",
    "heading_path": [
     "Commands",
@@ -1011,7 +1011,7 @@
   {
    "block_id": "exit-codes-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/exit-codes",
+   "page_url": "https://docs.leakdown.dev/exit-codes",
    "page_title": "Exit codes and verdicts",
    "heading_path": [
     "Exit codes and verdicts"
@@ -1022,7 +1022,7 @@
   {
    "block_id": "exit-codes-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/exit-codes",
+   "page_url": "https://docs.leakdown.dev/exit-codes",
    "page_title": "Exit codes and verdicts",
    "heading_path": [
     "Exit codes and verdicts",
@@ -1034,7 +1034,7 @@
   {
    "block_id": "exit-codes-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/exit-codes",
+   "page_url": "https://docs.leakdown.dev/exit-codes",
    "page_title": "Exit codes and verdicts",
    "heading_path": [
     "Exit codes and verdicts",
@@ -1046,7 +1046,7 @@
   {
    "block_id": "files-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/files",
+   "page_url": "https://docs.leakdown.dev/files",
    "page_title": "Files and folders",
    "heading_path": [
     "Files and folders"
@@ -1057,7 +1057,7 @@
   {
    "block_id": "files-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/files",
+   "page_url": "https://docs.leakdown.dev/files",
    "page_title": "Files and folders",
    "heading_path": [
     "Files and folders",
@@ -1069,7 +1069,7 @@
   {
    "block_id": "files-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/files",
+   "page_url": "https://docs.leakdown.dev/files",
    "page_title": "Files and folders",
    "heading_path": [
     "Files and folders",
@@ -1081,19 +1081,19 @@
   {
    "block_id": "files-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/files",
+   "page_url": "https://docs.leakdown.dev/files",
    "page_title": "Files and folders",
    "heading_path": [
     "Files and folders",
     "Files you add"
    ],
    "level": 2,
-   "text": "## Files you add\n\nFour files change how a run behaves, and none of them is required.\n\n| File | Purpose | Guide |\n|---|---|---|\n\n| `.env` | Mail and order settings | [Environment](https://docs.leakdown.ai/environment) |\n| `personas/*.yaml` | Your own prospects | [Personas](https://docs.leakdown.ai/personas#custom) |\n| `flows/*.yaml` | Journeys to score | [Flows](https://docs.leakdown.ai/flows) |\n| `runs/<site>/analytics.json` | Real-visitor weighting | [Personas](https://docs.leakdown.ai/personas#calibrate) |"
+   "text": "## Files you add\n\nFour files change how a run behaves, and none of them is required.\n\n| File | Purpose | Guide |\n|---|---|---|\n\n| `.env` | Mail and order settings | [Environment](https://docs.leakdown.dev/environment) |\n| `personas/*.yaml` | Your own prospects | [Personas](https://docs.leakdown.dev/personas#custom) |\n| `flows/*.yaml` | Journeys to score | [Flows](https://docs.leakdown.dev/flows) |\n| `runs/<site>/analytics.json` | Real-visitor weighting | [Personas](https://docs.leakdown.dev/personas#calibrate) |"
   },
   {
    "block_id": "environment-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/environment",
+   "page_url": "https://docs.leakdown.dev/environment",
    "page_title": "Environment variables",
    "heading_path": [
     "Environment variables"
@@ -1104,7 +1104,7 @@
   {
    "block_id": "environment-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/environment",
+   "page_url": "https://docs.leakdown.dev/environment",
    "page_title": "Environment variables",
    "heading_path": [
     "Environment variables",
@@ -1116,7 +1116,7 @@
   {
    "block_id": "environment-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/environment",
+   "page_url": "https://docs.leakdown.dev/environment",
    "page_title": "Environment variables",
    "heading_path": [
     "Environment variables",
@@ -1128,7 +1128,7 @@
   {
    "block_id": "environment-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/environment",
+   "page_url": "https://docs.leakdown.dev/environment",
    "page_title": "Environment variables",
    "heading_path": [
     "Environment variables",
@@ -1140,7 +1140,7 @@
   {
    "block_id": "changelog-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/changelog",
+   "page_url": "https://docs.leakdown.dev/changelog",
    "page_title": "Changelog",
    "heading_path": [
     "Changelog"
@@ -1151,7 +1151,7 @@
   {
    "block_id": "changelog-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/changelog",
+   "page_url": "https://docs.leakdown.dev/changelog",
    "page_title": "Changelog",
    "heading_path": [
     "Changelog",
@@ -1163,7 +1163,7 @@
   {
    "block_id": "changelog-H002",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/changelog",
+   "page_url": "https://docs.leakdown.dev/changelog",
    "page_title": "Changelog",
    "heading_path": [
     "Changelog",
@@ -1175,7 +1175,7 @@
   {
    "block_id": "changelog-H003",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/changelog",
+   "page_url": "https://docs.leakdown.dev/changelog",
    "page_title": "Changelog",
    "heading_path": [
     "Changelog",
@@ -1187,7 +1187,7 @@
   {
    "block_id": "changelog-H004",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/changelog",
+   "page_url": "https://docs.leakdown.dev/changelog",
    "page_title": "Changelog",
    "heading_path": [
     "Changelog",
@@ -1199,7 +1199,7 @@
   {
    "block_id": "changelog-H005",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/changelog",
+   "page_url": "https://docs.leakdown.dev/changelog",
    "page_title": "Changelog",
    "heading_path": [
     "Changelog",
@@ -1211,25 +1211,25 @@
   {
    "block_id": "build-a-command-H000",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/build-a-command",
+   "page_url": "https://docs.leakdown.dev/build-a-command",
    "page_title": "Builder",
    "heading_path": [
     "Builder"
    ],
    "level": 1,
-   "text": "# Builder\n\n> Pick the job, type your site, copy the command.\n\nYour site\nWhat do you want to know?\n**Where does signup leak?**The full run. About an hour.**Does signup still work?**A pass or fail for CI.**Does it work on a phone?**The full run on a phone screen.**Does one journey work?**Every session is scored against its steps.**Which version leaks less?**The same prospects on both, one verdict.**Was that finding real?**The same prospect three times.**Share the last report**One PDF for someone who will not open markdown.\n\nRun this\n\n```\nleakdown your-site.com --ladder --yes --headless\n```\n\nThen open runs/your-site.com/AGGREGATE.md.\n show the browser while it runs\nRunning from the clone instead of `npm link`? Use `node dist/cli.js` in place of `leakdown`.\nNot installed yet? [Quickstart](https://docs.leakdown.ai/quickstart) is five commands. Every other flag, such as `--model` and `--time`, is on [Commands](https://docs.leakdown.ai/commands)."
+   "text": "# Builder\n\n> Pick the job, type your site, copy the command.\n\nYour site\nWhat do you want to know?\n**Where does signup leak?**The full run. About an hour.**Does signup still work?**A pass or fail for CI.**Does it work on a phone?**The full run on a phone screen.**Does one journey work?**Every session is scored against its steps.**Which version leaks less?**The same prospects on both, one verdict.**Was that finding real?**The same prospect three times.**Share the last report**One PDF for someone who will not open markdown.\n\nRun this\n\n```\nleakdown your-site.com --ladder --yes --headless\n```\n\nThen open runs/your-site.com/AGGREGATE.md.\n show the browser while it runs\nRunning from the clone instead of `npm link`? Use `node dist/cli.js` in place of `leakdown`.\nNot installed yet? [Quickstart](https://docs.leakdown.dev/quickstart) is five commands. Every other flag, such as `--model` and `--time`, is on [Commands](https://docs.leakdown.dev/commands)."
   },
   {
    "block_id": "build-a-command-H001",
    "source": "docs",
-   "page_url": "https://docs.leakdown.ai/build-a-command",
+   "page_url": "https://docs.leakdown.dev/build-a-command",
    "page_title": "Builder",
    "heading_path": [
     "Builder",
     "After it runs"
    ],
    "level": 2,
-   "text": "## After it runs\n\nThe terminal ends with the result, and the files sit under `runs/`.\n\n```\n  3 of 10 completed their goal. 4 walked out with a reason. 3 ran out of patience still trying.\n  Fix first: your-site.com/signup/step-2 — 3 of 10 walked out here\n  \"The plan selector looks like a confirmation page. I think I am done.\"\n\n  Full report: runs/your-site.com/2026-09-17/10-14-02/AGGREGATE.md, then REPORT.md beside it\n\n```\n\n[**Reading the report**What AGGREGATE.md says, in order.→](https://docs.leakdown.ai/reading-the-report)[**Something went wrong**Usage limits, exit 2, missing video.→](https://docs.leakdown.ai/troubleshooting)"
+   "text": "## After it runs\n\nThe terminal ends with the result, and the files sit under `runs/`.\n\n```\n  3 of 10 completed their goal. 4 walked out with a reason. 3 ran out of patience still trying.\n  Fix first: your-site.com/signup/step-2 — 3 of 10 walked out here\n  \"The plan selector looks like a confirmation page. I think I am done.\"\n\n  Full report: runs/your-site.com/2026-09-17/10-14-02/AGGREGATE.md, then REPORT.md beside it\n\n```\n\n[**Reading the report**What AGGREGATE.md says, in order.→](https://docs.leakdown.dev/reading-the-report)[**Something went wrong**Usage limits, exit 2, missing video.→](https://docs.leakdown.dev/troubleshooting)"
   },
   {
    "block_id": "cli-readme-H000",
@@ -1763,10 +1763,10 @@
    "page_title": "Changelog",
    "heading_path": [
     "Changelog",
-    "Unreleased"
+    "0.8.0 — 2026-09-18"
    ],
    "level": 2,
-   "text": "## Unreleased\n\n**A judge for the yes/no calls: `--jev off|verify|full`.** With\n`TYPESAFE_API_KEY` set, TypeSafe's Jev model answers the questions that have a\nyes or no answer instead of the AI CLI: `verify` hands it the completion check\nat the end of a session, `full` also gives it flow checkpoints and any\n`--expect` value the page words differently (`Total: $96` for `$96.00`) — the\nplain substring match still runs first and still costs nothing. Default is\n`off`, and runs without the flag behave exactly as before. A judge that fails\nleaves a check unresolved, the same as a model that fails, and never ends a\nsession. Its tokens are counted apart from the brain's, as `usageJev` in\n`meta.json`. `node scripts/jev-replay.mjs` replays saved sessions through both\njudges and prints where they disagree."
+   "text": "## 0.8.0 — 2026-09-18\n\n**A judge for the yes/no calls: `--jev off|verify|full`.** With\n`TYPESAFE_API_KEY` set, TypeSafe's Jev model answers the questions that have a\nyes or no answer instead of the AI CLI: `verify` hands it the completion check\nat the end of a session, `full` also gives it flow checkpoints and any\n`--expect` value the page words differently (`Total: $96` for `$96.00`) — the\nplain substring match still runs first and still costs nothing. Default is\n`off`, and runs without the flag behave exactly as before. A judge that fails\nleaves a check unresolved, the same as a model that fails, and never ends a\nsession. Its tokens are counted apart from the brain's, as `usageJev` in\n`meta.json`. `node scripts/jev-replay.mjs` replays saved sessions through both\njudges and prints where they disagree."
   },
   {
    "block_id": "cli-changelog-H002",
@@ -1837,7 +1837,7 @@
     "leakdown --help"
    ],
    "level": 1,
-   "text": "# leakdown --help\n\nleakdown 0.7.0 — simulated prospects walk your signup and say where they gave up\n\n  Only run it against sites you own or have written permission to test. It creates\n  real accounts, triggers real emails and webhooks, and records what it sees.\n\n  leakdown <url> --ladder --yes --headless   the full run, about an hour\n  leakdown <url>                             a plain run, one model, menus for the rest\n  leakdown <url> --goal \"sign up and get an API key\" --steps 15 --yes   pass/fail for CI\n\n  Then read runs/<site>/AGGREGATE.md (the one-page report) and REPORT.md beside it.\n  leakdown --history shows every run with its one number. Bare \"leakdown\"\n  opens a guided flow."
+   "text": "# leakdown --help\n\nleakdown 0.8.0 — simulated prospects walk your signup and say where they gave up\n\n  Only run it against sites you own or have written permission to test. It creates\n  real accounts, triggers real emails and webhooks, and records what it sees.\n\n  leakdown <url> --ladder --yes --headless   the full run, about an hour\n  leakdown <url>                             a plain run, one model, menus for the rest\n  leakdown <url> --goal \"sign up and get an API key\" --steps 15 --yes   pass/fail for CI\n\n  Then read runs/<site>/AGGREGATE.md (the one-page report) and REPORT.md beside it.\n  leakdown --history shows every run with its one number. Bare \"leakdown\"\n  opens a guided flow."
   },
   {
    "block_id": "cli-help-H001",

@@ -302,7 +302,7 @@ export function RequestedRuns() {
   return (
     <>
       <p className="lead">
-        Don&apos;t want to run it yourself? Request a run on leakdown.ai. It is a free early-access demo: we run the same
+        Don&apos;t want to run it yourself? Request a run on leakdown.dev. It is a free early-access demo: we run the same
         CLI and email you the report.
       </p>
 
@@ -331,7 +331,7 @@ export function RequestedRuns() {
 
       <H2 id="request">Request one</H2>
       <p>
-        <Ext href={`${SITE}/#request`}>Request a run on leakdown.ai ↗</Ext> · <Ext href={`${SITE}/privacy`}>Privacy</Ext>
+        <Ext href={`${SITE}/#request`}>Request a run on leakdown.dev ↗</Ext> · <Ext href={`${SITE}/privacy`}>Privacy</Ext>
       </p>
       <H3 id="for-operators">For the operator</H3>
       <Code id="rr-ops">{"leakdown --orders            # new requests on the website\nleakdown --order <id>        # run one here and email the PDF"}</Code>

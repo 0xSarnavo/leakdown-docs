@@ -11,6 +11,7 @@
    be the one place on this site that can inject markup. */
 
 import { Fragment, type ReactNode } from "react";
+import { SITE_URL } from "../lib/site";
 
 const INLINE = /(`[^`]+`|\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
 
@@ -22,7 +23,7 @@ function inline(text: string, key: string): ReactNode[] {
     const link = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(part);
     if (link) {
       const [, label, href] = link;
-      const external = /^https?:\/\//.test(href) && !href.includes("docs.leakdown.ai");
+      const external = /^https?:\/\//.test(href) && !href.startsWith(SITE_URL);
       return (
         <a key={k} href={href} {...(external ? { target: "_blank", rel: "noreferrer noopener" } : {})}>
           {inline(label, k)}

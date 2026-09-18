@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { SITE_URL } from "../lib/site";
 
 /* Beside the title: "Copy page" copies the page as markdown; the chevron
    opens the rest (view as markdown, ChatGPT, Claude, llms.txt). The links
@@ -10,7 +11,7 @@ export default function PageActions({ slug }: { slug: string }) {
   const box = useRef<HTMLDetailsElement>(null);
   const md = `/${slug}.md`;
   const ask = (site: string) => encodeURIComponent(`Read ${site}${md} so I can ask questions about it.`);
-  const site = "https://docs.leakdown.ai";
+  const site = SITE_URL;
 
   const copy = async () => {
     let next: "ok" | "fail" = "fail";

@@ -1,6 +1,6 @@
 # leakdown-docs
 
-The Leakdown documentation site, hosted on its own (docs.leakdown.ai), separate from `leakdown-website`.
+The Leakdown documentation site, hosted on its own (docs.leakdown.dev), separate from `leakdown-website`.
 
 ```bash
 npm ci

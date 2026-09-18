@@ -633,7 +633,7 @@ kbd { font-size: 11px; padding: 2px 6px; border: 1px solid var(--rule); color: v
 .ask-dock.is-page .ask-hint { padding: 9px 4px 16px; }
 
 /* The start screen: the drop, one question, and the ways in. The same object
-   the marketing site opens with, so arriving here from leakdown.ai feels like
+   the marketing site opens with, so arriving here from leakdown.dev feels like
    the same product rather than a tool bolted on. */
 .askhero { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 14px; padding-bottom: 6vh; }
 

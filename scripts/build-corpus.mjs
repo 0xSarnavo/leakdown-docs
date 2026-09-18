@@ -13,6 +13,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { SITE_URL } from "../lib/site.ts";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "lib", "corpus.json");
@@ -26,7 +27,7 @@ const CLI_DIR = path.resolve(ROOT, flag("cli", process.env.CLI_DIR || "../leakdo
 const CHECK = argv.includes("--check");
 const REPO_BLOB = "https://github.com/0xSarnavo/leakdown-cli/blob/main";
 // blocks are quoted with a link, and the link must work off this machine
-const PUBLIC = (process.env.DOCS_PUBLIC || "https://docs.leakdown.ai").replace(/\/$/, "");
+const PUBLIC = (process.env.DOCS_PUBLIC || SITE_URL).replace(/\/$/, "");
 
 const LINK_RE = /\[([^\]]+)\]\((\S+?)\)/g;
 const HEADING_RE = /^(#{1,6})\s+(.*?)\s*$/;

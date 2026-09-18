@@ -2,7 +2,7 @@
    sidebar, the top tabs, search and the previous/next links all read this.
    `sections` lists each page's h2 ids so search can jump straight to one. */
 
-export const SITE = "https://leakdown.ai";
+export const SITE = "https://leakdown.dev";
 export const REPO = "https://github.com/0xSarnavo/leakdown-cli";
 export const CLI_VERSION = "0.7.0";
 

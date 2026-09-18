@@ -4,9 +4,10 @@ import Topbar from "../components/topbar";
 import Sidebar from "../components/sidebar";
 import Search from "../components/search";
 import Ask from "../components/ask";
+import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://docs.leakdown.ai"),
+  metadataBase: new URL(SITE_URL),
   title: "Leakdown Docs",
   description: "Install the Leakdown CLI, run your first test, read the report, and look up every flag.",
 };

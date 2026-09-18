@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AskChat from "../../components/ask-chat";
+import { SITE_URL } from "../../lib/site";
 
 /* The full page: a conversation with the docs and nothing else on screen. The
    panel (components/ask.tsx) is the same conversation over a page you are
@@ -18,7 +19,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Ask · Leakdown Docs",
   description: "Ask the Leakdown docs a question and get the paragraph that answers it, word for word.",
-  alternates: { canonical: "https://docs.leakdown.ai/ask" },
+  alternates: { canonical: `${SITE_URL}/ask` },
 };
 
 export default function AskPage() {

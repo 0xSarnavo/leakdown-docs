@@ -5,6 +5,7 @@ import { CONTENT } from "../../lib/pages";
 import { CLI_VERSION, DOC_PAGES, PAGES, REPO, isWide, neighbours, pageBySlug } from "../../lib/nav";
 import Toc from "../../components/toc";
 import PageActions from "../../components/page-actions";
+import { SITE_URL } from "../../lib/site";
 
 // nonce CSP needs a request per render (see proxy.ts)
 export const dynamic = "force-dynamic";
@@ -14,7 +15,7 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = pageBySlug((await params).slug);
   if (!p) return {};
-  return { title: `${p.title} · Leakdown Docs`, description: p.description, alternates: { canonical: `https://docs.leakdown.ai/${p.slug}` } };
+  return { title: `${p.title} · Leakdown Docs`, description: p.description, alternates: { canonical: `${SITE_URL}/${p.slug}` } };
 }
 
 export function generateStaticParams() {
