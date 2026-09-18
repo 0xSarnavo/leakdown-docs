@@ -111,6 +111,36 @@ One known failure is a documentation gap rather than a bug: "how much does
 leakdown cost per run?" is answered from adjacent pages because the docs never
 state what a run costs. A line saying so would fix the answer and the gap.
 
+### Feedback
+
+Under every answer: *did that answer it?* A no asks which of three ways it
+missed — wrong paragraph, not in the docs, not enough detail — and posts to
+`/api/feedback`.
+
+**This does not train anything.** Jev has no training endpoint and nothing here
+learns from a vote. What the votes are for is the gold set. Every question in
+`scripts/ask-gold.json` was written by us, in our phrasing, guessing at what
+someone would ask — and three separate label corrections have already come from
+questions we got wrong about our own docs. One real question that got the wrong
+paragraph is worth more than ten we invented.
+
+Read the votes by reason:
+
+| reason | what it usually means | where the fix is |
+|---|---|---|
+| Wrong paragraph | the answer exists but a neighbour won | the gold set, then ranking |
+| Not in the docs | a page that needs writing | the docs, not a threshold |
+| Not enough detail | a section split away from what it needed | `absorbThinSections` in the corpus builder |
+
+A vote carries the question, the block it got, and the scores. It carries no
+address, no identifier and no session — see `record()` in
+`app/api/feedback/route.ts`, which is also the one place to change when this
+needs to outlive the platform's log retention. Until then a vote is a log line:
+
+```bash
+vercel logs --since 1d | grep ask-feedback   # one JSON object per vote
+```
+
 ### Deploy
 
 `TYPESAFE_API_KEY` must be set on the server (Vercel → Settings → Environment

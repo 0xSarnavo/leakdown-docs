@@ -33,7 +33,77 @@ type Reply = {
   router: { choice: string; confidence: number } | null;
 };
 
-type Turn = { q: string; state: "asking" | "done" | "error" | "said"; reply?: Reply; error?: string; said?: "help" | "examples" | "unknown" };
+type Turn = {
+  q: string;
+  state: "asking" | "done" | "error" | "said";
+  reply?: Reply;
+  error?: string;
+  said?: "help" | "examples" | "unknown";
+  vote?: "up" | "down" | "sent";
+};
+
+/* Why an answer missed, in the three ways it actually misses. Each maps to a
+   different fix: a wrong paragraph is a ranking problem, "not in the docs" is
+   usually a page that needs writing, and "not enough" is a chunk that got split
+   away from what it needed. */
+const REASONS: Array<[value: string, label: string]> = [
+  ["wrong-paragraph", "Wrong paragraph"],
+  ["not-in-docs", "Not in the docs"],
+  ["too-thin", "Not enough detail"],
+];
+
+/* The vote is the only thing this page ever sends back about an answer, and it
+   carries the question, the block and the scores — nothing about who asked. */
+function Vote({ turn, onDone }: { turn: Turn; onDone: (v: "up" | "down" | "sent") => void }) {
+  const send = (helpful: boolean, reason = "") => {
+    onDone(helpful ? "sent" : "sent");
+    void fetch("/api/feedback", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        query: turn.q,
+        helpful,
+        reason,
+        block_id: turn.reply?.answer?.block_id ?? null,
+        verdict: turn.reply?.verdict ?? "",
+        exists: turn.reply?.exists ?? null,
+        fully: turn.reply?.fully ?? null,
+      }),
+    }).catch(() => {
+      /* a lost vote is not worth telling anyone about */
+    });
+  };
+
+  if (turn.vote === "sent") return <p className="ask-vote is-done">Thanks — that goes into the question set.</p>;
+
+  if (turn.vote === "down") {
+    return (
+      <div className="ask-vote">
+        <span>What went wrong?</span>
+        {REASONS.map(([value, label]) => (
+          <button key={value} type="button" onClick={() => send(false, value)}>
+            {label}
+          </button>
+        ))}
+        <button type="button" className="ask-vote-skip" onClick={() => send(false)}>
+          Skip
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="ask-vote">
+      <span>{turn.reply?.verdict === "absent" ? "Was it right to say no?" : "Did that answer it?"}</span>
+      <button type="button" onClick={() => send(true)} aria-label="Yes">
+        Yes
+      </button>
+      <button type="button" onClick={() => onDone("down")} aria-label="No">
+        No
+      </button>
+    </div>
+  );
+}
 
 const EXAMPLES = ["How do I install it?", "What does exit code 2 mean?", "How do I run a goal test in CI?"];
 
@@ -259,6 +329,8 @@ export default function AskChat({ page = false, autoFocus = false }: { page?: bo
                     </>
                   )
                 )}
+
+                <Vote turn={t} onDone={(v) => setTurns((all) => all.map((x, n) => (n === i ? { ...x, vote: v } : x)))} />
 
                 {t.reply.supporting.length > 0 && (
                   <details className="ask-more">
