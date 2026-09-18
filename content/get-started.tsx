@@ -1,6 +1,6 @@
 import { Callout, Card, Cards, H2, H3, Step, Steps, Table, Ext } from "../components/ui";
 import { Code, CodeTabs } from "../components/code";
-import { REPO, SITE } from "../lib/nav";
+import { CAL, REPO, SITE } from "../lib/nav";
 
 export function Introduction() {
   return (
@@ -333,7 +333,8 @@ export function RequestedRuns() {
 
       <H2 id="request">Request one</H2>
       <p>
-        <Ext href={`${SITE}/#request`}>Request a run on leakdown.dev ↗</Ext> · <Ext href={`${SITE}/privacy`}>Privacy</Ext>
+        <Ext href={`${SITE}/#request`}>Request a run on leakdown.dev ↗</Ext> · <Ext href={CAL}>Book 30 minutes ↗</Ext> ·{" "}
+        <Ext href={`${SITE}/privacy`}>Privacy</Ext>
       </p>
       <H3 id="for-operators">For the operator</H3>
       <Code id="rr-ops">{"leakdown --orders            # new requests on the website\nleakdown --order <id>        # run one here and email the PDF"}</Code>

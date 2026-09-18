@@ -40,6 +40,8 @@ const hits = new Map<string, number[]>();
    the in-memory guard is all there is — which is the state to fix before this
    is pointed at the open internet. */
 const DAILY_MAX = Number(process.env.ASK_DAILY_MAX ?? 2_000);
+/** One address's share of that day. Generous for a reader, useless for a loop. */
+const PER_IP_DAILY = Number(process.env.ASK_PER_IP_DAILY ?? 100);
 const DAY_SECONDS = 86_400;
 
 /* Identical questions cost nothing twice.
@@ -96,6 +98,16 @@ export async function POST(req: Request) {
       } catch {
         /* a corrupt entry is just a miss */
       }
+    }
+    /* One caller must not be able to eat the day on their own.
+       The global ceiling bounds the bill; this bounds who spends it, so a
+       single looping address cannot deny the budget to everyone else. */
+    const mine = await bump(`ask:ip:${today()}:${createHash("sha256").update(fwd || "local").digest("hex").slice(0, 16)}`, DAY_SECONDS);
+    if (mine !== null && mine > PER_IP_DAILY) {
+      return Response.json(
+        { error: "that is a lot of questions from one place today — try again tomorrow" },
+        { status: 429, headers: { "retry-after": "3600" } },
+      );
     }
     const used = await bump(`ask:day:${today()}`, DAY_SECONDS);
     if (used !== null && used > DAILY_MAX) {

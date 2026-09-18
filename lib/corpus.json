@@ -1,5 +1,5 @@
 {
- "built_at": "2026-09-18T16:12:08.623Z",
+ "built_at": "2026-09-18T16:58:04.077Z",
  "sources": [
   "docs:llms.txt",
   "cli:repo"
@@ -416,7 +416,7 @@
     "Request one"
    ],
    "level": 2,
-   "text": "## Request one\n\n[Request a run on leakdown.dev ↗](https://leakdown.dev/#request) · [Privacy](https://leakdown.dev/privacy)\n\n### For the operator\n\n```\nleakdown --orders            # new requests on the website\nleakdown --order         # run one here and email the PDF\n```\n\nNeeds the website's URL and token in `.env` and mail configured. See [Environment variables](https://docs.leakdown.dev/environment#orders)."
+   "text": "## Request one\n\n[Request a run on leakdown.dev ↗](https://leakdown.dev/#request) · [Book 30 minutes ↗](https://cal.com/leakdown/30min) · [Privacy](https://leakdown.dev/privacy)\n\n### For the operator\n\n```\nleakdown --orders            # new requests on the website\nleakdown --order         # run one here and email the PDF\n```\n\nNeeds the website's URL and token in `.env` and mail configured. See [Environment variables](https://docs.leakdown.dev/environment#orders)."
   },
   {
    "block_id": "use-cases-H000",

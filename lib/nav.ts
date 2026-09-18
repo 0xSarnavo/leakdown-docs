@@ -5,6 +5,8 @@
 export const SITE = "https://leakdown.dev";
 // support, and anything a GitHub issue is the wrong shape for
 export const CONTACT = "talk@leakdown.dev";
+// a 30-minute call, for what a queued request cannot answer
+export const CAL = "https://cal.com/leakdown/30min";
 export const REPO = "https://github.com/0xSarnavo/leakdown-cli";
 export const CLI_VERSION = "0.8.0";
 
